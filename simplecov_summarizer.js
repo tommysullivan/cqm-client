@@ -19,9 +19,10 @@ for(var key in coverageHash) {
 }
 
 simpleCovJSON.lines = {
-    percent: linesCovered / eligibleLines,
+    percent: eligibleLines==0 ? 0 : linesCovered / eligibleLines,
     covered: linesCovered,
-    total: eligibleLines
+    total: eligibleLines,
+    notCovered: eligibleLines - linesCovered
 }
 
 console.log(JSON.stringify(simpleCovJSON));

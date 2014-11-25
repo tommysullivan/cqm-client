@@ -20,7 +20,8 @@ $('.metric').map(function(i, item) {
     results.push({
         percent: percent,
         covered: covered,
-        total: total
+        total: total,
+        notCovered: total - covered
     });
 });
 

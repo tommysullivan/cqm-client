@@ -51,6 +51,7 @@ var totalComplexity = 0;
 var totalNumMethods = 0;
 var maxComplexity = 0;
 var numMethodsWithHighComplexity = 0;
+var numClassesWithHighComplexity = 0;
 fileComplexities.forEach(function(fileComplexity) {
     if(fileComplexity.sections!=null && fileComplexity.sections.length>0) {
         var complexityForFile = 0;
@@ -65,11 +66,13 @@ fileComplexities.forEach(function(fileComplexity) {
         });
         fileComplexity.totalComplexity = complexityForFile;
         fileComplexity.numMethods = numMethodsInFile;
-        fileComplexity.complexityPerMethod = complexityForFile / numMethodsInFile
+        fileComplexity.complexityPerMethod = complexityForFile / numMethodsInFile;
+        if(complexityForFile > 10) numClassesWithHighComplexity++;
     }
 });
 
 var complexitySummary = {
+    numClassesWithHighComplexity: numClassesWithHighComplexity,
     numMethodsWithHighComplexity: numMethodsWithHighComplexity,
     maxComplexity: maxComplexity,
     totalComplexity: totalComplexity,
