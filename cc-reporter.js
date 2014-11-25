@@ -67,7 +67,8 @@ var complexitySummary = {
     totalComplexity: totalComplexity,
     numMethods: totalNumMethods,
     complexityPerMethod: totalComplexity / totalNumMethods,
-    methodsPerFile: totalNumMethods / fileComplexities.length
+    methodsPerFile: totalNumMethods / fileComplexities.length,
+    details: fileComplexities
 }
 
 console.log(JSON.stringify(complexitySummary));
