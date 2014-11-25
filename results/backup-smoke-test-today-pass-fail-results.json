@@ -1,0 +1,374 @@
+{
+    "_index": "test-results",
+    "_type": "rspec",
+    "_id": "UVFr2x3DQp-UkAYlvh3g7w",
+    "_score": 1,
+    "_source": {
+        "job": {
+            "actions": [
+                {
+                    "parameters": [
+                        {
+                            "name": "STAGE_NAME",
+                            "value": "today"
+                        }
+                    ]
+                },
+                {
+                    "causes": [
+                        {
+                            "shortDescription": "Started by user Thomas Sullivan",
+                            "userId": "tsullivan",
+                            "userName": "Thomas Sullivan"
+                        }
+                    ]
+                },
+                {},
+                {},
+                {
+                    "buildsByBranchName": {
+                        "origin/master": {
+                            "buildNumber": 23,
+                            "buildResult": null,
+                            "marked": {
+                                "SHA1": "6862193929255bec4814f9ad6cadd4c33a5bc193",
+                                "branch": [
+                                    {
+                                        "SHA1": "6862193929255bec4814f9ad6cadd4c33a5bc193",
+                                        "name": "origin/master"
+                                    }
+                                ]
+                            },
+                            "revision": {
+                                "SHA1": "6862193929255bec4814f9ad6cadd4c33a5bc193",
+                                "branch": [
+                                    {
+                                        "SHA1": "6862193929255bec4814f9ad6cadd4c33a5bc193",
+                                        "name": "origin/master"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "lastBuiltRevision": {
+                        "SHA1": "6862193929255bec4814f9ad6cadd4c33a5bc193",
+                        "branch": [
+                            {
+                                "SHA1": "6862193929255bec4814f9ad6cadd4c33a5bc193",
+                                "name": "origin/master"
+                            }
+                        ]
+                    },
+                    "remoteUrls": [
+                        "git@source.flexilis.local:tsullivan/tommy-backup-smoketest.git"
+                    ],
+                    "scmName": ""
+                },
+                {},
+                {}
+            ],
+            "artifacts": [],
+            "building": true,
+            "description": null,
+            "duration": 0,
+            "estimatedDuration": 21693,
+            "executor": {},
+            "fullDisplayName": "tommy-backup-smoketest #23",
+            "id": "2014-10-27_10-55-45",
+            "keepLog": false,
+            "number": 23,
+            "result": null,
+            "timestamp": 1414432545131,
+            "url": "https://ci.corp.lookout.com/job/tommy-backup-smoketest/23/",
+            "builtOn": "bob4g-10.3",
+            "changeSet": {
+                "items": [],
+                "kind": "git"
+            },
+            "culprits": []
+        },
+        "testResult": {
+            "examples": [
+                {
+                    "description": "deletes all calls backed up for this device_guid",
+                    "full_description": "Calls deletes all calls backed up for this device_guid",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 108,
+                    "run_time": 0.573266712
+                },
+                {
+                    "description": "gets the start_time of the last backed up call (in this case epoch)",
+                    "full_description": "Calls gets the start_time of the last backed up call (in this case epoch)",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 112,
+                    "run_time": 0.159555797
+                },
+                {
+                    "description": "uploads call log",
+                    "full_description": "Calls uploads call log",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 116,
+                    "run_time": 0.401641998
+                },
+                {
+                    "description": "gets the start_time of the last backed up call (now updated)",
+                    "full_description": "Calls gets the start_time of the last backed up call (now updated)",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 120,
+                    "run_time": 0.112854374
+                },
+                {
+                    "description": "gets the backed up call logs",
+                    "full_description": "Calls gets the backed up call logs",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 124,
+                    "run_time": 0.143235217
+                },
+                {
+                    "description": "downloads zip archive containing 1 call logs with 3 entries",
+                    "full_description": "Calls downloads zip archive containing 1 call logs with 3 entries",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 128,
+                    "run_time": 0.13906625
+                },
+                {
+                    "description": "uploads second call log",
+                    "full_description": "Calls uploads second call log",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 132,
+                    "run_time": 0.279271899
+                },
+                {
+                    "description": "gets the start_time of the last backed up call (now updated again)",
+                    "full_description": "Calls gets the start_time of the last backed up call (now updated again)",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 136,
+                    "run_time": 0.111709324
+                },
+                {
+                    "description": "gets the backed up call logs (now with two sets of call logs merged)",
+                    "full_description": "Calls gets the backed up call logs (now with two sets of call logs merged)",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 140,
+                    "run_time": 0.144824704
+                },
+                {
+                    "description": "downloads zip archive containing 1 call logs with 6 entries",
+                    "full_description": "Calls downloads zip archive containing 1 call logs with 6 entries",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 144,
+                    "run_time": 0.146503772
+                },
+                {
+                    "description": "deletes all call logs backed up for this guid",
+                    "full_description": "Calls deletes all call logs backed up for this guid",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 148,
+                    "run_time": 0.151418543
+                },
+                {
+                    "description": "gets the start_time of the last backed up call (in this case epoch)",
+                    "full_description": "Calls gets the start_time of the last backed up call (in this case epoch)",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 152,
+                    "run_time": 0.113852702
+                },
+                {
+                    "description": "uploads 1 vcard without gzip",
+                    "full_description": "Contacts uploads 1 vcard without gzip",
+                    "status": "passed",
+                    "file_path": "./spec/contacts_spec.rb",
+                    "line_number": 23,
+                    "run_time": 0.20833725
+                },
+                {
+                    "description": "uploads 1 vcard with gzip",
+                    "full_description": "Contacts uploads 1 vcard with gzip",
+                    "status": "passed",
+                    "file_path": "./spec/contacts_spec.rb",
+                    "line_number": 33,
+                    "run_time": 1.236421032
+                },
+                {
+                    "description": "downloads meta data of the last vcard backed up",
+                    "full_description": "Contacts downloads meta data of the last vcard backed up",
+                    "status": "passed",
+                    "file_path": "./spec/contacts_spec.rb",
+                    "line_number": 51,
+                    "run_time": 0.109537746
+                },
+                {
+                    "description": "downloads meta data listing all backed up vcards",
+                    "full_description": "Contacts downloads meta data listing all backed up vcards",
+                    "status": "passed",
+                    "file_path": "./spec/contacts_spec.rb",
+                    "line_number": 62,
+                    "run_time": 0.111271541
+                },
+                {
+                    "description": "downloads the actual vcard payload",
+                    "full_description": "Contacts downloads the actual vcard payload",
+                    "status": "passed",
+                    "file_path": "./spec/contacts_spec.rb",
+                    "line_number": 82,
+                    "run_time": 0.150484744
+                },
+                {
+                    "description": "deletes all photos",
+                    "full_description": "Photos deletes all photos",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 28,
+                    "run_time": 0.146016208
+                },
+                {
+                    "description": "uploads 2 photos",
+                    "full_description": "Photos uploads 2 photos",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 34,
+                    "run_time": 0.863327389
+                },
+                {
+                    "description": "download 2 photo",
+                    "full_description": "Photos download 2 photo",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 46,
+                    "run_time": 0.764301151
+                },
+                {
+                    "description": "downloads meta data",
+                    "full_description": "Photos downloads meta data",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 64,
+                    "run_time": 0.220501974
+                },
+                {
+                    "description": "downloads meta data (all photos)",
+                    "full_description": "Photos downloads meta data (all photos)",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 84,
+                    "run_time": 0.13382635
+                },
+                {
+                    "description": "updates path of photo 1",
+                    "full_description": "Photos updates path of photo 1",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 105,
+                    "run_time": 0.127670264
+                },
+                {
+                    "description": "download photo with updated path",
+                    "full_description": "Photos download photo with updated path",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 115,
+                    "run_time": 0.150415548
+                },
+                {
+                    "description": "downloads meta data",
+                    "full_description": "Photos downloads meta data",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 125,
+                    "run_time": 0.109962452
+                },
+                {
+                    "description": "updates path of photo 1",
+                    "full_description": "Photos updates path of photo 1",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 136,
+                    "run_time": 0.111110225
+                },
+                {
+                    "description": "downloads meta data",
+                    "full_description": "Photos downloads meta data",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 146,
+                    "run_time": 0.111414039
+                },
+                {
+                    "description": "downloads zip archive containing 2 photos",
+                    "full_description": "Photos downloads zip archive containing 2 photos",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 157,
+                    "run_time": 0.878545427
+                },
+                {
+                    "description": "deletes photo 2",
+                    "full_description": "Photos deletes photo 2",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 183,
+                    "run_time": 0.239393469
+                },
+                {
+                    "description": "download photo 2 should return in 404",
+                    "full_description": "Photos download photo 2 should return in 404",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 189,
+                    "run_time": 0.115055009
+                },
+                {
+                    "description": "downloads meta data (all photos skipping deleted)",
+                    "full_description": "Photos downloads meta data (all photos skipping deleted)",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 195,
+                    "run_time": 0.12686386
+                },
+                {
+                    "description": "downloads zip archive containing 1 photo",
+                    "full_description": "Photos downloads zip archive containing 1 photo",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 208,
+                    "run_time": 0.176505853
+                },
+                {
+                    "description": "downloads thumbnail for photo 1",
+                    "full_description": "Photos downloads thumbnail for photo 1",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 228,
+                    "run_time": 2.181266612
+                },
+                {
+                    "description": "deletes photo 1",
+                    "full_description": "Photos deletes photo 1",
+                    "status": "passed",
+                    "file_path": "./spec/photos_spec.rb",
+                    "line_number": 240,
+                    "run_time": 0.260224319
+                }
+            ],
+            "summary": {
+                "duration": 11.025744347,
+                "example_count": 34,
+                "failure_count": 0,
+                "pending_count": 0
+            },
+            "summary_line": "34 examples, 0 failures"
+        }
+    }
+}

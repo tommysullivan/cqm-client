@@ -1,0 +1,5076 @@
+{"numMethodsWithHighComplexity": 33, "maxComplexity": 24, "totalComplexity": 1312, "numMethods": 716, "complexityPerMethod": 1.8324022346368716, "methodsPerFile": 3.709844559585492, "details": [
+    {
+        "file": " ./src/application/history.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 69,
+                "complexity": 4
+            },
+            {
+                "startLine": 26,
+                "endLine": 39,
+                "complexity": 2
+            },
+            {
+                "startLine": 29,
+                "endLine": 31,
+                "complexity": 1
+            },
+            {
+                "startLine": 31,
+                "endLine": 39,
+                "complexity": 2
+            },
+            {
+                "startLine": 39,
+                "endLine": 51,
+                "complexity": 2
+            },
+            {
+                "startLine": 51,
+                "endLine": 59,
+                "complexity": 2
+            },
+            {
+                "startLine": 53,
+                "endLine": 56,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 14,
+        "numMethods": 7,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/application/layout.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 46,
+                "complexity": 1
+            },
+            {
+                "startLine": 30,
+                "endLine": 33,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 38,
+                "complexity": 1
+            },
+            {
+                "startLine": 34,
+                "endLine": 36,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 4,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/application/router.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 32,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/application/routes.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 43,
+                "complexity": 1
+            },
+            {
+                "startLine": 15,
+                "endLine": 43,
+                "complexity": 1
+            },
+            {
+                "startLine": 15,
+                "endLine": 43,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/help.coffee",
+        "sections": [
+            {
+                "startLine": 17,
+                "endLine": 69,
+                "complexity": 1
+            },
+            {
+                "startLine": 25,
+                "endLine": 30,
+                "complexity": 1
+            },
+            {
+                "startLine": 31,
+                "endLine": 38,
+                "complexity": 1
+            },
+            {
+                "startLine": 43,
+                "endLine": 47,
+                "complexity": 1
+            },
+            {
+                "startLine": 47,
+                "endLine": 69,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 5,
+        "numMethods": 5,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/instance.coffee",
+        "sections": [
+            {
+                "startLine": 21,
+                "endLine": 95,
+                "complexity": 2
+            },
+            {
+                "startLine": 31,
+                "endLine": 37,
+                "complexity": 1
+            },
+            {
+                "startLine": 34,
+                "endLine": 37,
+                "complexity": 1
+            },
+            {
+                "startLine": 37,
+                "endLine": 85,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 4,
+        "complexityPerMethod": 1.5
+    },
+    {
+        "file": " ./src/controllers/locale.coffee",
+        "sections": [
+            {
+                "startLine": 17,
+                "endLine": 91,
+                "complexity": 6
+            },
+            {
+                "startLine": 31,
+                "endLine": 36,
+                "complexity": 1
+            },
+            {
+                "startLine": 36,
+                "endLine": 73,
+                "complexity": 2
+            },
+            {
+                "startLine": 73,
+                "endLine": 81,
+                "complexity": 5
+            }
+        ],
+        "totalComplexity": 14,
+        "numMethods": 4,
+        "complexityPerMethod": 3.5
+    },
+    {
+        "file": " ./src/controllers/mixins/audio-composer.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 26,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/mixins/banner-composer.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 52,
+                "complexity": 1
+            },
+            {
+                "startLine": 36,
+                "endLine": 49,
+                "complexity": 1
+            },
+            {
+                "startLine": 39,
+                "endLine": 46,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/mixins/before-unload.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 46,
+                "complexity": 1
+            },
+            {
+                "startLine": 17,
+                "endLine": 20,
+                "complexity": 1
+            },
+            {
+                "startLine": 20,
+                "endLine": 25,
+                "complexity": 1
+            },
+            {
+                "startLine": 23,
+                "endLine": 23,
+                "complexity": 1
+            },
+            {
+                "startLine": 25,
+                "endLine": 30,
+                "complexity": 1
+            },
+            {
+                "startLine": 28,
+                "endLine": 28,
+                "complexity": 1
+            },
+            {
+                "startLine": 30,
+                "endLine": 34,
+                "complexity": 1
+            },
+            {
+                "startLine": 34,
+                "endLine": 43,
+                "complexity": 1
+            },
+            {
+                "startLine": 37,
+                "endLine": 37,
+                "complexity": 1
+            },
+            {
+                "startLine": 38,
+                "endLine": 41,
+                "complexity": 1
+            },
+            {
+                "startLine": 43,
+                "endLine": 46,
+                "complexity": 1
+            },
+            {
+                "startLine": 44,
+                "endLine": 44,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 12,
+        "numMethods": 12,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/mixins/modal-composer.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 26,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/mixins/navbar-composer.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 26,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/mixins/retrieve.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 24,
+                "complexity": 1
+            },
+            {
+                "startLine": 14,
+                "endLine": 24,
+                "complexity": 1
+            },
+            {
+                "startLine": 15,
+                "endLine": 21,
+                "complexity": 1
+            },
+            {
+                "startLine": 16,
+                "endLine": 16,
+                "complexity": 1
+            },
+            {
+                "startLine": 17,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 18,
+                "endLine": 18,
+                "complexity": 1
+            },
+            {
+                "startLine": 19,
+                "endLine": 19,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 7,
+        "numMethods": 7,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/mixins/search-composer.coffee",
+        "sections": [
+            {
+                "startLine": 3,
+                "endLine": 21,
+                "complexity": 1
+            },
+            {
+                "startLine": 8,
+                "endLine": 11,
+                "complexity": 1
+            },
+            {
+                "startLine": 11,
+                "endLine": 15,
+                "complexity": 1
+            },
+            {
+                "startLine": 15,
+                "endLine": 19,
+                "complexity": 1
+            },
+            {
+                "startLine": 19,
+                "endLine": 21,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 5,
+        "numMethods": 5,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/mixins/search-context-composer.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 63,
+                "complexity": 5
+            },
+            {
+                "startLine": 30,
+                "endLine": 38,
+                "complexity": 1
+            },
+            {
+                "startLine": 38,
+                "endLine": 44,
+                "complexity": 3
+            },
+            {
+                "startLine": 44,
+                "endLine": 48,
+                "complexity": 1
+            },
+            {
+                "startLine": 48,
+                "endLine": 48,
+                "complexity": 1
+            },
+            {
+                "startLine": 49,
+                "endLine": 63,
+                "complexity": 3
+            },
+            {
+                "startLine": 53,
+                "endLine": 57,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 15,
+        "numMethods": 7,
+        "complexityPerMethod": 2.142857142857143
+    },
+    {
+        "file": " ./src/controllers/mixins/search-context-scope-composer.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 50,
+                "complexity": 5
+            },
+            {
+                "startLine": 21,
+                "endLine": 29,
+                "complexity": 1
+            },
+            {
+                "startLine": 29,
+                "endLine": 42,
+                "complexity": 5
+            },
+            {
+                "startLine": 42,
+                "endLine": 42,
+                "complexity": 1
+            },
+            {
+                "startLine": 43,
+                "endLine": 43,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 13,
+        "numMethods": 5,
+        "complexityPerMethod": 2.6
+    },
+    {
+        "file": " ./src/controllers/mixins/search-filter-composer.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 66,
+                "complexity": 3
+            },
+            {
+                "startLine": 31,
+                "endLine": 38,
+                "complexity": 1
+            },
+            {
+                "startLine": 38,
+                "endLine": 42,
+                "complexity": 1
+            },
+            {
+                "startLine": 42,
+                "endLine": 48,
+                "complexity": 3
+            },
+            {
+                "startLine": 48,
+                "endLine": 54,
+                "complexity": 1
+            },
+            {
+                "startLine": 51,
+                "endLine": 54,
+                "complexity": 1
+            },
+            {
+                "startLine": 54,
+                "endLine": 60,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 11,
+        "numMethods": 7,
+        "complexityPerMethod": 1.5714285714285714
+    },
+    {
+        "file": " ./src/controllers/mixins/view-composer.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 27,
+                "complexity": 2
+            },
+            {
+                "startLine": 23,
+                "endLine": 27,
+                "complexity": 2
+            },
+            {
+                "startLine": 24,
+                "endLine": 27,
+                "complexity": 2
+            },
+            {
+                "startLine": 27,
+                "endLine": 27,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 7,
+        "numMethods": 4,
+        "complexityPerMethod": 1.75
+    },
+    {
+        "file": " ./src/controllers/reports.coffee",
+        "sections": [
+            {
+                "startLine": 17,
+                "endLine": 72,
+                "complexity": 7
+            },
+            {
+                "startLine": 30,
+                "endLine": 37,
+                "complexity": 1
+            },
+            {
+                "startLine": 37,
+                "endLine": 50,
+                "complexity": 7
+            },
+            {
+                "startLine": 40,
+                "endLine": 50,
+                "complexity": 7
+            },
+            {
+                "startLine": 50,
+                "endLine": 59,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 23,
+        "numMethods": 5,
+        "complexityPerMethod": 4.6
+    },
+    {
+        "file": " ./src/controllers/search/apps.coffee",
+        "sections": [
+            {
+                "startLine": 31,
+                "endLine": 133,
+                "complexity": 5
+            },
+            {
+                "startLine": 48,
+                "endLine": 48,
+                "complexity": 1
+            },
+            {
+                "startLine": 50,
+                "endLine": 54,
+                "complexity": 1
+            },
+            {
+                "startLine": 54,
+                "endLine": 63,
+                "complexity": 1
+            },
+            {
+                "startLine": 63,
+                "endLine": 114,
+                "complexity": 5
+            },
+            {
+                "startLine": 72,
+                "endLine": 76,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 16,
+        "numMethods": 6,
+        "complexityPerMethod": 2.6666666666666665
+    },
+    {
+        "file": " ./src/controllers/search/devices.coffee",
+        "sections": [
+            {
+                "startLine": 29,
+                "endLine": 127,
+                "complexity": 4
+            },
+            {
+                "startLine": 44,
+                "endLine": 44,
+                "complexity": 1
+            },
+            {
+                "startLine": 48,
+                "endLine": 55,
+                "complexity": 2
+            },
+            {
+                "startLine": 50,
+                "endLine": 55,
+                "complexity": 2
+            },
+            {
+                "startLine": 55,
+                "endLine": 59,
+                "complexity": 1
+            },
+            {
+                "startLine": 59,
+                "endLine": 67,
+                "complexity": 1
+            },
+            {
+                "startLine": 67,
+                "endLine": 108,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 14,
+        "numMethods": 7,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/controllers/search/index.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 13,
+                "complexity": 1
+            },
+            {
+                "startLine": 9,
+                "endLine": 13,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/controllers/search/manifest.coffee",
+        "sections": [
+            {
+                "startLine": 27,
+                "endLine": 129,
+                "complexity": 6
+            },
+            {
+                "startLine": 42,
+                "endLine": 42,
+                "complexity": 1
+            },
+            {
+                "startLine": 44,
+                "endLine": 55,
+                "complexity": 1
+            },
+            {
+                "startLine": 55,
+                "endLine": 60,
+                "complexity": 2
+            },
+            {
+                "startLine": 60,
+                "endLine": 109,
+                "complexity": 5
+            },
+            {
+                "startLine": 77,
+                "endLine": 81,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 18,
+        "numMethods": 6,
+        "complexityPerMethod": 3
+    },
+    {
+        "file": " ./src/index.coffee",
+        "sections": [
+            {
+                "startLine": 40,
+                "endLine": 47,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/libs.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 16,
+                "complexity": 1
+            },
+            {
+                "startLine": 12,
+                "endLine": 12,
+                "complexity": 1
+            },
+            {
+                "startLine": 13,
+                "endLine": 13,
+                "complexity": 1
+            },
+            {
+                "startLine": 14,
+                "endLine": 14,
+                "complexity": 1
+            },
+            {
+                "startLine": 15,
+                "endLine": 15,
+                "complexity": 1
+            },
+            {
+                "startLine": 16,
+                "endLine": 16,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 6,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/main.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 14,
+                "complexity": 1
+            },
+            {
+                "startLine": 8,
+                "endLine": 8,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/app-filter-selection.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 120,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/app-result.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 23,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/app-scope.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 77,
+                "complexity": 7
+            },
+            {
+                "startLine": 17,
+                "endLine": 22,
+                "complexity": 2
+            },
+            {
+                "startLine": 24,
+                "endLine": 29,
+                "complexity": 3
+            },
+            {
+                "startLine": 29,
+                "endLine": 34,
+                "complexity": 2
+            },
+            {
+                "startLine": 34,
+                "endLine": 77,
+                "complexity": 1
+            },
+            {
+                "startLine": 50,
+                "endLine": 53,
+                "complexity": 1
+            },
+            {
+                "startLine": 53,
+                "endLine": 61,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 19,
+        "numMethods": 7,
+        "complexityPerMethod": 2.7142857142857144
+    },
+    {
+        "file": " ./src/meta/app-search-result-column.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 83,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/assessment.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 56,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/device-filter-selection.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 85,
+                "complexity": 1
+            },
+            {
+                "startLine": 43,
+                "endLine": 50,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/device-network-type.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 29,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/device-search-result-column.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 53,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/filter-selection.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 20,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/instance-section.coffee",
+        "sections": [
+            {
+                "startLine": 17,
+                "endLine": 117,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/locale-device-section.coffee",
+        "sections": [
+            {
+                "startLine": 7,
+                "endLine": 30,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/manifest-search-result-column.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 75,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/permission.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 453,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/search-context.coffee",
+        "sections": [
+            {
+                "startLine": 15,
+                "endLine": 69,
+                "complexity": 1
+            },
+            {
+                "startLine": 26,
+                "endLine": 29,
+                "complexity": 1
+            },
+            {
+                "startLine": 29,
+                "endLine": 33,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/sensitive-data.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 54,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/severity.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 36,
+                "complexity": 1
+            },
+            {
+                "startLine": 9,
+                "endLine": 14,
+                "complexity": 1
+            },
+            {
+                "startLine": 22,
+                "endLine": 27,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/meta/source.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 285,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/mixins/debounced.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 20,
+                "complexity": 1
+            },
+            {
+                "startLine": 14,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 17,
+                "endLine": 20,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/mixins/inject-callbacks.coffee",
+        "sections": [
+            {
+                "startLine": 3,
+                "endLine": 53,
+                "complexity": 6
+            },
+            {
+                "startLine": 21,
+                "endLine": 53,
+                "complexity": 6
+            },
+            {
+                "startLine": 22,
+                "endLine": 53,
+                "complexity": 6
+            },
+            {
+                "startLine": 35,
+                "endLine": 46,
+                "complexity": 4
+            },
+            {
+                "startLine": 40,
+                "endLine": 46,
+                "complexity": 2
+            },
+            {
+                "startLine": 46,
+                "endLine": 52,
+                "complexity": 1
+            },
+            {
+                "startLine": 52,
+                "endLine": 53,
+                "complexity": 1
+            },
+            {
+                "startLine": 52,
+                "endLine": 53,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 27,
+        "numMethods": 8,
+        "complexityPerMethod": 3.375
+    },
+    {
+        "file": " ./src/mixins/layout-class.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 69,
+                "complexity": 4
+            },
+            {
+                "startLine": 16,
+                "endLine": 69,
+                "complexity": 1
+            },
+            {
+                "startLine": 17,
+                "endLine": 20,
+                "complexity": 1
+            },
+            {
+                "startLine": 30,
+                "endLine": 69,
+                "complexity": 3
+            },
+            {
+                "startLine": 33,
+                "endLine": 48,
+                "complexity": 3
+            },
+            {
+                "startLine": 55,
+                "endLine": 61,
+                "complexity": 1
+            },
+            {
+                "startLine": 61,
+                "endLine": 61,
+                "complexity": 2
+            },
+            {
+                "startLine": 63,
+                "endLine": 63,
+                "complexity": 1
+            },
+            {
+                "startLine": 64,
+                "endLine": 64,
+                "complexity": 1
+            },
+            {
+                "startLine": 65,
+                "endLine": 65,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 18,
+        "numMethods": 10,
+        "complexityPerMethod": 1.8
+    },
+    {
+        "file": " ./src/models/application/index.coffee",
+        "sections": [
+            {
+                "startLine": 16,
+                "endLine": 87,
+                "complexity": 4
+            },
+            {
+                "startLine": 24,
+                "endLine": 28,
+                "complexity": 1
+            },
+            {
+                "startLine": 35,
+                "endLine": 40,
+                "complexity": 3
+            },
+            {
+                "startLine": 40,
+                "endLine": 50,
+                "complexity": 2
+            },
+            {
+                "startLine": 44,
+                "endLine": 44,
+                "complexity": 1
+            },
+            {
+                "startLine": 73,
+                "endLine": 73,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 12,
+        "numMethods": 6,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/models/application/instance.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 57,
+                "complexity": 2
+            },
+            {
+                "startLine": 18,
+                "endLine": 24,
+                "complexity": 1
+            },
+            {
+                "startLine": 24,
+                "endLine": 35,
+                "complexity": 2
+            },
+            {
+                "startLine": 48,
+                "endLine": 48,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 4,
+        "complexityPerMethod": 1.5
+    },
+    {
+        "file": " ./src/models/background-job.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 42,
+                "complexity": 1
+            },
+            {
+                "startLine": 26,
+                "endLine": 26,
+                "complexity": 1
+            },
+            {
+                "startLine": 27,
+                "endLine": 27,
+                "complexity": 1
+            },
+            {
+                "startLine": 28,
+                "endLine": 28,
+                "complexity": 1
+            },
+            {
+                "startLine": 29,
+                "endLine": 29,
+                "complexity": 1
+            },
+            {
+                "startLine": 30,
+                "endLine": 30,
+                "complexity": 1
+            },
+            {
+                "startLine": 31,
+                "endLine": 31,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 36,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 8,
+        "numMethods": 8,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/country.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 20,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/device/firmware-version.coffee",
+        "sections": [
+            {
+                "startLine": 7,
+                "endLine": 24,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/device/index.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 63,
+                "complexity": 1
+            },
+            {
+                "startLine": 45,
+                "endLine": 45,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/filter.coffee",
+        "sections": [
+            {
+                "startLine": 15,
+                "endLine": 64,
+                "complexity": 7
+            },
+            {
+                "startLine": 21,
+                "endLine": 21,
+                "complexity": 1
+            },
+            {
+                "startLine": 23,
+                "endLine": 27,
+                "complexity": 1
+            },
+            {
+                "startLine": 24,
+                "endLine": 27,
+                "complexity": 1
+            },
+            {
+                "startLine": 27,
+                "endLine": 30,
+                "complexity": 1
+            },
+            {
+                "startLine": 30,
+                "endLine": 34,
+                "complexity": 5
+            },
+            {
+                "startLine": 44,
+                "endLine": 44,
+                "complexity": 1
+            },
+            {
+                "startLine": 50,
+                "endLine": 55,
+                "complexity": 3
+            },
+            {
+                "startLine": 52,
+                "endLine": 52,
+                "complexity": 2
+            },
+            {
+                "startLine": 53,
+                "endLine": 53,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 24,
+        "numMethods": 10,
+        "complexityPerMethod": 2.4
+    },
+    {
+        "file": " ./src/models/firmware/version.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 20,
+                "complexity": 1
+            },
+            {
+                "startLine": 8,
+                "endLine": 8,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/ad-network.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 15,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/certificate.coffee",
+        "sections": [
+            {
+                "startLine": 7,
+                "endLine": 16,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/communication.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 38,
+                "complexity": 3
+            },
+            {
+                "startLine": 17,
+                "endLine": 38,
+                "complexity": 3
+            },
+            {
+                "startLine": 17,
+                "endLine": 38,
+                "complexity": 3
+            },
+            {
+                "startLine": 18,
+                "endLine": 18,
+                "complexity": 1
+            },
+            {
+                "startLine": 28,
+                "endLine": 28,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 12,
+        "numMethods": 5,
+        "complexityPerMethod": 2.4
+    },
+    {
+        "file": " ./src/models/instance/discovery-event.coffee",
+        "sections": [
+            {
+                "startLine": 7,
+                "endLine": 18,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/filesystem-activity.coffee",
+        "sections": [
+            {
+                "startLine": 7,
+                "endLine": 19,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/index.coffee",
+        "sections": [
+            {
+                "startLine": 23,
+                "endLine": 93,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/malware-family.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 12,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/manual-research.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 51,
+                "complexity": 1
+            },
+            {
+                "startLine": 16,
+                "endLine": 20,
+                "complexity": 1
+            },
+            {
+                "startLine": 16,
+                "endLine": 20,
+                "complexity": 1
+            },
+            {
+                "startLine": 29,
+                "endLine": 32,
+                "complexity": 1
+            },
+            {
+                "startLine": 29,
+                "endLine": 32,
+                "complexity": 1
+            },
+            {
+                "startLine": 42,
+                "endLine": 45,
+                "complexity": 1
+            },
+            {
+                "startLine": 42,
+                "endLine": 45,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 7,
+        "numMethods": 7,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/nearest-discovery-event.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 16,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/permission.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 31,
+                "complexity": 1
+            },
+            {
+                "startLine": 16,
+                "endLine": 20,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/prevalence.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 38,
+                "complexity": 2
+            },
+            {
+                "startLine": 18,
+                "endLine": 26,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 2,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/models/instance/signature.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 30,
+                "complexity": 1
+            },
+            {
+                "startLine": 14,
+                "endLine": 18,
+                "complexity": 1
+            },
+            {
+                "startLine": 25,
+                "endLine": 28,
+                "complexity": 1
+            },
+            {
+                "startLine": 26,
+                "endLine": 26,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 4,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/sms-activity.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 40,
+                "complexity": 1
+            },
+            {
+                "startLine": 21,
+                "endLine": 24,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/strings.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 18,
+                "complexity": 1
+            },
+            {
+                "startLine": 12,
+                "endLine": 12,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/instance/version.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 15,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/locale.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 48,
+                "complexity": 3
+            },
+            {
+                "startLine": 26,
+                "endLine": 37,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 2,
+        "complexityPerMethod": 3
+    },
+    {
+        "file": " ./src/models/manifest/index.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 62,
+                "complexity": 5
+            },
+            {
+                "startLine": 24,
+                "endLine": 28,
+                "complexity": 3
+            },
+            {
+                "startLine": 28,
+                "endLine": 31,
+                "complexity": 2
+            },
+            {
+                "startLine": 31,
+                "endLine": 37,
+                "complexity": 2
+            },
+            {
+                "startLine": 37,
+                "endLine": 43,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 13,
+        "numMethods": 5,
+        "complexityPerMethod": 2.6
+    },
+    {
+        "file": " ./src/models/manifest/instance.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 85,
+                "complexity": 1
+            },
+            {
+                "startLine": 18,
+                "endLine": 22,
+                "complexity": 1
+            },
+            {
+                "startLine": 21,
+                "endLine": 21,
+                "complexity": 1
+            },
+            {
+                "startLine": 35,
+                "endLine": 35,
+                "complexity": 1
+            },
+            {
+                "startLine": 75,
+                "endLine": 75,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 5,
+        "numMethods": 5,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/manifest/scope.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 41,
+                "complexity": 2
+            },
+            {
+                "startLine": 16,
+                "endLine": 41,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 2,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/models/mixins/cache-response-headers.coffee",
+        "sections": [
+            {
+                "startLine": 3,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 11,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 13,
+                "endLine": 13,
+                "complexity": 1
+            },
+            {
+                "startLine": 14,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 16,
+                "endLine": 16,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 5,
+        "numMethods": 5,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/mixins/downloadable.coffee",
+        "sections": [
+            {
+                "startLine": 3,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 11,
+                "endLine": 14,
+                "complexity": 1
+            },
+            {
+                "startLine": 14,
+                "endLine": 17,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/mixins/ensure-model.coffee",
+        "sections": [
+            {
+                "startLine": 3,
+                "endLine": 27,
+                "complexity": 3
+            },
+            {
+                "startLine": 13,
+                "endLine": 19,
+                "complexity": 2
+            },
+            {
+                "startLine": 19,
+                "endLine": 24,
+                "complexity": 1
+            },
+            {
+                "startLine": 21,
+                "endLine": 21,
+                "complexity": 1
+            },
+            {
+                "startLine": 24,
+                "endLine": 27,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 9,
+        "numMethods": 5,
+        "complexityPerMethod": 1.8
+    },
+    {
+        "file": " ./src/models/mixins/filter.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 30,
+                "complexity": 5
+            },
+            {
+                "startLine": 10,
+                "endLine": 10,
+                "complexity": 1
+            },
+            {
+                "startLine": 10,
+                "endLine": 10,
+                "complexity": 1
+            },
+            {
+                "startLine": 11,
+                "endLine": 11,
+                "complexity": 1
+            },
+            {
+                "startLine": 11,
+                "endLine": 11,
+                "complexity": 1
+            },
+            {
+                "startLine": 19,
+                "endLine": 22,
+                "complexity": 2
+            },
+            {
+                "startLine": 22,
+                "endLine": 26,
+                "complexity": 2
+            },
+            {
+                "startLine": 26,
+                "endLine": 30,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 16,
+        "numMethods": 8,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/models/mixins/pageable.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 91,
+                "complexity": 8
+            },
+            {
+                "startLine": 26,
+                "endLine": 30,
+                "complexity": 1
+            },
+            {
+                "startLine": 30,
+                "endLine": 41,
+                "complexity": 1
+            },
+            {
+                "startLine": 35,
+                "endLine": 35,
+                "complexity": 1
+            },
+            {
+                "startLine": 41,
+                "endLine": 47,
+                "complexity": 1
+            },
+            {
+                "startLine": 47,
+                "endLine": 74,
+                "complexity": 7
+            },
+            {
+                "startLine": 56,
+                "endLine": 56,
+                "complexity": 2
+            },
+            {
+                "startLine": 57,
+                "endLine": 64,
+                "complexity": 3
+            },
+            {
+                "startLine": 74,
+                "endLine": 87,
+                "complexity": 2
+            },
+            {
+                "startLine": 79,
+                "endLine": 79,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 27,
+        "numMethods": 10,
+        "complexityPerMethod": 2.7
+    },
+    {
+        "file": " ./src/models/mixins/polling.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 42,
+                "complexity": 6
+            },
+            {
+                "startLine": 12,
+                "endLine": 15,
+                "complexity": 2
+            },
+            {
+                "startLine": 15,
+                "endLine": 24,
+                "complexity": 2
+            },
+            {
+                "startLine": 17,
+                "endLine": 20,
+                "complexity": 1
+            },
+            {
+                "startLine": 20,
+                "endLine": 22,
+                "complexity": 2
+            },
+            {
+                "startLine": 24,
+                "endLine": 36,
+                "complexity": 3
+            },
+            {
+                "startLine": 27,
+                "endLine": 31,
+                "complexity": 2
+            },
+            {
+                "startLine": 36,
+                "endLine": 42,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 20,
+        "numMethods": 8,
+        "complexityPerMethod": 2.5
+    },
+    {
+        "file": " ./src/models/mixins/searchable.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 77,
+                "complexity": 10
+            },
+            {
+                "startLine": 21,
+                "endLine": 28,
+                "complexity": 3
+            },
+            {
+                "startLine": 28,
+                "endLine": 32,
+                "complexity": 1
+            },
+            {
+                "startLine": 32,
+                "endLine": 36,
+                "complexity": 1
+            },
+            {
+                "startLine": 36,
+                "endLine": 41,
+                "complexity": 2
+            },
+            {
+                "startLine": 41,
+                "endLine": 48,
+                "complexity": 3
+            },
+            {
+                "startLine": 48,
+                "endLine": 77,
+                "complexity": 5
+            },
+            {
+                "startLine": 61,
+                "endLine": 61,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 26,
+        "numMethods": 8,
+        "complexityPerMethod": 3.25
+    },
+    {
+        "file": " ./src/models/mixins/serialize-fragment.coffee",
+        "sections": [
+            {
+                "startLine": 3,
+                "endLine": 33,
+                "complexity": 5
+            },
+            {
+                "startLine": 12,
+                "endLine": 15,
+                "complexity": 2
+            },
+            {
+                "startLine": 15,
+                "endLine": 23,
+                "complexity": 1
+            },
+            {
+                "startLine": 17,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 18,
+                "endLine": 18,
+                "complexity": 1
+            },
+            {
+                "startLine": 23,
+                "endLine": 33,
+                "complexity": 4
+            },
+            {
+                "startLine": 30,
+                "endLine": 33,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 15,
+        "numMethods": 7,
+        "complexityPerMethod": 2.142857142857143
+    },
+    {
+        "file": " ./src/models/mixins/sub-model.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 124,
+                "complexity": 24
+            },
+            {
+                "startLine": 11,
+                "endLine": 18,
+                "complexity": 2
+            },
+            {
+                "startLine": 13,
+                "endLine": 18,
+                "complexity": 2
+            },
+            {
+                "startLine": 38,
+                "endLine": 41,
+                "complexity": 1
+            },
+            {
+                "startLine": 41,
+                "endLine": 72,
+                "complexity": 11
+            },
+            {
+                "startLine": 44,
+                "endLine": 49,
+                "complexity": 3
+            },
+            {
+                "startLine": 49,
+                "endLine": 54,
+                "complexity": 2
+            },
+            {
+                "startLine": 55,
+                "endLine": 63,
+                "complexity": 5
+            },
+            {
+                "startLine": 63,
+                "endLine": 70,
+                "complexity": 4
+            },
+            {
+                "startLine": 65,
+                "endLine": 70,
+                "complexity": 3
+            },
+            {
+                "startLine": 72,
+                "endLine": 79,
+                "complexity": 2
+            },
+            {
+                "startLine": 79,
+                "endLine": 100,
+                "complexity": 6
+            },
+            {
+                "startLine": 84,
+                "endLine": 88,
+                "complexity": 1
+            },
+            {
+                "startLine": 88,
+                "endLine": 92,
+                "complexity": 2
+            },
+            {
+                "startLine": 92,
+                "endLine": 98,
+                "complexity": 5
+            },
+            {
+                "startLine": 100,
+                "endLine": 122,
+                "complexity": 7
+            },
+            {
+                "startLine": 102,
+                "endLine": 120,
+                "complexity": 7
+            }
+        ],
+        "totalComplexity": 87,
+        "numMethods": 17,
+        "complexityPerMethod": 5.117647058823529
+    },
+    {
+        "file": " ./src/models/mixins/taggregator.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 46,
+                "complexity": 8
+            },
+            {
+                "startLine": 22,
+                "endLine": 30,
+                "complexity": 4
+            },
+            {
+                "startLine": 30,
+                "endLine": 39,
+                "complexity": 2
+            },
+            {
+                "startLine": 32,
+                "endLine": 32,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 39,
+                "complexity": 2
+            },
+            {
+                "startLine": 35,
+                "endLine": 39,
+                "complexity": 2
+            },
+            {
+                "startLine": 39,
+                "endLine": 46,
+                "complexity": 4
+            }
+        ],
+        "totalComplexity": 23,
+        "numMethods": 7,
+        "complexityPerMethod": 3.2857142857142856
+    },
+    {
+        "file": " ./src/models/region.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 24,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/report.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 42,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 36,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/models/settings.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 22,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": "  ✓ ./src/nls/app_filter_selections.coffee"
+    },
+    {
+        "file": "  ✓ ./src/nls/application.coffee"
+    },
+    {
+        "file": "  ✓ ./src/nls/assessments.coffee"
+    },
+    {
+        "file": "  ✓ ./src/nls/common.coffee"
+    },
+    {
+        "file": "  ✓ ./src/nls/countries.coffee"
+    },
+    {
+        "file": "  ✓ ./src/nls/date.coffee"
+    },
+    {
+        "file": " ./src/nls/locales.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 12,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": "  ✓ ./src/nls/permissions.coffee"
+    },
+    {
+        "file": "  ✓ ./src/nls/regions.coffee"
+    },
+    {
+        "file": "  ✓ ./src/nls/sensitive_data.coffee"
+    },
+    {
+        "file": "  ✓ ./src/nls/sources.coffee"
+    },
+    {
+        "file": " ./src/overrides/model.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 16,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/audio-player.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 68,
+                "complexity": 1
+            },
+            {
+                "startLine": 19,
+                "endLine": 25,
+                "complexity": 1
+            },
+            {
+                "startLine": 25,
+                "endLine": 25,
+                "complexity": 1
+            },
+            {
+                "startLine": 45,
+                "endLine": 49,
+                "complexity": 1
+            },
+            {
+                "startLine": 49,
+                "endLine": 56,
+                "complexity": 1
+            },
+            {
+                "startLine": 56,
+                "endLine": 59,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 6,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/banner.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 30,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/cells/boolean-icon.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 36,
+                "complexity": 1
+            },
+            {
+                "startLine": 14,
+                "endLine": 14,
+                "complexity": 1
+            },
+            {
+                "startLine": 20,
+                "endLine": 22,
+                "complexity": 1
+            },
+            {
+                "startLine": 24,
+                "endLine": 29,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 4,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/cells/date-time.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 40,
+                "complexity": 1
+            },
+            {
+                "startLine": 18,
+                "endLine": 21,
+                "complexity": 1
+            },
+            {
+                "startLine": 29,
+                "endLine": 33,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/cells/popularity-bar.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 59,
+                "complexity": 3
+            },
+            {
+                "startLine": 29,
+                "endLine": 39,
+                "complexity": 2
+            },
+            {
+                "startLine": 39,
+                "endLine": 44,
+                "complexity": 1
+            },
+            {
+                "startLine": 44,
+                "endLine": 51,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 8,
+        "numMethods": 4,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/views/cells/popularity.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 49,
+                "complexity": 4
+            },
+            {
+                "startLine": 28,
+                "endLine": 42,
+                "complexity": 4
+            }
+        ],
+        "totalComplexity": 8,
+        "numMethods": 2,
+        "complexityPerMethod": 4
+    },
+    {
+        "file": " ./src/views/cells/threats.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 47,
+                "complexity": 2
+            },
+            {
+                "startLine": 14,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 35,
+                "endLine": 40,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 5,
+        "numMethods": 3,
+        "complexityPerMethod": 1.6666666666666667
+    },
+    {
+        "file": " ./src/views/cells/version.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 47,
+                "complexity": 2
+            },
+            {
+                "startLine": 32,
+                "endLine": 39,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 2,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/views/grid.coffee",
+        "sections": [
+            {
+                "startLine": 22,
+                "endLine": 110,
+                "complexity": 3
+            },
+            {
+                "startLine": 43,
+                "endLine": 47,
+                "complexity": 1
+            },
+            {
+                "startLine": 73,
+                "endLine": 81,
+                "complexity": 3
+            },
+            {
+                "startLine": 75,
+                "endLine": 77,
+                "complexity": 1
+            },
+            {
+                "startLine": 85,
+                "endLine": 93,
+                "complexity": 1
+            },
+            {
+                "startLine": 96,
+                "endLine": 110,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 10,
+        "numMethods": 6,
+        "complexityPerMethod": 1.6666666666666667
+    },
+    {
+        "file": " ./src/views/instance/cells/attribute-query.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 35,
+                "complexity": 1
+            },
+            {
+                "startLine": 16,
+                "endLine": 16,
+                "complexity": 1
+            },
+            {
+                "startLine": 21,
+                "endLine": 29,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/cells/malware-detection-type.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 33,
+                "complexity": 1
+            },
+            {
+                "startLine": 13,
+                "endLine": 19,
+                "complexity": 1
+            },
+            {
+                "startLine": 22,
+                "endLine": 25,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/cells/malware-family-name.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 45,
+                "complexity": 1
+            },
+            {
+                "startLine": 29,
+                "endLine": 45,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/cells/malware-severity-label.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 47,
+                "complexity": 1
+            },
+            {
+                "startLine": 29,
+                "endLine": 34,
+                "complexity": 1
+            },
+            {
+                "startLine": 34,
+                "endLine": 38,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/header.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 65,
+                "complexity": 1
+            },
+            {
+                "startLine": 40,
+                "endLine": 47,
+                "complexity": 1
+            },
+            {
+                "startLine": 47,
+                "endLine": 65,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/partials/attribute-query.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 84,
+                "complexity": 2
+            },
+            {
+                "startLine": 23,
+                "endLine": 23,
+                "complexity": 1
+            },
+            {
+                "startLine": 34,
+                "endLine": 39,
+                "complexity": 2
+            },
+            {
+                "startLine": 55,
+                "endLine": 55,
+                "complexity": 1
+            },
+            {
+                "startLine": 61,
+                "endLine": 84,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 7,
+        "numMethods": 5,
+        "complexityPerMethod": 1.4
+    },
+    {
+        "file": " ./src/views/instance/partials/nearest-discovery-event.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 80,
+                "complexity": 4
+            },
+            {
+                "startLine": 22,
+                "endLine": 25,
+                "complexity": 1
+            },
+            {
+                "startLine": 51,
+                "endLine": 58,
+                "complexity": 3
+            },
+            {
+                "startLine": 58,
+                "endLine": 62,
+                "complexity": 1
+            },
+            {
+                "startLine": 62,
+                "endLine": 80,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 11,
+        "numMethods": 5,
+        "complexityPerMethod": 2.2
+    },
+    {
+        "file": " ./src/views/instance/section/ad-networks.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 50,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/section/communications.coffee",
+        "sections": [
+            {
+                "startLine": 16,
+                "endLine": 92,
+                "complexity": 1
+            },
+            {
+                "startLine": 25,
+                "endLine": 92,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/section/discovery-events.coffee",
+        "sections": [
+            {
+                "startLine": 15,
+                "endLine": 59,
+                "complexity": 1
+            },
+            {
+                "startLine": 24,
+                "endLine": 59,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/section/filesystem-activity.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 46,
+                "complexity": 1
+            },
+            {
+                "startLine": 20,
+                "endLine": 46,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/section/header.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 24,
+                "complexity": 1
+            },
+            {
+                "startLine": 12,
+                "endLine": 12,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/section/identification.coffee",
+        "sections": [
+            {
+                "startLine": 18,
+                "endLine": 122,
+                "complexity": 1
+            },
+            {
+                "startLine": 48,
+                "endLine": 60,
+                "complexity": 1
+            },
+            {
+                "startLine": 60,
+                "endLine": 72,
+                "complexity": 1
+            },
+            {
+                "startLine": 72,
+                "endLine": 89,
+                "complexity": 1
+            },
+            {
+                "startLine": 89,
+                "endLine": 106,
+                "complexity": 1
+            },
+            {
+                "startLine": 106,
+                "endLine": 122,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 6,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/section/malware.coffee",
+        "sections": [
+            {
+                "startLine": 16,
+                "endLine": 66,
+                "complexity": 1
+            },
+            {
+                "startLine": 24,
+                "endLine": 66,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/section/manual-research.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 128,
+                "complexity": 3
+            },
+            {
+                "startLine": 21,
+                "endLine": 21,
+                "complexity": 1
+            },
+            {
+                "startLine": 31,
+                "endLine": 42,
+                "complexity": 1
+            },
+            {
+                "startLine": 42,
+                "endLine": 49,
+                "complexity": 1
+            },
+            {
+                "startLine": 49,
+                "endLine": 67,
+                "complexity": 1
+            },
+            {
+                "startLine": 67,
+                "endLine": 85,
+                "complexity": 1
+            },
+            {
+                "startLine": 85,
+                "endLine": 104,
+                "complexity": 1
+            },
+            {
+                "startLine": 104,
+                "endLine": 120,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 12,
+        "numMethods": 8,
+        "complexityPerMethod": 1.5
+    },
+    {
+        "file": " ./src/views/instance/section/permissions.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 56,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/section/prevalence-map.coffee",
+        "sections": [
+            {
+                "startLine": 23,
+                "endLine": 154,
+                "complexity": 5
+            },
+            {
+                "startLine": 43,
+                "endLine": 54,
+                "complexity": 2
+            },
+            {
+                "startLine": 70,
+                "endLine": 73,
+                "complexity": 1
+            },
+            {
+                "startLine": 85,
+                "endLine": 91,
+                "complexity": 1
+            },
+            {
+                "startLine": 91,
+                "endLine": 97,
+                "complexity": 1
+            },
+            {
+                "startLine": 97,
+                "endLine": 102,
+                "complexity": 2
+            },
+            {
+                "startLine": 102,
+                "endLine": 106,
+                "complexity": 1
+            },
+            {
+                "startLine": 106,
+                "endLine": 120,
+                "complexity": 1
+            },
+            {
+                "startLine": 120,
+                "endLine": 125,
+                "complexity": 1
+            },
+            {
+                "startLine": 125,
+                "endLine": 130,
+                "complexity": 1
+            },
+            {
+                "startLine": 130,
+                "endLine": 137,
+                "complexity": 2
+            },
+            {
+                "startLine": 137,
+                "endLine": 142,
+                "complexity": 2
+            },
+            {
+                "startLine": 142,
+                "endLine": 146,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 21,
+        "numMethods": 13,
+        "complexityPerMethod": 1.6153846153846154
+    },
+    {
+        "file": " ./src/views/instance/section/prevalence.coffee",
+        "sections": [
+            {
+                "startLine": 17,
+                "endLine": 91,
+                "complexity": 2
+            },
+            {
+                "startLine": 30,
+                "endLine": 52,
+                "complexity": 1
+            },
+            {
+                "startLine": 52,
+                "endLine": 58,
+                "complexity": 1
+            },
+            {
+                "startLine": 58,
+                "endLine": 74,
+                "complexity": 1
+            },
+            {
+                "startLine": 74,
+                "endLine": 77,
+                "complexity": 1
+            },
+            {
+                "startLine": 77,
+                "endLine": 83,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 8,
+        "numMethods": 6,
+        "complexityPerMethod": 1.3333333333333333
+    },
+    {
+        "file": " ./src/views/instance/section/sms-activity.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 54,
+                "complexity": 1
+            },
+            {
+                "startLine": 21,
+                "endLine": 54,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/instance/section/strings.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 41,
+                "complexity": 2
+            },
+            {
+                "startLine": 28,
+                "endLine": 32,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 2,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/views/locale/device/header.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 32,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/locale/device/section/firmware-versions.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 57,
+                "complexity": 1
+            },
+            {
+                "startLine": 23,
+                "endLine": 57,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/mixins/affix.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 69,
+                "complexity": 11
+            },
+            {
+                "startLine": 24,
+                "endLine": 31,
+                "complexity": 5
+            },
+            {
+                "startLine": 31,
+                "endLine": 36,
+                "complexity": 1
+            },
+            {
+                "startLine": 36,
+                "endLine": 41,
+                "complexity": 1
+            },
+            {
+                "startLine": 41,
+                "endLine": 51,
+                "complexity": 3
+            },
+            {
+                "startLine": 47,
+                "endLine": 51,
+                "complexity": 2
+            },
+            {
+                "startLine": 51,
+                "endLine": 55,
+                "complexity": 2
+            },
+            {
+                "startLine": 55,
+                "endLine": 65,
+                "complexity": 4
+            }
+        ],
+        "totalComplexity": 29,
+        "numMethods": 8,
+        "complexityPerMethod": 3.625
+    },
+    {
+        "file": " ./src/views/mixins/collapsable.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 40,
+                "complexity": 3
+            },
+            {
+                "startLine": 19,
+                "endLine": 22,
+                "complexity": 2
+            },
+            {
+                "startLine": 22,
+                "endLine": 25,
+                "complexity": 1
+            },
+            {
+                "startLine": 23,
+                "endLine": 23,
+                "complexity": 1
+            },
+            {
+                "startLine": 25,
+                "endLine": 34,
+                "complexity": 2
+            },
+            {
+                "startLine": 29,
+                "endLine": 29,
+                "complexity": 1
+            },
+            {
+                "startLine": 30,
+                "endLine": 30,
+                "complexity": 1
+            },
+            {
+                "startLine": 31,
+                "endLine": 31,
+                "complexity": 1
+            },
+            {
+                "startLine": 32,
+                "endLine": 32,
+                "complexity": 1
+            },
+            {
+                "startLine": 34,
+                "endLine": 34,
+                "complexity": 1
+            },
+            {
+                "startLine": 35,
+                "endLine": 35,
+                "complexity": 1
+            },
+            {
+                "startLine": 36,
+                "endLine": 36,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 16,
+        "numMethods": 12,
+        "complexityPerMethod": 1.3333333333333333
+    },
+    {
+        "file": " ./src/views/mixins/collection-results-class.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 35,
+                "complexity": 5
+            },
+            {
+                "startLine": 9,
+                "endLine": 14,
+                "complexity": 2
+            },
+            {
+                "startLine": 21,
+                "endLine": 26,
+                "complexity": 3
+            },
+            {
+                "startLine": 26,
+                "endLine": 32,
+                "complexity": 1
+            },
+            {
+                "startLine": 32,
+                "endLine": 35,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 13,
+        "numMethods": 5,
+        "complexityPerMethod": 2.6
+    },
+    {
+        "file": " ./src/views/mixins/combo-box.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 178,
+                "complexity": 20
+            },
+            {
+                "startLine": 11,
+                "endLine": 19,
+                "complexity": 3
+            },
+            {
+                "startLine": 19,
+                "endLine": 24,
+                "complexity": 2
+            },
+            {
+                "startLine": 30,
+                "endLine": 33,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 36,
+                "complexity": 1
+            },
+            {
+                "startLine": 51,
+                "endLine": 57,
+                "complexity": 1
+            },
+            {
+                "startLine": 57,
+                "endLine": 60,
+                "complexity": 1
+            },
+            {
+                "startLine": 71,
+                "endLine": 78,
+                "complexity": 1
+            },
+            {
+                "startLine": 81,
+                "endLine": 88,
+                "complexity": 1
+            },
+            {
+                "startLine": 88,
+                "endLine": 92,
+                "complexity": 1
+            },
+            {
+                "startLine": 109,
+                "endLine": 112,
+                "complexity": 1
+            },
+            {
+                "startLine": 116,
+                "endLine": 128,
+                "complexity": 6
+            },
+            {
+                "startLine": 128,
+                "endLine": 143,
+                "complexity": 4
+            },
+            {
+                "startLine": 139,
+                "endLine": 139,
+                "complexity": 1
+            },
+            {
+                "startLine": 143,
+                "endLine": 150,
+                "complexity": 3
+            },
+            {
+                "startLine": 150,
+                "endLine": 158,
+                "complexity": 3
+            },
+            {
+                "startLine": 158,
+                "endLine": 164,
+                "complexity": 4
+            },
+            {
+                "startLine": 164,
+                "endLine": 168,
+                "complexity": 1
+            },
+            {
+                "startLine": 168,
+                "endLine": 174,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 57,
+        "numMethods": 19,
+        "complexityPerMethod": 3
+    },
+    {
+        "file": " ./src/views/mixins/custom-templating.coffee",
+        "sections": [
+            {
+                "startLine": 4,
+                "endLine": 24,
+                "complexity": 3
+            },
+            {
+                "startLine": 9,
+                "endLine": 24,
+                "complexity": 3
+            },
+            {
+                "startLine": 17,
+                "endLine": 22,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 8,
+        "numMethods": 3,
+        "complexityPerMethod": 2.6666666666666665
+    },
+    {
+        "file": " ./src/views/mixins/markdown-templating.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 19,
+                "complexity": 1
+            },
+            {
+                "startLine": 12,
+                "endLine": 17,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/mixins/refresh-offsets.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 42,
+                "complexity": 1
+            },
+            {
+                "startLine": 20,
+                "endLine": 34,
+                "complexity": 1
+            },
+            {
+                "startLine": 34,
+                "endLine": 36,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/mixins/satellite.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 54,
+                "complexity": 4
+            },
+            {
+                "startLine": 24,
+                "endLine": 28,
+                "complexity": 2
+            },
+            {
+                "startLine": 28,
+                "endLine": 52,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 9,
+        "numMethods": 3,
+        "complexityPerMethod": 3
+    },
+    {
+        "file": " ./src/views/mixins/scroll-spy.coffee",
+        "sections": [
+            {
+                "startLine": 8,
+                "endLine": 63,
+                "complexity": 4
+            },
+            {
+                "startLine": 21,
+                "endLine": 25,
+                "complexity": 1
+            },
+            {
+                "startLine": 25,
+                "endLine": 30,
+                "complexity": 2
+            },
+            {
+                "startLine": 30,
+                "endLine": 36,
+                "complexity": 3
+            },
+            {
+                "startLine": 34,
+                "endLine": 34,
+                "complexity": 1
+            },
+            {
+                "startLine": 53,
+                "endLine": 56,
+                "complexity": 1
+            },
+            {
+                "startLine": 54,
+                "endLine": 54,
+                "complexity": 1
+            },
+            {
+                "startLine": 56,
+                "endLine": 59,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 14,
+        "numMethods": 8,
+        "complexityPerMethod": 1.75
+    },
+    {
+        "file": " ./src/views/mixins/sync-class.coffee",
+        "sections": [
+            {
+                "startLine": 6,
+                "endLine": 52,
+                "complexity": 8
+            },
+            {
+                "startLine": 11,
+                "endLine": 16,
+                "complexity": 2
+            },
+            {
+                "startLine": 25,
+                "endLine": 29,
+                "complexity": 3
+            },
+            {
+                "startLine": 29,
+                "endLine": 33,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 41,
+                "complexity": 3
+            },
+            {
+                "startLine": 41,
+                "endLine": 49,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 20,
+        "numMethods": 6,
+        "complexityPerMethod": 3.3333333333333335
+    },
+    {
+        "file": " ./src/views/modal.coffee",
+        "sections": [
+            {
+                "startLine": 17,
+                "endLine": 127,
+                "complexity": 6
+            },
+            {
+                "startLine": 26,
+                "endLine": 26,
+                "complexity": 1
+            },
+            {
+                "startLine": 27,
+                "endLine": 27,
+                "complexity": 1
+            },
+            {
+                "startLine": 28,
+                "endLine": 28,
+                "complexity": 1
+            },
+            {
+                "startLine": 29,
+                "endLine": 29,
+                "complexity": 1
+            },
+            {
+                "startLine": 52,
+                "endLine": 52,
+                "complexity": 1
+            },
+            {
+                "startLine": 53,
+                "endLine": 53,
+                "complexity": 1
+            },
+            {
+                "startLine": 54,
+                "endLine": 54,
+                "complexity": 1
+            },
+            {
+                "startLine": 57,
+                "endLine": 67,
+                "complexity": 1
+            },
+            {
+                "startLine": 67,
+                "endLine": 78,
+                "complexity": 1
+            },
+            {
+                "startLine": 78,
+                "endLine": 88,
+                "complexity": 1
+            },
+            {
+                "startLine": 88,
+                "endLine": 115,
+                "complexity": 6
+            }
+        ],
+        "totalComplexity": 22,
+        "numMethods": 12,
+        "complexityPerMethod": 1.8333333333333333
+    },
+    {
+        "file": " ./src/views/modals/alert.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 62,
+                "complexity": 1
+            },
+            {
+                "startLine": 26,
+                "endLine": 29,
+                "complexity": 1
+            },
+            {
+                "startLine": 32,
+                "endLine": 40,
+                "complexity": 1
+            },
+            {
+                "startLine": 49,
+                "endLine": 53,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 4,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/modals/confirm.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 63,
+                "complexity": 1
+            },
+            {
+                "startLine": 21,
+                "endLine": 21,
+                "complexity": 1
+            },
+            {
+                "startLine": 26,
+                "endLine": 34,
+                "complexity": 1
+            },
+            {
+                "startLine": 46,
+                "endLine": 50,
+                "complexity": 1
+            },
+            {
+                "startLine": 50,
+                "endLine": 54,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 5,
+        "numMethods": 5,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/modals/create-manifest.coffee",
+        "sections": [
+            {
+                "startLine": 20,
+                "endLine": 98,
+                "complexity": 2
+            },
+            {
+                "startLine": 49,
+                "endLine": 55,
+                "complexity": 1
+            },
+            {
+                "startLine": 55,
+                "endLine": 61,
+                "complexity": 1
+            },
+            {
+                "startLine": 61,
+                "endLine": 67,
+                "complexity": 1
+            },
+            {
+                "startLine": 67,
+                "endLine": 76,
+                "complexity": 1
+            },
+            {
+                "startLine": 72,
+                "endLine": 72,
+                "complexity": 1
+            },
+            {
+                "startLine": 73,
+                "endLine": 73,
+                "complexity": 1
+            },
+            {
+                "startLine": 76,
+                "endLine": 82,
+                "complexity": 2
+            },
+            {
+                "startLine": 82,
+                "endLine": 86,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 11,
+        "numMethods": 9,
+        "complexityPerMethod": 1.2222222222222223
+    },
+    {
+        "file": " ./src/views/modals/feedback.coffee",
+        "sections": [
+            {
+                "startLine": 16,
+                "endLine": 62,
+                "complexity": 1
+            },
+            {
+                "startLine": 32,
+                "endLine": 45,
+                "complexity": 1
+            },
+            {
+                "startLine": 37,
+                "endLine": 37,
+                "complexity": 1
+            },
+            {
+                "startLine": 38,
+                "endLine": 38,
+                "complexity": 1
+            },
+            {
+                "startLine": 45,
+                "endLine": 51,
+                "complexity": 1
+            },
+            {
+                "startLine": 51,
+                "endLine": 54,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 6,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/modals/instance-malware-description.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 34,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/navbar.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 54,
+                "complexity": 1
+            },
+            {
+                "startLine": 39,
+                "endLine": 54,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/partials/back-to-search.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 43,
+                "complexity": 1
+            },
+            {
+                "startLine": 24,
+                "endLine": 24,
+                "complexity": 1
+            },
+            {
+                "startLine": 32,
+                "endLine": 35,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/partials/combo-box.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 37,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/partials/dom-property-binding.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 28,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/partials/html.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 26,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/partials/last-export-date.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 49,
+                "complexity": 2
+            },
+            {
+                "startLine": 20,
+                "endLine": 23,
+                "complexity": 1
+            },
+            {
+                "startLine": 34,
+                "endLine": 40,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 5,
+        "numMethods": 3,
+        "complexityPerMethod": 1.6666666666666667
+    },
+    {
+        "file": " ./src/views/partials/list.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 33,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/partials/markdown.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 26,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/partials/message.coffee",
+        "sections": [
+            {
+                "startLine": 9,
+                "endLine": 31,
+                "complexity": 1
+            },
+            {
+                "startLine": 14,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 20,
+                "endLine": 24,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/partials/progress.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 43,
+                "complexity": 3
+            },
+            {
+                "startLine": 20,
+                "endLine": 31,
+                "complexity": 3
+            },
+            {
+                "startLine": 27,
+                "endLine": 27,
+                "complexity": 1
+            },
+            {
+                "startLine": 31,
+                "endLine": 35,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 8,
+        "numMethods": 4,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/views/report/header.coffee",
+        "sections": [
+            {
+                "startLine": 20,
+                "endLine": 98,
+                "complexity": 4
+            },
+            {
+                "startLine": 40,
+                "endLine": 47,
+                "complexity": 1
+            },
+            {
+                "startLine": 47,
+                "endLine": 54,
+                "complexity": 1
+            },
+            {
+                "startLine": 54,
+                "endLine": 61,
+                "complexity": 1
+            },
+            {
+                "startLine": 61,
+                "endLine": 68,
+                "complexity": 1
+            },
+            {
+                "startLine": 68,
+                "endLine": 75,
+                "complexity": 1
+            },
+            {
+                "startLine": 75,
+                "endLine": 88,
+                "complexity": 4
+            }
+        ],
+        "totalComplexity": 13,
+        "numMethods": 7,
+        "complexityPerMethod": 1.8571428571428572
+    },
+    {
+        "file": " ./src/views/report/index.coffee",
+        "sections": [
+            {
+                "startLine": 17,
+                "endLine": 75,
+                "complexity": 1
+            },
+            {
+                "startLine": 28,
+                "endLine": 33,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 43,
+                "complexity": 1
+            },
+            {
+                "startLine": 43,
+                "endLine": 48,
+                "complexity": 1
+            },
+            {
+                "startLine": 48,
+                "endLine": 53,
+                "complexity": 1
+            },
+            {
+                "startLine": 53,
+                "endLine": 58,
+                "complexity": 1
+            },
+            {
+                "startLine": 58,
+                "endLine": 64,
+                "complexity": 1
+            },
+            {
+                "startLine": 64,
+                "endLine": 67,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 8,
+        "numMethods": 8,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/report/partials/create-button.coffee",
+        "sections": [
+            {
+                "startLine": 18,
+                "endLine": 96,
+                "complexity": 5
+            },
+            {
+                "startLine": 30,
+                "endLine": 34,
+                "complexity": 1
+            },
+            {
+                "startLine": 32,
+                "endLine": 32,
+                "complexity": 1
+            },
+            {
+                "startLine": 52,
+                "endLine": 59,
+                "complexity": 2
+            },
+            {
+                "startLine": 59,
+                "endLine": 68,
+                "complexity": 2
+            },
+            {
+                "startLine": 65,
+                "endLine": 65,
+                "complexity": 1
+            },
+            {
+                "startLine": 66,
+                "endLine": 66,
+                "complexity": 1
+            },
+            {
+                "startLine": 68,
+                "endLine": 73,
+                "complexity": 1
+            },
+            {
+                "startLine": 73,
+                "endLine": 85,
+                "complexity": 3
+            }
+        ],
+        "totalComplexity": 17,
+        "numMethods": 9,
+        "complexityPerMethod": 1.8888888888888888
+    },
+    {
+        "file": " ./src/views/report/partials/download-button.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 55,
+                "complexity": 3
+            },
+            {
+                "startLine": 35,
+                "endLine": 39,
+                "complexity": 2
+            },
+            {
+                "startLine": 39,
+                "endLine": 46,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 7,
+        "numMethods": 3,
+        "complexityPerMethod": 2.3333333333333335
+    },
+    {
+        "file": " ./src/views/report/partials/file-info.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 60,
+                "complexity": 2
+            },
+            {
+                "startLine": 37,
+                "endLine": 41,
+                "complexity": 1
+            },
+            {
+                "startLine": 41,
+                "endLine": 45,
+                "complexity": 1
+            },
+            {
+                "startLine": 45,
+                "endLine": 50,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 4,
+        "complexityPerMethod": 1.5
+    },
+    {
+        "file": " ./src/views/report/partials/filters.coffee",
+        "sections": [
+            {
+                "startLine": 13,
+                "endLine": 67,
+                "complexity": 2
+            },
+            {
+                "startLine": 23,
+                "endLine": 26,
+                "complexity": 1
+            },
+            {
+                "startLine": 28,
+                "endLine": 32,
+                "complexity": 1
+            },
+            {
+                "startLine": 32,
+                "endLine": 40,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 4,
+        "complexityPerMethod": 1.5
+    },
+    {
+        "file": " ./src/views/report/partials/job-created-at.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 42,
+                "complexity": 1
+            },
+            {
+                "startLine": 30,
+                "endLine": 34,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/report/partials/job-eta.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 40,
+                "complexity": 1
+            },
+            {
+                "startLine": 28,
+                "endLine": 32,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/report/partials/job-status.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 48,
+                "complexity": 6
+            },
+            {
+                "startLine": 27,
+                "endLine": 40,
+                "complexity": 6
+            }
+        ],
+        "totalComplexity": 12,
+        "numMethods": 2,
+        "complexityPerMethod": 6
+    },
+    {
+        "file": " ./src/views/report/partials/notify.coffee",
+        "sections": [
+            {
+                "startLine": 16,
+                "endLine": 108,
+                "complexity": 6
+            },
+            {
+                "startLine": 54,
+                "endLine": 58,
+                "complexity": 1
+            },
+            {
+                "startLine": 58,
+                "endLine": 62,
+                "complexity": 2
+            },
+            {
+                "startLine": 62,
+                "endLine": 69,
+                "complexity": 3
+            },
+            {
+                "startLine": 69,
+                "endLine": 80,
+                "complexity": 3
+            },
+            {
+                "startLine": 76,
+                "endLine": 76,
+                "complexity": 1
+            },
+            {
+                "startLine": 77,
+                "endLine": 77,
+                "complexity": 1
+            },
+            {
+                "startLine": 80,
+                "endLine": 83,
+                "complexity": 1
+            },
+            {
+                "startLine": 83,
+                "endLine": 87,
+                "complexity": 1
+            },
+            {
+                "startLine": 87,
+                "endLine": 92,
+                "complexity": 1
+            },
+            {
+                "startLine": 92,
+                "endLine": 97,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 21,
+        "numMethods": 11,
+        "complexityPerMethod": 1.9090909090909092
+    },
+    {
+        "file": " ./src/views/report/partials/retry-button.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 52,
+                "complexity": 2
+            },
+            {
+                "startLine": 35,
+                "endLine": 38,
+                "complexity": 1
+            },
+            {
+                "startLine": 38,
+                "endLine": 43,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 5,
+        "numMethods": 3,
+        "complexityPerMethod": 1.6666666666666667
+    },
+    {
+        "file": " ./src/views/report/partials/row-count.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 39,
+                "complexity": 1
+            },
+            {
+                "startLine": 28,
+                "endLine": 31,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/context/app-scope.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 57,
+                "complexity": 4
+            },
+            {
+                "startLine": 20,
+                "endLine": 23,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 37,
+                "complexity": 1
+            },
+            {
+                "startLine": 37,
+                "endLine": 40,
+                "complexity": 2
+            },
+            {
+                "startLine": 40,
+                "endLine": 47,
+                "complexity": 3
+            },
+            {
+                "startLine": 47,
+                "endLine": 50,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 12,
+        "numMethods": 6,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/views/search/context/index.coffee",
+        "sections": [
+            {
+                "startLine": 18,
+                "endLine": 85,
+                "complexity": 1
+            },
+            {
+                "startLine": 27,
+                "endLine": 27,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 39,
+                "complexity": 1
+            },
+            {
+                "startLine": 41,
+                "endLine": 45,
+                "complexity": 1
+            },
+            {
+                "startLine": 45,
+                "endLine": 48,
+                "complexity": 1
+            },
+            {
+                "startLine": 66,
+                "endLine": 70,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 6,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/context/manifest-scope.coffee",
+        "sections": [
+            {
+                "startLine": 15,
+                "endLine": 73,
+                "complexity": 2
+            },
+            {
+                "startLine": 26,
+                "endLine": 29,
+                "complexity": 1
+            },
+            {
+                "startLine": 41,
+                "endLine": 46,
+                "complexity": 1
+            },
+            {
+                "startLine": 46,
+                "endLine": 52,
+                "complexity": 1
+            },
+            {
+                "startLine": 52,
+                "endLine": 58,
+                "complexity": 1
+            },
+            {
+                "startLine": 55,
+                "endLine": 55,
+                "complexity": 1
+            },
+            {
+                "startLine": 56,
+                "endLine": 56,
+                "complexity": 1
+            },
+            {
+                "startLine": 58,
+                "endLine": 64,
+                "complexity": 2
+            },
+            {
+                "startLine": 64,
+                "endLine": 67,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 11,
+        "numMethods": 9,
+        "complexityPerMethod": 1.2222222222222223
+    },
+    {
+        "file": " ./src/views/search/context/scope-dropdown.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 64,
+                "complexity": 2
+            },
+            {
+                "startLine": 39,
+                "endLine": 46,
+                "complexity": 1
+            },
+            {
+                "startLine": 46,
+                "endLine": 51,
+                "complexity": 1
+            },
+            {
+                "startLine": 51,
+                "endLine": 54,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 4,
+        "complexityPerMethod": 1.5
+    },
+    {
+        "file": " ./src/views/search/context/scope.coffee",
+        "sections": [
+            {
+                "startLine": 5,
+                "endLine": 16,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/context/scopes.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 42,
+                "complexity": 1
+            },
+            {
+                "startLine": 24,
+                "endLine": 24,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/filters/add-button.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 52,
+                "complexity": 1
+            },
+            {
+                "startLine": 37,
+                "endLine": 40,
+                "complexity": 1
+            },
+            {
+                "startLine": 40,
+                "endLine": 43,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 3,
+        "numMethods": 3,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/filters/index.coffee",
+        "sections": [
+            {
+                "startLine": 19,
+                "endLine": 92,
+                "complexity": 1
+            },
+            {
+                "startLine": 34,
+                "endLine": 45,
+                "complexity": 1
+            },
+            {
+                "startLine": 45,
+                "endLine": 50,
+                "complexity": 1
+            },
+            {
+                "startLine": 50,
+                "endLine": 92,
+                "complexity": 1
+            },
+            {
+                "startLine": 81,
+                "endLine": 81,
+                "complexity": 1
+            },
+            {
+                "startLine": 82,
+                "endLine": 85,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 6,
+        "numMethods": 6,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/filters/inputs.coffee",
+        "sections": [
+            {
+                "startLine": 19,
+                "endLine": 80,
+                "complexity": 2
+            },
+            {
+                "startLine": 43,
+                "endLine": 59,
+                "complexity": 1
+            },
+            {
+                "startLine": 50,
+                "endLine": 52,
+                "complexity": 1
+            },
+            {
+                "startLine": 52,
+                "endLine": 54,
+                "complexity": 1
+            },
+            {
+                "startLine": 59,
+                "endLine": 70,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 7,
+        "numMethods": 5,
+        "complexityPerMethod": 1.4
+    },
+    {
+        "file": " ./src/views/search/filters/remove-button.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 42,
+                "complexity": 2
+            },
+            {
+                "startLine": 27,
+                "endLine": 31,
+                "complexity": 2
+            },
+            {
+                "startLine": 31,
+                "endLine": 34,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 5,
+        "numMethods": 3,
+        "complexityPerMethod": 1.6666666666666667
+    },
+    {
+        "file": " ./src/views/search/filters/result-count.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 43,
+                "complexity": 2
+            },
+            {
+                "startLine": 29,
+                "endLine": 34,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 2,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/views/search/filters/selector.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 46,
+                "complexity": 1
+            },
+            {
+                "startLine": 35,
+                "endLine": 38,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/filters/text-input.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 47,
+                "complexity": 2
+            },
+            {
+                "startLine": 17,
+                "endLine": 21,
+                "complexity": 1
+            },
+            {
+                "startLine": 30,
+                "endLine": 30,
+                "complexity": 1
+            },
+            {
+                "startLine": 31,
+                "endLine": 31,
+                "complexity": 1
+            },
+            {
+                "startLine": 33,
+                "endLine": 39,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 7,
+        "numMethods": 5,
+        "complexityPerMethod": 1.4
+    },
+    {
+        "file": " ./src/views/search/results/application/inferred-title-cell.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 40,
+                "complexity": 1
+            },
+            {
+                "startLine": 25,
+                "endLine": 32,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/results/application/instance-count-cell.coffee",
+        "sections": [
+            {
+                "startLine": 12,
+                "endLine": 74,
+                "complexity": 2
+            },
+            {
+                "startLine": 17,
+                "endLine": 17,
+                "complexity": 1
+            },
+            {
+                "startLine": 32,
+                "endLine": 35,
+                "complexity": 1
+            },
+            {
+                "startLine": 35,
+                "endLine": 39,
+                "complexity": 1
+            },
+            {
+                "startLine": 59,
+                "endLine": 67,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 7,
+        "numMethods": 5,
+        "complexityPerMethod": 1.4
+    },
+    {
+        "file": " ./src/views/search/results/application/instances.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 37,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/results/application/row.coffee",
+        "sections": [
+            {
+                "startLine": 17,
+                "endLine": 103,
+                "complexity": 9
+            },
+            {
+                "startLine": 24,
+                "endLine": 29,
+                "complexity": 2
+            },
+            {
+                "startLine": 46,
+                "endLine": 53,
+                "complexity": 1
+            },
+            {
+                "startLine": 53,
+                "endLine": 56,
+                "complexity": 1
+            },
+            {
+                "startLine": 56,
+                "endLine": 64,
+                "complexity": 2
+            },
+            {
+                "startLine": 64,
+                "endLine": 77,
+                "complexity": 7
+            },
+            {
+                "startLine": 90,
+                "endLine": 94,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 23,
+        "numMethods": 7,
+        "complexityPerMethod": 3.2857142857142856
+    },
+    {
+        "file": " ./src/views/search/results/device/row.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 35,
+                "complexity": 1
+            },
+            {
+                "startLine": 25,
+                "endLine": 35,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 2,
+        "numMethods": 2,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/results/headers.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 39,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/results/index.coffee",
+        "sections": [
+            {
+                "startLine": 10,
+                "endLine": 35,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/results/manifest/partial-matches.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 43,
+                "complexity": 5
+            },
+            {
+                "startLine": 27,
+                "endLine": 36,
+                "complexity": 5
+            }
+        ],
+        "totalComplexity": 10,
+        "numMethods": 2,
+        "complexityPerMethod": 5
+    },
+    {
+        "file": " ./src/views/search/results/manifest/row.coffee",
+        "sections": [
+            {
+                "startLine": 19,
+                "endLine": 112,
+                "complexity": 6
+            },
+            {
+                "startLine": 27,
+                "endLine": 27,
+                "complexity": 1
+            },
+            {
+                "startLine": 55,
+                "endLine": 59,
+                "complexity": 1
+            },
+            {
+                "startLine": 80,
+                "endLine": 87,
+                "complexity": 1
+            },
+            {
+                "startLine": 87,
+                "endLine": 90,
+                "complexity": 1
+            },
+            {
+                "startLine": 90,
+                "endLine": 95,
+                "complexity": 1
+            },
+            {
+                "startLine": 95,
+                "endLine": 104,
+                "complexity": 6
+            }
+        ],
+        "totalComplexity": 17,
+        "numMethods": 7,
+        "complexityPerMethod": 2.4285714285714284
+    },
+    {
+        "file": " ./src/views/search/results/messages.coffee",
+        "sections": [
+            {
+                "startLine": 11,
+                "endLine": 36,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 1,
+        "numMethods": 1,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/search/results/pager.coffee",
+        "sections": [
+            {
+                "startLine": 14,
+                "endLine": 66,
+                "complexity": 1
+            },
+            {
+                "startLine": 23,
+                "endLine": 23,
+                "complexity": 1
+            },
+            {
+                "startLine": 24,
+                "endLine": 24,
+                "complexity": 1
+            },
+            {
+                "startLine": 51,
+                "endLine": 57,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 4,
+        "complexityPerMethod": 1
+    },
+    {
+        "file": " ./src/views/section.coffee",
+        "sections": [
+            {
+                "startLine": 20,
+                "endLine": 133,
+                "complexity": 5
+            },
+            {
+                "startLine": 32,
+                "endLine": 40,
+                "complexity": 2
+            },
+            {
+                "startLine": 53,
+                "endLine": 60,
+                "complexity": 1
+            },
+            {
+                "startLine": 60,
+                "endLine": 69,
+                "complexity": 2
+            },
+            {
+                "startLine": 69,
+                "endLine": 75,
+                "complexity": 2
+            },
+            {
+                "startLine": 87,
+                "endLine": 87,
+                "complexity": 1
+            },
+            {
+                "startLine": 107,
+                "endLine": 112,
+                "complexity": 2
+            },
+            {
+                "startLine": 120,
+                "endLine": 124,
+                "complexity": 1
+            }
+        ],
+        "totalComplexity": 16,
+        "numMethods": 8,
+        "complexityPerMethod": 2
+    },
+    {
+        "file": " ./src/views/sidebar.coffee",
+        "sections": [
+            {
+                "startLine": 18,
+                "endLine": 84,
+                "complexity": 2
+            },
+            {
+                "startLine": 53,
+                "endLine": 58,
+                "complexity": 2
+            }
+        ],
+        "totalComplexity": 4,
+        "numMethods": 2,
+        "complexityPerMethod": 2
+    }
+]}

@@ -1,4 +1,4 @@
-{"maxComplexity": 19, "totalComplexity": 1126, "numMethods": 638, "complexityPerMethod": 1.7648902821316614, "methodsPerFile": 4.557142857142857, "details": [
+{"numMethodsWithHighComplexity": 26, "maxComplexity": 19, "totalComplexity": 1126, "numMethods": 638, "complexityPerMethod": 1.7648902821316614, "methodsPerFile": 4.557142857142857, "details": [
     {
         "file": " ./src/application/routes.coffee",
         "sections": [
