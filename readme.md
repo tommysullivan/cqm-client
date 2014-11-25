@@ -45,18 +45,20 @@ Code Coverage
 
 
 # COMPLEXITY: (same for each coffee app)
-./node_modules/cqm-client/node_modules/coffeelint/bin/coffeelint -f ./node_modules/cqm-client/coffeelint.json `find ./src -name \*.coffee | tr "\\n" " "` > cqm-complexity.txt
-node ./node_modules/cqm-client/cc-reporter.js ./cqm-complexity.txt > cqm-complexity.json
-echo '{"job": '`cat cqm-job-metadata.json`', "complexity": '`cat cqm-complexity.json`' }' > cqm-complexity-with-build-metadata.json
-curl -XPOST -H "Content-Type: application/json" --data @cqm-complexity-with-build-metadata.json 'lookout-elasticsearch-tsullivan-0.flexilis.org:9200/complexity/coffeelint'
+
+    ./node_modules/cqm-client/node_modules/coffeelint/bin/coffeelint -f ./node_modules/cqm-client/coffeelint.json `find ./src -name \*.coffee | tr "\\n" " "` > cqm-complexity.txt
+    node ./node_modules/cqm-client/cc-reporter.js ./cqm-complexity.txt > cqm-complexity.json
+    echo '{"job": '`cat cqm-job-metadata.json`', "complexity": '`cat cqm-complexity.json`' }' > cqm-complexity-with-build-metadata.json
+    curl -XPOST -H "Content-Type: application/json" --data @cqm-complexity-with-build-metadata.json 'lookout-elasticsearch-tsullivan-0.flexilis.org:9200/complexity/coffeelint'
 
 # TEST RESULTS:
 backup is writing these to result.json automatically
-echo '{"job": '`cat cqm-job-metadata.json`', "testResult": '`cat result.json`' }' > cqm-test-result-with-build-metadata.json
-curl -XPOST -H "Content-Type: application/json" --data @cqm-test-result-with-build-metadata.json 'lookout-elasticsearch-tsullivan-0.flexilis.org:9200/test-results/rspec'
+
+    echo '{"job": '`cat cqm-job-metadata.json`', "testResult": '`cat result.json`' }' > cqm-test-result-with-build-metadata.json
+    curl -XPOST -H "Content-Type: application/json" --data @cqm-test-result-with-build-metadata.json 'lookout-elasticsearch-tsullivan-0.flexilis.org:9200/test-results/rspec'
     
     
-#TODO:
+# TODO:
 
 backup
     unit test coverage
