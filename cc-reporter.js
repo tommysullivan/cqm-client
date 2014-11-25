@@ -14,15 +14,15 @@ function getFilePath(line) {
 }
 
 function getStartLine(line) {
-    return line.substring(line.indexOf('#')+1, line.indexOf('-'));
+    return parseInt(line.substring(line.indexOf('#')+1, line.indexOf('-')));
 }
 
 function getEndLine(line) {
-    return line.substring(line.indexOf('-')+1, line.indexOf(':'));
+    return parseInt(line.substring(line.indexOf('-')+1, line.indexOf(':')));
 }
 
 function getComplexity(line) {
-    return line.substring(line.lastIndexOf(' ')+1, line.lastIndexOf('.'));
+    return parseInt(line.substring(line.lastIndexOf(' ')+1, line.lastIndexOf('.')));
 }
 
 var lines = coffeeLintOutputFileContent.split("\n");
