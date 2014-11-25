@@ -6,8 +6,8 @@ cqm-client
     
 # Usage
 
-* Cyclomatic complexity
+Cyclomatic complexity
     node cc-reporter path/to/coffeelint/output
     
-* Code Coverage
+Code Coverage
     node coverage_reporter coverage/index/file/path.html coverage/json/file/path.json
