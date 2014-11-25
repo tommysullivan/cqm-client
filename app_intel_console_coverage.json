@@ -1,0 +1,1542 @@
+{"total": {
+    "total": 3149,
+    "covered": 1725,
+    "percentage": "54.78"
+}, "details": [
+    {
+        "file": "build/src/libs.js",
+        "cov": {
+            "covered": 13,
+            "total": 13,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/main.js",
+        "cov": {
+            "covered": 7,
+            "total": 8,
+            "percentage": "87.50"
+        }
+    },
+    {
+        "file": "build/src/application/history.js",
+        "cov": {
+            "covered": 8,
+            "total": 45,
+            "percentage": "17.78"
+        }
+    },
+    {
+        "file": "build/src/application/layout.js",
+        "cov": {
+            "covered": 7,
+            "total": 11,
+            "percentage": "63.64"
+        }
+    },
+    {
+        "file": "build/src/application/router.js",
+        "cov": {
+            "covered": 6,
+            "total": 6,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/application/routes.js",
+        "cov": {
+            "covered": 4,
+            "total": 16,
+            "percentage": "25.00"
+        }
+    },
+    {
+        "file": "build/src/controllers/help.js",
+        "cov": {
+            "covered": 20,
+            "total": 24,
+            "percentage": "83.33"
+        }
+    },
+    {
+        "file": "build/src/controllers/instance.js",
+        "cov": {
+            "covered": 5,
+            "total": 35,
+            "percentage": "14.29"
+        }
+    },
+    {
+        "file": "build/src/controllers/locale.js",
+        "cov": {
+            "covered": 5,
+            "total": 31,
+            "percentage": "16.13"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/audio-composer.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/banner-composer.js",
+        "cov": {
+            "covered": 4,
+            "total": 16,
+            "percentage": "25.00"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/before-unload.js",
+        "cov": {
+            "covered": 5,
+            "total": 31,
+            "percentage": "16.13"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/modal-composer.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/navbar-composer.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/retrieve.js",
+        "cov": {
+            "covered": 4,
+            "total": 14,
+            "percentage": "28.57"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/search-composer.js",
+        "cov": {
+            "covered": 4,
+            "total": 17,
+            "percentage": "23.53"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/search-context-composer.js",
+        "cov": {
+            "covered": 15,
+            "total": 26,
+            "percentage": "57.69"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/search-context-scope-composer.js",
+        "cov": {
+            "covered": 15,
+            "total": 19,
+            "percentage": "78.95"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/search-filter-composer.js",
+        "cov": {
+            "covered": 27,
+            "total": 27,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/controllers/mixins/view-composer.js",
+        "cov": {
+            "covered": 14,
+            "total": 14,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/controllers/reports.js",
+        "cov": {
+            "covered": 4,
+            "total": 31,
+            "percentage": "12.90"
+        }
+    },
+    {
+        "file": "build/src/controllers/search/apps.js",
+        "cov": {
+            "covered": 4,
+            "total": 34,
+            "percentage": "11.76"
+        }
+    },
+    {
+        "file": "build/src/controllers/search/devices.js",
+        "cov": {
+            "covered": 4,
+            "total": 32,
+            "percentage": "12.50"
+        }
+    },
+    {
+        "file": "build/src/controllers/search/index.js",
+        "cov": {
+            "covered": 5,
+            "total": 11,
+            "percentage": "45.45"
+        }
+    },
+    {
+        "file": "build/src/controllers/search/manifest.js",
+        "cov": {
+            "covered": 4,
+            "total": 34,
+            "percentage": "11.76"
+        }
+    },
+    {
+        "file": "build/src/meta/app-filter-selection.js",
+        "cov": {
+            "covered": 17,
+            "total": 17,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/app-result.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/app-scope.js",
+        "cov": {
+            "covered": 17,
+            "total": 27,
+            "percentage": "62.96"
+        }
+    },
+    {
+        "file": "build/src/meta/app-search-result-column.js",
+        "cov": {
+            "covered": 15,
+            "total": 15,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/assessment.js",
+        "cov": {
+            "covered": 18,
+            "total": 18,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/device-filter-selection.js",
+        "cov": {
+            "covered": 11,
+            "total": 12,
+            "percentage": "91.67"
+        }
+    },
+    {
+        "file": "build/src/meta/device-network-type.js",
+        "cov": {
+            "covered": 8,
+            "total": 8,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/device-search-result-column.js",
+        "cov": {
+            "covered": 8,
+            "total": 8,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/filter-selection.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/instance-section.js",
+        "cov": {
+            "covered": 21,
+            "total": 21,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/locale-device-section.js",
+        "cov": {
+            "covered": 7,
+            "total": 7,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/manifest-search-result-column.js",
+        "cov": {
+            "covered": 14,
+            "total": 14,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/permission.js",
+        "cov": {
+            "covered": 151,
+            "total": 151,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/search-context.js",
+        "cov": {
+            "covered": 8,
+            "total": 11,
+            "percentage": "72.73"
+        }
+    },
+    {
+        "file": "build/src/meta/sensitive-data.js",
+        "cov": {
+            "covered": 18,
+            "total": 18,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/meta/severity.js",
+        "cov": {
+            "covered": 11,
+            "total": 18,
+            "percentage": "61.11"
+        }
+    },
+    {
+        "file": "build/src/meta/source.js",
+        "cov": {
+            "covered": 95,
+            "total": 95,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/mixins/debounced.js",
+        "cov": {
+            "covered": 6,
+            "total": 11,
+            "percentage": "54.55"
+        }
+    },
+    {
+        "file": "build/src/mixins/inject-callbacks.js",
+        "cov": {
+            "covered": 23,
+            "total": 26,
+            "percentage": "88.46"
+        }
+    },
+    {
+        "file": "build/src/mixins/layout-class.js",
+        "cov": {
+            "covered": 8,
+            "total": 39,
+            "percentage": "20.51"
+        }
+    },
+    {
+        "file": "build/src/models/application/index.js",
+        "cov": {
+            "covered": 7,
+            "total": 22,
+            "percentage": "31.82"
+        }
+    },
+    {
+        "file": "build/src/models/application/instance.js",
+        "cov": {
+            "covered": 7,
+            "total": 10,
+            "percentage": "70.00"
+        }
+    },
+    {
+        "file": "build/src/models/background-job.js",
+        "cov": {
+            "covered": 10,
+            "total": 18,
+            "percentage": "55.56"
+        }
+    },
+    {
+        "file": "build/src/models/country.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/device/firmware-version.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/device/index.js",
+        "cov": {
+            "covered": 5,
+            "total": 6,
+            "percentage": "83.33"
+        }
+    },
+    {
+        "file": "build/src/models/filter.js",
+        "cov": {
+            "covered": 15,
+            "total": 28,
+            "percentage": "53.57"
+        }
+    },
+    {
+        "file": "build/src/models/firmware/version.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/models/instance/ad-network.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/instance/certificate.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/instance/communication.js",
+        "cov": {
+            "covered": 7,
+            "total": 15,
+            "percentage": "46.67"
+        }
+    },
+    {
+        "file": "build/src/models/instance/discovery-event.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/instance/filesystem-activity.js",
+        "cov": {
+            "covered": 6,
+            "total": 6,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/instance/index.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/instance/malware-family.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/instance/manual-research.js",
+        "cov": {
+            "covered": 8,
+            "total": 14,
+            "percentage": "57.14"
+        }
+    },
+    {
+        "file": "build/src/models/instance/nearest-discovery-event.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/instance/permission.js",
+        "cov": {
+            "covered": 7,
+            "total": 9,
+            "percentage": "77.78"
+        }
+    },
+    {
+        "file": "build/src/models/instance/prevalence.js",
+        "cov": {
+            "covered": 7,
+            "total": 12,
+            "percentage": "58.33"
+        }
+    },
+    {
+        "file": "build/src/models/instance/signature.js",
+        "cov": {
+            "covered": 7,
+            "total": 13,
+            "percentage": "53.85"
+        }
+    },
+    {
+        "file": "build/src/models/instance/sms-activity.js",
+        "cov": {
+            "covered": 7,
+            "total": 8,
+            "percentage": "87.50"
+        }
+    },
+    {
+        "file": "build/src/models/instance/strings.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/models/instance/version.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/locale.js",
+        "cov": {
+            "covered": 5,
+            "total": 17,
+            "percentage": "29.41"
+        }
+    },
+    {
+        "file": "build/src/models/manifest/index.js",
+        "cov": {
+            "covered": 7,
+            "total": 22,
+            "percentage": "31.82"
+        }
+    },
+    {
+        "file": "build/src/models/manifest/instance.js",
+        "cov": {
+            "covered": 15,
+            "total": 17,
+            "percentage": "88.24"
+        }
+    },
+    {
+        "file": "build/src/models/manifest/scope.js",
+        "cov": {
+            "covered": 5,
+            "total": 8,
+            "percentage": "62.50"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/cache-response-headers.js",
+        "cov": {
+            "covered": 9,
+            "total": 15,
+            "percentage": "60.00"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/downloadable.js",
+        "cov": {
+            "covered": 4,
+            "total": 9,
+            "percentage": "44.44"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/ensure-model.js",
+        "cov": {
+            "covered": 18,
+            "total": 21,
+            "percentage": "85.71"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/filter.js",
+        "cov": {
+            "covered": 29,
+            "total": 29,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/pageable.js",
+        "cov": {
+            "covered": 47,
+            "total": 49,
+            "percentage": "95.92"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/polling.js",
+        "cov": {
+            "covered": 35,
+            "total": 41,
+            "percentage": "85.37"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/searchable.js",
+        "cov": {
+            "covered": 17,
+            "total": 52,
+            "percentage": "32.69"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/serialize-fragment.js",
+        "cov": {
+            "covered": 8,
+            "total": 27,
+            "percentage": "29.63"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/sub-model.js",
+        "cov": {
+            "covered": 93,
+            "total": 105,
+            "percentage": "88.57"
+        }
+    },
+    {
+        "file": "build/src/models/mixins/taggregator.js",
+        "cov": {
+            "covered": 41,
+            "total": 41,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/region.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/models/report.js",
+        "cov": {
+            "covered": 6,
+            "total": 7,
+            "percentage": "85.71"
+        }
+    },
+    {
+        "file": "build/src/models/settings.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/app_filter_selections.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/application.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/assessments.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/common.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/countries.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/date.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/locales.js",
+        "cov": {
+            "covered": 5,
+            "total": 5,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/permissions.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/regions.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/sensitive_data.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/nls/sources.js",
+        "cov": {
+            "covered": 2,
+            "total": 2,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/overrides/model.js",
+        "cov": {
+            "covered": 5,
+            "total": 5,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/audio-player.js",
+        "cov": {
+            "covered": 5,
+            "total": 19,
+            "percentage": "26.32"
+        }
+    },
+    {
+        "file": "build/src/views/banner.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/cells/boolean-icon.js",
+        "cov": {
+            "covered": 4,
+            "total": 10,
+            "percentage": "40.00"
+        }
+    },
+    {
+        "file": "build/src/views/cells/date-time.js",
+        "cov": {
+            "covered": 6,
+            "total": 11,
+            "percentage": "54.55"
+        }
+    },
+    {
+        "file": "build/src/views/cells/popularity-bar.js",
+        "cov": {
+            "covered": 6,
+            "total": 14,
+            "percentage": "42.86"
+        }
+    },
+    {
+        "file": "build/src/views/cells/popularity.js",
+        "cov": {
+            "covered": 6,
+            "total": 15,
+            "percentage": "40.00"
+        }
+    },
+    {
+        "file": "build/src/views/cells/threats.js",
+        "cov": {
+            "covered": 4,
+            "total": 9,
+            "percentage": "44.44"
+        }
+    },
+    {
+        "file": "build/src/views/cells/version.js",
+        "cov": {
+            "covered": 4,
+            "total": 11,
+            "percentage": "36.36"
+        }
+    },
+    {
+        "file": "build/src/views/grid.js",
+        "cov": {
+            "covered": 8,
+            "total": 23,
+            "percentage": "34.78"
+        }
+    },
+    {
+        "file": "build/src/views/instance/cells/attribute-query.js",
+        "cov": {
+            "covered": 4,
+            "total": 6,
+            "percentage": "66.67"
+        }
+    },
+    {
+        "file": "build/src/views/instance/cells/malware-detection-type.js",
+        "cov": {
+            "covered": 4,
+            "total": 6,
+            "percentage": "66.67"
+        }
+    },
+    {
+        "file": "build/src/views/instance/cells/malware-family-name.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/cells/malware-severity-label.js",
+        "cov": {
+            "covered": 4,
+            "total": 11,
+            "percentage": "36.36"
+        }
+    },
+    {
+        "file": "build/src/views/instance/header.js",
+        "cov": {
+            "covered": 4,
+            "total": 6,
+            "percentage": "66.67"
+        }
+    },
+    {
+        "file": "build/src/views/instance/partials/attribute-query.js",
+        "cov": {
+            "covered": 5,
+            "total": 15,
+            "percentage": "33.33"
+        }
+    },
+    {
+        "file": "build/src/views/instance/partials/nearest-discovery-event.js",
+        "cov": {
+            "covered": 4,
+            "total": 21,
+            "percentage": "19.05"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/ad-networks.js",
+        "cov": {
+            "covered": 5,
+            "total": 5,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/communications.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/discovery-events.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/filesystem-activity.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/header.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/identification.js",
+        "cov": {
+            "covered": 4,
+            "total": 9,
+            "percentage": "44.44"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/malware.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/manual-research.js",
+        "cov": {
+            "covered": 6,
+            "total": 28,
+            "percentage": "21.43"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/permissions.js",
+        "cov": {
+            "covered": 5,
+            "total": 5,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/prevalence-map.js",
+        "cov": {
+            "covered": 11,
+            "total": 44,
+            "percentage": "25.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/prevalence.js",
+        "cov": {
+            "covered": 4,
+            "total": 14,
+            "percentage": "28.57"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/sms-activity.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/instance/section/strings.js",
+        "cov": {
+            "covered": 4,
+            "total": 7,
+            "percentage": "57.14"
+        }
+    },
+    {
+        "file": "build/src/views/locale/device/header.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/locale/device/section/firmware-versions.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/affix.js",
+        "cov": {
+            "covered": 6,
+            "total": 52,
+            "percentage": "11.54"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/collapsable.js",
+        "cov": {
+            "covered": 7,
+            "total": 34,
+            "percentage": "20.59"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/collection-results-class.js",
+        "cov": {
+            "covered": 7,
+            "total": 30,
+            "percentage": "23.33"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/combo-box.js",
+        "cov": {
+            "covered": 78,
+            "total": 91,
+            "percentage": "85.71"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/custom-templating.js",
+        "cov": {
+            "covered": 4,
+            "total": 15,
+            "percentage": "26.67"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/markdown-templating.js",
+        "cov": {
+            "covered": 6,
+            "total": 10,
+            "percentage": "60.00"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/refresh-offsets.js",
+        "cov": {
+            "covered": 4,
+            "total": 9,
+            "percentage": "44.44"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/satellite.js",
+        "cov": {
+            "covered": 9,
+            "total": 28,
+            "percentage": "32.14"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/scroll-spy.js",
+        "cov": {
+            "covered": 7,
+            "total": 24,
+            "percentage": "29.17"
+        }
+    },
+    {
+        "file": "build/src/views/mixins/sync-class.js",
+        "cov": {
+            "covered": 7,
+            "total": 36,
+            "percentage": "19.44"
+        }
+    },
+    {
+        "file": "build/src/views/modal.js",
+        "cov": {
+            "covered": 4,
+            "total": 36,
+            "percentage": "11.11"
+        }
+    },
+    {
+        "file": "build/src/views/modals/alert.js",
+        "cov": {
+            "covered": 6,
+            "total": 12,
+            "percentage": "50.00"
+        }
+    },
+    {
+        "file": "build/src/views/modals/confirm.js",
+        "cov": {
+            "covered": 4,
+            "total": 12,
+            "percentage": "33.33"
+        }
+    },
+    {
+        "file": "build/src/views/modals/create-manifest.js",
+        "cov": {
+            "covered": 9,
+            "total": 40,
+            "percentage": "22.50"
+        }
+    },
+    {
+        "file": "build/src/views/modals/feedback.js",
+        "cov": {
+            "covered": 6,
+            "total": 14,
+            "percentage": "42.86"
+        }
+    },
+    {
+        "file": "build/src/views/modals/instance-malware-description.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/navbar.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/partials/back-to-search.js",
+        "cov": {
+            "covered": 4,
+            "total": 6,
+            "percentage": "66.67"
+        }
+    },
+    {
+        "file": "build/src/views/partials/combo-box.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/partials/dom-property-binding.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/partials/html.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/partials/last-export-date.js",
+        "cov": {
+            "covered": 6,
+            "total": 11,
+            "percentage": "54.55"
+        }
+    },
+    {
+        "file": "build/src/views/partials/list.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/partials/markdown.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/partials/message.js",
+        "cov": {
+            "covered": 4,
+            "total": 8,
+            "percentage": "50.00"
+        }
+    },
+    {
+        "file": "build/src/views/partials/progress.js",
+        "cov": {
+            "covered": 4,
+            "total": 17,
+            "percentage": "23.53"
+        }
+    },
+    {
+        "file": "build/src/views/report/header.js",
+        "cov": {
+            "covered": 4,
+            "total": 24,
+            "percentage": "16.67"
+        }
+    },
+    {
+        "file": "build/src/views/report/index.js",
+        "cov": {
+            "covered": 4,
+            "total": 12,
+            "percentage": "33.33"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/create-button.js",
+        "cov": {
+            "covered": 7,
+            "total": 36,
+            "percentage": "19.44"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/download-button.js",
+        "cov": {
+            "covered": 4,
+            "total": 13,
+            "percentage": "30.77"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/file-info.js",
+        "cov": {
+            "covered": 5,
+            "total": 14,
+            "percentage": "35.71"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/filters.js",
+        "cov": {
+            "covered": 7,
+            "total": 19,
+            "percentage": "36.84"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/job-created-at.js",
+        "cov": {
+            "covered": 6,
+            "total": 9,
+            "percentage": "66.67"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/job-eta.js",
+        "cov": {
+            "covered": 6,
+            "total": 9,
+            "percentage": "66.67"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/job-status.js",
+        "cov": {
+            "covered": 4,
+            "total": 21,
+            "percentage": "19.05"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/notify.js",
+        "cov": {
+            "covered": 4,
+            "total": 41,
+            "percentage": "9.76"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/retry-button.js",
+        "cov": {
+            "covered": 4,
+            "total": 9,
+            "percentage": "44.44"
+        }
+    },
+    {
+        "file": "build/src/views/report/partials/row-count.js",
+        "cov": {
+            "covered": 6,
+            "total": 7,
+            "percentage": "85.71"
+        }
+    },
+    {
+        "file": "build/src/views/search/context/app-scope.js",
+        "cov": {
+            "covered": 4,
+            "total": 17,
+            "percentage": "23.53"
+        }
+    },
+    {
+        "file": "build/src/views/search/context/index.js",
+        "cov": {
+            "covered": 5,
+            "total": 12,
+            "percentage": "41.67"
+        }
+    },
+    {
+        "file": "build/src/views/search/context/manifest-scope.js",
+        "cov": {
+            "covered": 6,
+            "total": 25,
+            "percentage": "24.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/context/scope-dropdown.js",
+        "cov": {
+            "covered": 4,
+            "total": 9,
+            "percentage": "44.44"
+        }
+    },
+    {
+        "file": "build/src/views/search/context/scope.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/context/scopes.js",
+        "cov": {
+            "covered": 5,
+            "total": 8,
+            "percentage": "62.50"
+        }
+    },
+    {
+        "file": "build/src/views/search/filters/add-button.js",
+        "cov": {
+            "covered": 4,
+            "total": 6,
+            "percentage": "66.67"
+        }
+    },
+    {
+        "file": "build/src/views/search/filters/index.js",
+        "cov": {
+            "covered": 7,
+            "total": 12,
+            "percentage": "58.33"
+        }
+    },
+    {
+        "file": "build/src/views/search/filters/inputs.js",
+        "cov": {
+            "covered": 7,
+            "total": 19,
+            "percentage": "36.84"
+        }
+    },
+    {
+        "file": "build/src/views/search/filters/remove-button.js",
+        "cov": {
+            "covered": 4,
+            "total": 8,
+            "percentage": "50.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/filters/result-count.js",
+        "cov": {
+            "covered": 4,
+            "total": 8,
+            "percentage": "50.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/filters/selector.js",
+        "cov": {
+            "covered": 4,
+            "total": 5,
+            "percentage": "80.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/filters/text-input.js",
+        "cov": {
+            "covered": 4,
+            "total": 13,
+            "percentage": "30.77"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/application/inferred-title-cell.js",
+        "cov": {
+            "covered": 4,
+            "total": 10,
+            "percentage": "40.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/application/instance-count-cell.js",
+        "cov": {
+            "covered": 6,
+            "total": 21,
+            "percentage": "28.57"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/application/instances.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/application/row.js",
+        "cov": {
+            "covered": 8,
+            "total": 39,
+            "percentage": "20.51"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/device/row.js",
+        "cov": {
+            "covered": 4,
+            "total": 7,
+            "percentage": "57.14"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/headers.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/index.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/manifest/partial-matches.js",
+        "cov": {
+            "covered": 4,
+            "total": 15,
+            "percentage": "26.67"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/manifest/row.js",
+        "cov": {
+            "covered": 9,
+            "total": 31,
+            "percentage": "29.03"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/messages.js",
+        "cov": {
+            "covered": 4,
+            "total": 4,
+            "percentage": "100.00"
+        }
+    },
+    {
+        "file": "build/src/views/search/results/pager.js",
+        "cov": {
+            "covered": 4,
+            "total": 10,
+            "percentage": "40.00"
+        }
+    },
+    {
+        "file": "build/src/views/section.js",
+        "cov": {
+            "covered": 9,
+            "total": 41,
+            "percentage": "21.95"
+        }
+    },
+    {
+        "file": "build/src/views/sidebar.js",
+        "cov": {
+            "covered": 7,
+            "total": 12,
+            "percentage": "58.33"
+        }
+    }
+]}

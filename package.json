@@ -1,0 +1,9 @@
+{
+    "name": "cqm-client",
+    "version": "0.0.1",
+    "repository": "https://source.flexilis.local/tsullivan/cqm-client",
+    "devDependencies": {
+        "cheerio": "*",
+        "coffeelint": "*"
+    }
+}
