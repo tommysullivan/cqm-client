@@ -1,0 +1,7 @@
+{
+    "name": "coverage-reporter",
+    "version": "0.0.1",
+    "devDependencies": {
+        "cheerio": "*"
+    }
+}
