@@ -43,4 +43,30 @@ lines.forEach(function(line) {
     }
 });
 
-console.log(JSON.stringify(fileComplexities));
+var totalComplexity = 0;
+var totalNumMethods = 0;
+var maxComplexity = 0;
+fileComplexities.forEach(function(fileComplexity) {
+    if(fileComplexity.sections!=null && fileComplexity.sections.length>0) {
+        var complexityForFile = 0;
+        var numMethodsInFile = 0;
+        fileComplexity.sections.forEach(function(section) {
+            if(section.complexity>maxComplexity) maxComplexity = section.complexity;
+            complexityForFile+=section.complexity;
+            totalComplexity+=section.complexity;
+            numMethodsInFile++;
+            totalNumMethods++;
+        });
+        fileComplexity.totalComplexity = complexityForFile;
+        fileComplexity.numMethods = numMethodsInFile;
+        fileComplexity.complexityPerMethod = complexityForFile / numMethodsInFile
+    }
+});
+
+var complexitySummary = {
+    totalComplexity: totalComplexity,
+    numMethods: totalNumMethods,
+    complexityPerMethod: totalComplexity / totalNumMethods
+}
+
+console.log(JSON.stringify(complexitySummary));
