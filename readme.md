@@ -1,7 +1,10 @@
 cqm-client
 ----------
 
+For reporting code quality metrics to a central repository.
+
 # Install
+
     add as a dependency to app using git location, OR download source and npm install.
     
 # Usage
