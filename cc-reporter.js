@@ -22,7 +22,7 @@ function getEndLine(line) {
 }
 
 function getComplexity(line) {
-    reeturn line.substring(line.lastIndexOf(' ')+1, line.lastIndexOf('.'));
+    return line.substring(line.lastIndexOf(' ')+1, line.lastIndexOf('.'));
 }
 
 var lines = coffeeLintOutputFileContent.split("\n");
