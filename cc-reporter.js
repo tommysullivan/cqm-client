@@ -25,21 +25,6 @@ function getComplexity(line) {
     reeturn line.substring(line.lastIndexOf(' ')+1, line.lastIndexOf('.'));
 }
 
-// http://nodejs.org/api.html#_child_processes
-var sys = require('sys')
-var exec = require('child_process').exec;
-var child;
-
-// executes `pwd`
-child = exec("pwd", function (error, stdout, stderr) {
-    sys.print('stdout: ' + stdout);
-    sys.print('stderr: ' + stderr);
-    if (error !== null) {
-        console.log('exec error: ' + error);
-    }
-});
-
-
 var lines = coffeeLintOutputFileContent.split("\n");
 var fileComplexities = []
 var currentFileComplexityObj;
@@ -59,10 +44,3 @@ lines.forEach(function(line) {
 });
 
 console.log(JSON.stringify(fileComplexities));
-
-//var coffeeSourceRoot = process.argv[2];
-//var coffeeLintBinPath = process.argv[3]; //./node_modules/.bin/coffeelint
-//if(coffeeSourceRoot==null || coffeeLintBinPath==null) throw new Error("usage: node cc-reporter path/to/coffee/src/root path/to/bin/coffeelint");
-
-
-// ./node_modules/.bin/coffeelint -f coffeelint.json src/**/*.coffee src/*.coffee src/**/**/*.coffee src/**/**/**/*.coffee src/**/**/**/**/*.coffee
