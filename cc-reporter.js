@@ -66,7 +66,8 @@ fileComplexities.forEach(function(fileComplexity) {
 var complexitySummary = {
     totalComplexity: totalComplexity,
     numMethods: totalNumMethods,
-    complexityPerMethod: totalComplexity / totalNumMethods
+    complexityPerMethod: totalComplexity / totalNumMethods,
+    methodsPerFile: totalNumMethods / fileComplexities.length
 }
 
 console.log(JSON.stringify(complexitySummary));
