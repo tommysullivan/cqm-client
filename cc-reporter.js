@@ -50,12 +50,14 @@ lines.forEach(function(line) {
 var totalComplexity = 0;
 var totalNumMethods = 0;
 var maxComplexity = 0;
+var numMethodsWithHighComplexity = 0;
 fileComplexities.forEach(function(fileComplexity) {
     if(fileComplexity.sections!=null && fileComplexity.sections.length>0) {
         var complexityForFile = 0;
         var numMethodsInFile = 0;
         fileComplexity.sections.forEach(function(section) {
             if(section.complexity>maxComplexity) maxComplexity = section.complexity;
+            if(section.complexity>5) numMethodsWithHighComplexity++;
             complexityForFile+=section.complexity;
             totalComplexity+=section.complexity;
             numMethodsInFile++;
@@ -68,6 +70,7 @@ fileComplexities.forEach(function(fileComplexity) {
 });
 
 var complexitySummary = {
+    numMethodsWithHighComplexity: numMethodsWithHighComplexity,
     maxComplexity: maxComplexity,
     totalComplexity: totalComplexity,
     numMethods: totalNumMethods,
