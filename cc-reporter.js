@@ -9,6 +9,10 @@ function isFilePath(line) {
     return line.indexOf('coffee') != -1
 }
 
+function isSection(line) {
+    return line.indexOf('The cyclomatic complexity is too damn high')!=-1;
+}
+
 function getFilePath(line) {
     return line.substring(line.indexOf('⚡ ')+1);
 }
@@ -33,7 +37,7 @@ lines.forEach(function(line) {
     if(isFilePath(line)) {
         currentFileComplexityObj = { file: getFilePath(line) }
         fileComplexities.push(currentFileComplexityObj);
-    } else {
+    } else if(isSection(line)) {
         if(currentFileComplexityObj.sections==undefined) currentFileComplexityObj.sections = []
         currentFileComplexityObj.sections.push({
             startLine: getStartLine(line),
@@ -64,6 +68,7 @@ fileComplexities.forEach(function(fileComplexity) {
 });
 
 var complexitySummary = {
+    maxComplexity: maxComplexity,
     totalComplexity: totalComplexity,
     numMethods: totalNumMethods,
     complexityPerMethod: totalComplexity / totalNumMethods,
