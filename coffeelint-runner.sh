@@ -1,1 +1,1 @@
-./node_modules/.bin/coffeelint -f ./build/cyclomatic-complexity-reporter/coffeelint.json `find ./src -name \*.coffee | tr "\\n" " "`
+./node_modules/coffeelint/bin/coffeelint -f ./node_modules/cqm-client/coffeelint.json `find ./src -name \*.coffee | tr "\\n" " "`
