@@ -38,6 +38,9 @@ Code Coverage
     backup-service:
     echo '{"summary": '`cat coverage/.last_run.json`', "details": '`cat coverage/.resultset.json`' }' > cqm-coverage-pre-summary.json
     node ./node_modules/cqm-client/simplecov_summarizer.js cqm-coverage-pre-summary.json > cqm-coverage.json
+    
+    app_intel:
+    manually taken out of customized javascript running in the browser
 
     all:
     echo '{"job": '`cat cqm-job-metadata.json`', "coverage": '`cat cqm-coverage.json`' }' > cqm-coverage-with-build-metadata.json

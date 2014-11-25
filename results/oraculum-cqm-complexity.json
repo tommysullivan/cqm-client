@@ -1,4 +1,4 @@
-{"numMethodsWithHighComplexity": 50, "maxComplexity": 45, "totalComplexity": 1288, "numMethods": 406, "complexityPerMethod": 3.1724137931034484, "methodsPerFile": 6.059701492537314, "details": [
+{"numClassesWithHighComplexity": 32, "numMethodsWithHighComplexity": 50, "maxComplexity": 45, "totalComplexity": 1288, "numMethods": 406, "complexityPerMethod": 3.1724137931034484, "methodsPerFile": 6.059701492537314, "details": [
     {
         "file": " ./src/abstract/polymorphactory.coffee",
         "sections": [

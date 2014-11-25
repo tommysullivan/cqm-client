@@ -1,7 +1,8 @@
 {"total": {
     "total": 3149,
     "covered": 1725,
-    "percentage": "54.78"
+    "percentage": .5478,
+    "notCovered": 1424
 }, "details": [
     {
         "file": "build/src/libs.js",
@@ -1044,7 +1045,7 @@
         }
     },
     {
-        "file": "build/src/views/mixins/collection-results-class.js",
+        "file": "build/src/views/mixins/collection-old-results-class.js",
         "cov": {
             "covered": 7,
             "total": 30,
@@ -1436,7 +1437,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/application/inferred-title-cell.js",
+        "file": "build/src/views/search/old-results/application/inferred-title-cell.js",
         "cov": {
             "covered": 4,
             "total": 10,
@@ -1444,7 +1445,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/application/instance-count-cell.js",
+        "file": "build/src/views/search/old-results/application/instance-count-cell.js",
         "cov": {
             "covered": 6,
             "total": 21,
@@ -1452,7 +1453,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/application/instances.js",
+        "file": "build/src/views/search/old-results/application/instances.js",
         "cov": {
             "covered": 4,
             "total": 4,
@@ -1460,7 +1461,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/application/row.js",
+        "file": "build/src/views/search/old-results/application/row.js",
         "cov": {
             "covered": 8,
             "total": 39,
@@ -1468,7 +1469,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/device/row.js",
+        "file": "build/src/views/search/old-results/device/row.js",
         "cov": {
             "covered": 4,
             "total": 7,
@@ -1476,7 +1477,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/headers.js",
+        "file": "build/src/views/search/old-results/headers.js",
         "cov": {
             "covered": 4,
             "total": 4,
@@ -1484,7 +1485,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/index.js",
+        "file": "build/src/views/search/old-results/index.js",
         "cov": {
             "covered": 4,
             "total": 4,
@@ -1492,7 +1493,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/manifest/partial-matches.js",
+        "file": "build/src/views/search/old-results/manifest/partial-matches.js",
         "cov": {
             "covered": 4,
             "total": 15,
@@ -1500,7 +1501,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/manifest/row.js",
+        "file": "build/src/views/search/old-results/manifest/row.js",
         "cov": {
             "covered": 9,
             "total": 31,
@@ -1508,7 +1509,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/messages.js",
+        "file": "build/src/views/search/old-results/messages.js",
         "cov": {
             "covered": 4,
             "total": 4,
@@ -1516,7 +1517,7 @@
         }
     },
     {
-        "file": "build/src/views/search/results/pager.js",
+        "file": "build/src/views/search/old-results/pager.js",
         "cov": {
             "covered": 4,
             "total": 10,

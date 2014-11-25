@@ -1,19 +1,23 @@
 {"statements": {
     "percent": "80.83",
     "covered": "1758",
-    "total": "2175"
+    "total": "2175",
+    "notCovered": 417
 }, "branches": {
     "percent": "65.3",
     "covered": "702",
-    "total": "1075"
+    "total": "1075",
+    "notCovered": 373
 }, "functions": {
     "percent": "83.77",
     "covered": "444",
-    "total": "530"
+    "total": "530",
+    "notCovered": 86
 }, "lines": {
     "percent": "81.06",
     "covered": "1746",
-    "total": "2154"
+    "total": "2154",
+    "notCovered": 408
 }, "details": {
     "build/src/abstract/polymorphactory.js": {
         "path": "build/src/abstract/polymorphactory.js",

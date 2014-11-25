@@ -1,4 +1,4 @@
-{"numMethodsWithHighComplexity": 33, "maxComplexity": 24, "totalComplexity": 1312, "numMethods": 716, "complexityPerMethod": 1.8324022346368716, "methodsPerFile": 3.709844559585492, "details": [
+{"numClassesWithHighComplexity": 44, "numMethodsWithHighComplexity": 33, "maxComplexity": 24, "totalComplexity": 1312, "numMethods": 716, "complexityPerMethod": 1.8324022346368716, "methodsPerFile": 3.709844559585492, "details": [
     {
         "file": " ./src/application/history.coffee",
         "sections": [

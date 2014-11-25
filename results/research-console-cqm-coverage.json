@@ -1,19 +1,23 @@
 {"statements": {
     "percent": "58.19",
     "covered": "1343",
-    "total": "2308"
+    "total": "2308",
+    "notCovered": 965
 }, "branches": {
     "percent": "34.03",
     "covered": "178",
-    "total": "523"
+    "total": "523",
+    "notCovered": 345
 }, "functions": {
     "percent": "57.47",
     "covered": "477",
-    "total": "830"
+    "total": "830",
+    "notCovered": 353
 }, "lines": {
     "percent": "58.7",
     "covered": "1343",
-    "total": "2288"
+    "total": "2288",
+    "notCovered": 945
 }, "details": {
     "build/src/controllers/assessment/index.js": {
         "path": "build/src/controllers/assessment/index.js",
