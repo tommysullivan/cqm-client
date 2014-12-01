@@ -19,7 +19,8 @@ module.exports = function(
     IstanbulCoverageReporter,
     JSONFileLoader,
     CoverageTotalsSectionWriter,
-    CoverageReportWriter
+    CoverageReportWriter,
+    InvalidCoverageNumbersException
     ) {
     return {
         configurationLoader: function() {
@@ -49,6 +50,7 @@ module.exports = function(
         coverageReportWriter: function() {
             return CoverageReportWriter();
         },
+        invalidCoverageNumbersException: InvalidCoverageNumbersException,
         coverageTotalsSectionWriter: CoverageTotalsSectionWriter,
         jsonFileLoaderException: JSONFileLoaderException,
         configuration: Configuration,
