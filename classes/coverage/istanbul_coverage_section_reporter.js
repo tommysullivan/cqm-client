@@ -1,6 +1,6 @@
 module.exports = function($, sectionNamesOrderedByAppearance) {
     return {
-        writeCoverageSectionTotals: function(matchingDOMElement, index, coverageReportWriter) {
+        reportCoverageSectionTotals: function(matchingDOMElement, index, coverageReportWriter) {
             if(index>3) return;
             var sectionJQueryResult = $(matchingDOMElement);
             var metricsText = sectionJQueryResult.text();

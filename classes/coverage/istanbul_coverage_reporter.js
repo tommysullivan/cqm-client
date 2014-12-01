@@ -8,13 +8,13 @@ module.exports = function(jsonFileLoader,
                           istanbulCoverageSectionReporter
     ) {
     return {
-        writeCoverageReport: function(coverageReportWriter) {
+        reportCoverage: function(coverageReportWriter) {
             try {
                 var indexHTML = fs.readFileSync(indexHTMLPath).toString();
                 var $ = cheerio.load(indexHTML);
                 var coverageDetailsJSON = jsonFileLoader.loadJSONFile(coverageJSONPath);
                 $(sectionHTMLSelector).each(function(matchingDOMElement, index) {
-                    istanbulCoverageSectionReporter.writeCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter);
+                    istanbulCoverageSectionReporter.reportCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter);
                 });
                 coverageReportWriter.writeCoverageDetails(coverageDetailsJSON);
             }

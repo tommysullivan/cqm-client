@@ -17,7 +17,9 @@ module.exports = function(
     JSONFileLoaderException,
     IstanbulCoverageReporterException,
     IstanbulCoverageReporter,
-    JSONFileLoader
+    JSONFileLoader,
+    CoverageTotalsSectionWriter,
+    CoverageReportWriter
     ) {
     return {
         configurationLoader: function() {
@@ -44,6 +46,10 @@ module.exports = function(
         jsonFileLoader: function() {
             return JSONFileLoader(fs, factory.json(), factory);
         },
+        coverageReportWriter: function() {
+            return CoverageReportWriter();
+        },
+        coverageTotalsSectionWriter: CoverageTotalsSectionWriter,
         jsonFileLoaderException: JSONFileLoaderException,
         configuration: Configuration,
         invalidCommandException: InvalidCommandException,

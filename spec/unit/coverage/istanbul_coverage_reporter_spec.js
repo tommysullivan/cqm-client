@@ -35,7 +35,7 @@ describe('IstanbulCoverageReporter', function() {
         indexHTMLContent = 'indexHTMLContent';
         fs.readFileSync.andReturn(indexHTMLContent);
         sectionHTMLSelector = '.metric';
-        istanbulCoverageSectionReporter = jasmine.createSpyObj('IstanbulCoverageSectionReporter', ['writeCoverageSectionTotals']);
+        istanbulCoverageSectionReporter = jasmine.createSpyObj('IstanbulCoverageSectionReporter', ['reportCoverageSectionTotals']);
 
         subject = IstanbulCoverageReporter(
             jsonFileLoader,
@@ -53,51 +53,51 @@ describe('IstanbulCoverageReporter', function() {
         expect(subject).not.toBeUndefined();
     });
 
-    describe('writeCoverageReport(coverageReportWriter)', function() {
+    describe('reportCoverage(coverageReportWriter)', function() {
 
         it('uses fs to read the istanbul html coverage results file located at indexHTMLPath', function() {
-            subject.writeCoverageReport(coverageReportWriter);
+            subject.reportCoverage(coverageReportWriter);
             expect(fs.readFileSync).toHaveBeenCalledWith(indexHTMLPath);
         });
 
         it('uses cheerio to create a server-side jquery object with the retrieved html', function() {
-            subject.writeCoverageReport(coverageReportWriter);
+            subject.reportCoverage(coverageReportWriter);
             expect(cheerio.load).toHaveBeenCalledWith(indexHTMLContent);
         });
 
         it('uses jsonFileLoader to load and parse the istanbul json results file located at coverageJSONPath', function() {
-            subject.writeCoverageReport(coverageReportWriter);
+            subject.reportCoverage(coverageReportWriter);
             expect(jsonFileLoader.loadJSONFile).toHaveBeenCalledWith(coverageJSONPath);
         });
 
         it('uses sectionHTMLSelector jquery selector to find the DOM elements containing the totals', function() {
-            subject.writeCoverageReport(coverageReportWriter);
+            subject.reportCoverage(coverageReportWriter);
             expect($).toHaveBeenCalledWith(sectionHTMLSelector);
         });
 
         it('uses the jquery *each* method to loop over each matching "totals DOM element" it finds', function() {
-            subject.writeCoverageReport(coverageReportWriter);
+            subject.reportCoverage(coverageReportWriter);
             expect(jqueryResult.each).toHaveBeenCalled();
         });
 
         it('uses the coverageReportWriter to writeCoverageDetails, passing the raw istanbul JSON result loaded from coverageJSONPath', function() {
             var rawIstanbulJSON = {}
             jsonFileLoader.loadJSONFile.andReturn(rawIstanbulJSON);
-            subject.writeCoverageReport(coverageReportWriter);
+            subject.reportCoverage(coverageReportWriter);
             expect(coverageReportWriter.writeCoverageDetails).toHaveBeenCalledWith(rawIstanbulJSON);
         });
 
         describe('for each matching DOM element found', function() {
-            it('calls istanbulCoverageSectionReporter.writeCoverageSectionTotals(sectionJQueryResult, index, coverageReportWriter)', function() {
+            it('calls istanbulCoverageSectionReporter.reportCoverageSectionTotals(sectionJQueryResult, index, coverageReportWriter)', function() {
                 var sectionJQueryResult = {}
                 var index = 3;
                 var eachHandler;
                 jqueryResult.each.andCallFake(function(currentEachHandler) {
                     eachHandler = currentEachHandler;
                 });
-                subject.writeCoverageReport(coverageReportWriter);
+                subject.reportCoverage(coverageReportWriter);
                 eachHandler(sectionJQueryResult, index);
-                expect(istanbulCoverageSectionReporter.writeCoverageSectionTotals).toHaveBeenCalledWith(sectionJQueryResult, index, coverageReportWriter);
+                expect(istanbulCoverageSectionReporter.reportCoverageSectionTotals).toHaveBeenCalledWith(sectionJQueryResult, index, coverageReportWriter);
             });
         });
 
@@ -112,15 +112,15 @@ describe('IstanbulCoverageReporter', function() {
 
             function expectExceptionBehavior() {
                 it('calls the factory to create a new IstanbulCoverageReporterException', function() {
-                    expect(function() { subject.writeCoverageReport(coverageReportWriter); }).toThrow();
+                    expect(function() { subject.reportCoverage(coverageReportWriter); }).toThrow();
                     expect(factory.istanbulCoverageReporterException).toHaveBeenCalled();
                 });
                 it('passes indexHTMLPath, coverageJSONPath, and the original exception, e', function() {
-                    expect(function() { subject.writeCoverageReport(coverageReportWriter); }).toThrow();
+                    expect(function() { subject.reportCoverage(coverageReportWriter); }).toThrow();
                     expect(factory.istanbulCoverageReporterException).toHaveBeenCalledWith(indexHTMLPath, coverageJSONPath, originalException);
                 });
                 it('throws the resulting exception', function() {
-                    expect(function() { subject.writeCoverageReport(coverageReportWriter); }).toThrow(istanbulCoverageReporterException);
+                    expect(function() { subject.reportCoverage(coverageReportWriter); }).toThrow(istanbulCoverageReporterException);
                 });
             }
 

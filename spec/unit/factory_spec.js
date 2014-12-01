@@ -20,6 +20,8 @@ describe('Factory', function() {
         IstanbulCoverageReporterException,
         IstanbulCoverageReporter,
         JSONFileLoader,
+        CoverageTotalsSectionWriter,
+        CoverageReportWriter,
         subject;
 
     beforeEach(function() {
@@ -52,6 +54,8 @@ describe('Factory', function() {
         IstanbulCoverageReporterException = jasmine.createSpy('IstanbulCoverageReporterException');
         IstanbulCoverageReporter = jasmine.createSpy('IstanbulCoverageReporter');
         JSONFileLoader = jasmine.createSpy('JSONFileLoader');
+        CoverageTotalsSectionWriter = jasmine.createSpy('CoverageTotalsSectionWriter');
+        CoverageReportWriter = jasmine.createSpy('CoverageReportWriter');
         JSON = {}
         subject = Factory(
             fs,
@@ -72,7 +76,9 @@ describe('Factory', function() {
             JSONFileLoaderException,
             IstanbulCoverageReporterException,
             IstanbulCoverageReporter,
-            JSONFileLoader
+            JSONFileLoader,
+            CoverageTotalsSectionWriter,
+            CoverageReportWriter
         );
     });
 

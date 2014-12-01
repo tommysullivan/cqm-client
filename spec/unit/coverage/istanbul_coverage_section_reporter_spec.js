@@ -18,7 +18,7 @@ describe('IstanbulCoverageSectionReporter($, sectionNamesOrderedByAppearance)', 
         expect(subject).not.toBeUndefined();
     });
 
-    describe('writeCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter)', function() {
+    describe('reportCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter)', function() {
         var matchingDOMElement, index, coverageReportWriter, coverageTotalsSectionWriter;
         beforeEach(function() {
             matchingDOMElement = {}
@@ -31,14 +31,14 @@ describe('IstanbulCoverageSectionReporter($, sectionNamesOrderedByAppearance)', 
                 index = 4;
             });
             it('ignores the column and returns immediately', function() {
-                subject.writeCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter);
+                subject.reportCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter);
                 expect($).not.toHaveBeenCalled();
             });
         });
         describe('when the index is one of the first three columns', function() {
             beforeEach(function() {
                 index = 2;
-                subject.writeCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter);
+                subject.reportCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter);
             });
             it('wraps the matching element with jquery using $(matchingDOMElement)', function() {
                 expect($).toHaveBeenCalledWith(matchingDOMElement);
