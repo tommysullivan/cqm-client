@@ -1,0 +1,160 @@
+{
+    "type": "vnd/lookout.cqm.quality-report#1.0.0+json",
+    "context": {
+        "environment": "today",
+        "technologies": ["ruby","javascript"],
+        "product": "flexd",
+        "teams": ["Core Services","Platform Automation"],
+        "testType": "system integration",
+        "artifactType": "web server",
+        "tags": ["critical", "exampleData"]
+    },
+    "complexity": {
+        "type": "vnd/lookout.cqm.complexity-report.mocha#1.0.0+json",
+        "content": {
+            "summary": {
+                "numClassesWithHighComplexity": 44,
+                "numMethodsWithHighComplexity": 33,
+                "maxComplexity": 24,
+                "totalComplexity": 1312,
+                "numMethods": 716,
+                "complexityPerMethod": 1.8324022346368716,
+                "methodsPerFile": 3.709844559585492
+            },
+            "details": [
+
+            ]
+        }
+    },
+    "coverage": {
+        "type": "vnd/lookout.cqm.coverage-report.istanbul#1.0.0+json",
+        "content": {
+            "summary": {
+                "statements": {
+                    "percent": "58.19",
+                    "covered": "1343",
+                    "total": "2308",
+                    "notCovered": 965
+                },
+                "branches": {
+                    "percent": "34.03",
+                    "covered": "178",
+                    "total": "523",
+                    "notCovered": 345
+                },
+                "functions": {
+                    "percent": "57.47",
+                    "covered": "477",
+                    "total": "830",
+                    "notCovered": 353
+                },
+                "lines": {
+                    "percent": "58.7",
+                    "covered": "1343",
+                    "total": "2288",
+                    "notCovered": 945
+                }
+            },
+            "details": [
+
+            ]
+        }
+    },
+    "testResult": {
+        "type": "vnd/lookout.cqm.test-result.rspec#1.0.0+json",
+        "content": {
+            "examples": [
+                {
+                    "description": "deletes all calls backed up for this device_guid",
+                    "full_description": "Calls deletes all calls backed up for this device_guid",
+                    "status": "passed",
+                    "file_path": "./spec/calls_spec.rb",
+                    "line_number": 108,
+                    "run_time": 0.573266712
+                }
+            ],
+            "summary": {
+                "duration": 11.025744347,
+                "example_count": 34,
+                "failure_count": 0,
+                "pending_count": 0
+            },
+            "summary_line": "34 examples, 0 failures"
+        }
+    },
+    "job": {
+        "actions": [
+            {
+                "causes": [
+                    {
+                        "shortDescription": "Started by user Thomas Sullivan",
+                        "userId": "tsullivan",
+                        "userName": "Thomas Sullivan"
+                    }
+                ]
+            },
+            {},
+            {},
+            {
+                "buildsByBranchName": {
+                    "origin/master": {
+                        "buildNumber": 7,
+                        "buildResult": null,
+                        "marked": {
+                            "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                            "branch": [
+                                {
+                                    "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                                    "name": "origin/master"
+                                }
+                            ]
+                        },
+                        "revision": {
+                            "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                            "branch": [
+                                {
+                                    "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                                    "name": "origin/master"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "lastBuiltRevision": {
+                    "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                    "branch": [
+                        {
+                            "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                            "name": "origin/master"
+                        }
+                    ]
+                },
+                "remoteUrls": [
+                    "git@source.flexilis.local:tsullivan/backup-tommy.git"
+                ],
+                "scmName": ""
+            },
+            {},
+            {}
+        ],
+        "artifacts": [],
+        "building": true,
+        "description": null,
+        "duration": 0,
+        "estimatedDuration": 466914,
+        "executor": {},
+        "fullDisplayName": "tommy-backup #7",
+        "id": "2014-10-27_14-31-40",
+        "keepLog": false,
+        "number": 7,
+        "result": null,
+        "timestamp": 1414445500349,
+        "url": "https://ci.corp.lookout.com/job/tommy-backup/7/",
+        "builtOn": "bob4g-10.110",
+        "changeSet": {
+            "items": [],
+            "kind": "git"
+        },
+        "culprits": []
+    }
+}

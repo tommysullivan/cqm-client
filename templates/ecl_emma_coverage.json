@@ -1,0 +1,54 @@
+{
+    "statements": {
+        "percent": 0.761710237461502,
+        "covered": 94724,
+        "total": 124357,
+        "notCovered": 29633
+    },
+    "branches": {
+        "percent": 0.5575299085151302,
+        "covered": 3169,
+        "total": 5684,
+        "notCovered": 2515
+    },
+    "functions": {
+        "percent": 0.7410931174089069,
+        "covered": 3661,
+        "total": 4940,
+        "notCovered": 1279
+    },
+    "lines": {
+        "percent": 0.7440057309005099,
+        "covered": 17656,
+        "total": 23731,
+        "notCovered": 6075
+    },
+    "details": [
+    {
+        "fqn": "com.lookout.android.apk.file.TestApkFile",
+        "statements": {
+            "percent": 1,
+            "covered": 254,
+            "total": 254,
+            "notCovered": 0
+        },
+        "branches": {
+            "percent": 0,
+            "covered": 0,
+            "total": 0,
+            "notCovered": 0
+        },
+        "functions": {
+            "percent": 1,
+            "covered": 18,
+            "total": 18,
+            "notCovered": 0
+        },
+        "lines": {
+            "percent": 1,
+            "covered": 66,
+            "total": 66,
+            "notCovered": 0
+        }
+    }
+]}

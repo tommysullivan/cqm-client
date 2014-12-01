@@ -1,0 +1,66 @@
+{
+    "numClassesWithHighComplexity": 44,
+    "numMethodsWithHighComplexity": 33,
+    "maxComplexity": 24,
+    "totalComplexity": 1312,
+    "numMethods": 716,
+    "complexityPerMethod": 1.8324022346368716,
+    "methodsPerFile": 3.709844559585492,
+    "details": [
+        {
+            "file": " ./src/application/history.coffee",
+            "sections": [
+                {
+                    "startLine": 11,
+                    "endLine": 69,
+                    "complexity": 4
+                },
+                {
+                    "startLine": 26,
+                    "endLine": 39,
+                    "complexity": 2
+                },
+                {
+                    "startLine": 29,
+                    "endLine": 31,
+                    "complexity": 1
+                },
+                {
+                    "startLine": 31,
+                    "endLine": 39,
+                    "complexity": 2
+                },
+                {
+                    "startLine": 39,
+                    "endLine": 51,
+                    "complexity": 2
+                },
+                {
+                    "startLine": 51,
+                    "endLine": 59,
+                    "complexity": 2
+                },
+                {
+                    "startLine": 53,
+                    "endLine": 56,
+                    "complexity": 1
+                }
+            ],
+            "totalComplexity": 14,
+            "numMethods": 7,
+            "complexityPerMethod": 2
+        }
+    ]
+}
+
+/*
+Design:
+
+On a builder, we perform an npm install of this module. We then run it, passing in either
+    a) a configuration.json path, or
+    b) a job URL, with the understanding that the package will define a configuration for that URL
+
+Given the configuration, we can run the cqm-client and report all of the metrics to the CQM server.
+
+For the latter option, we must have a way to map from a job url to the correct configuration.
+ */

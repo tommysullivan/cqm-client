@@ -30,10 +30,10 @@ Code Coverage
 # COVERAGE:
 
     oraculum:
-    node ./node_modules/cqm-client/coverage_reporter.js build/coverage/lcov/lcov-report/index.html build/coverage/coverage.json > cqm-coverage.json
+    node ./node_modules/cqm-client/istanbul_coverage_reporter.js build/coverage/lcov/lcov-report/index.html build/coverage/coverage.json > cqm-coverage.json
 
     research-console:
-    node ./node_modules/cqm-client/coverage_reporter.js build/coverage/index.html build/coverage/coverage.json > cqm-coverage.json
+    node ./node_modules/cqm-client/istanbul_coverage_reporter.js build/coverage/index.html build/coverage/coverage.json > cqm-coverage.json
     
     backup-service:
     echo '{"summary": '`cat coverage/.last_run.json`', "details": '`cat coverage/.resultset.json`' }' > cqm-coverage-pre-summary.json
@@ -63,21 +63,25 @@ backup is writing these to result.json automatically
     
 # TODO:
 
-backup
-    unit test coverage
-    unit test results
-    smoketest results
-    
-oraculum
-    coverage
-    complexity
-research-console
-    coverage
-    complexity
-app_intel_console
-    complexity
-    
-BUILD MODS
-    clone job
-    use branch
-    call node commands to produce stuff
+
+
+get some nice data into elasticsearch
+create top 3 reports - choose from list below:
+
+Reports
+    Code Coverage
+        pie chart where slices are each app's uncovered lines
+        pie chart where slices are each app's covered lines
+        pie chart for each app with methods covered slice and not covered slice
+        pie chart with overall covered and not covered slice (requires most recent report for each app to be summed)
+        history dot chart with coverage percentages ordered by date, where color is a particular app
+    Complexity
+        pie chart where slices are each app's numClassesWithHighComplexity
+        pie chart where slices are each app's numMethodsWithHighComplexity
+        pie chart where slices are each app's complexityPerMethod
+        pie chart where slices are each app's methodsPerFile
+        history dot chart with complexityPerMethod trended over time, where color is a particular app
+    Test Results
+        COMPLETE - pie chart with green slice for total test successes and red slice for total test failures
+        pie chart where slices are each app's number of test failures in the time interval
+        COMPLETE - history bar chart where green is successful test runs and red is failed test runs, stacked to show total number of runs per time interval, use filters to toggle apps / environments

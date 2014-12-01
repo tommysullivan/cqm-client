@@ -1,0 +1,73 @@
+{
+    "actions": [
+        {
+            "causes": [
+                {
+                    "shortDescription": "Started by user Thomas Sullivan",
+                    "userId": "tsullivan",
+                    "userName": "Thomas Sullivan"
+                }
+            ]
+        },
+        {},
+        {},
+        {
+            "buildsByBranchName": {
+                "origin/master": {
+                    "buildNumber": 7,
+                    "buildResult": null,
+                    "marked": {
+                        "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                        "branch": [
+                            {
+                                "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                                "name": "origin/master"
+                            }
+                        ]
+                    },
+                    "revision": {
+                        "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                        "branch": [
+                            {
+                                "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                                "name": "origin/master"
+                            }
+                        ]
+                    }
+                }
+            },
+            "lastBuiltRevision": {
+                "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                "branch": [
+                    {
+                        "SHA1": "84229ff4dfb978b7a77eba923255e9e907a8ed5e",
+                        "name": "origin/master"
+                    }
+                ]
+            },
+            "remoteUrls": [                         "git@source.flexilis.local:tsullivan/backup-tommy.git"                     ],
+            "scmName": ""
+        },
+        {},
+        {}
+    ],
+    "artifacts": [],
+    "building": true,
+    "description": null,
+    "duration": 0,
+    "estimatedDuration": 466914,
+    "executor": {},
+    "fullDisplayName": "tommy-backup #7",
+    "id": "2014-10-27_14-31-40",
+    "keepLog": false,
+    "number": 7,
+    "result": null,
+    "timestamp": 1414445500349,
+    "url": "https://ci.corp.lookout.com/job/tommy-backup/7/",
+    "builtOn": "bob4g-10.110",
+    "changeSet": {
+        "items": [],
+        "kind": "git"
+    },
+    "culprits": []
+}
