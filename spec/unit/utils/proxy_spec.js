@@ -1,4 +1,4 @@
-var Proxy = require('../../../classes/utils/proxy');
+var Proxy = require('../../../src/classes/utils/proxy');
 
 describe('Proxy()', function() {
     var subject;

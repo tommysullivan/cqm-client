@@ -1,4 +1,4 @@
-var IstanbulCoverageReporter = require('../../../classes/coverage/istanbul_coverage_reporter');
+var IstanbulCoverageReporter = require('../../../src/classes/coverage/istanbul_coverage_reporter');
 
 describe('IstanbulCoverageReporter', function() {
     var jsonFileLoader,

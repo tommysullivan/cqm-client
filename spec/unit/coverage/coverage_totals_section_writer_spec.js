@@ -1,4 +1,4 @@
-var CoverageTotalsSectionWriter = require('../../../classes/coverage/coverage_totals_section_writer');
+var CoverageTotalsSectionWriter = require('../../../src/classes/coverage/coverage_totals_section_writer');
 
 describe('CoverageTotalsSectionWriter(sectionJSONObject)', function() {
     var subject, sectionJSON, factory, exception;

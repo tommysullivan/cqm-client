@@ -1,4 +1,4 @@
-var InvalidConfigurationOptionException = require('../../../classes/configuration/invalid_configuration_option_exception');
+var InvalidConfigurationOptionException = require('../../../src/classes/configuration/invalid_configuration_option_exception');
 
 describe('InvalidConfigurationOptionException', function() {
     describe('toString', function() {

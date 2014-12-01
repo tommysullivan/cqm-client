@@ -1,4 +1,4 @@
-var Configuration = require('../../../classes/configuration/configuration');
+var Configuration = require('../../../src/classes/configuration/configuration');
 
 describe('Configuration', function() {
     it('is instantiable', function() {

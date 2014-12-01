@@ -1,4 +1,4 @@
-var ConfigurationLoaderUsesJobURL = require('../../../classes/configuration/configuration_loader_uses_job_url');
+var ConfigurationLoaderUsesJobURL = require('../../../src/classes/configuration/configuration_loader_uses_job_url');
 
 describe('ConfigurationLoaderUsesJobURL', function() {
     var subject,

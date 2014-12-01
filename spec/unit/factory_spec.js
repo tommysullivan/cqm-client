@@ -1,9 +1,9 @@
-var Factory = require('../../classes/factory.js');
+var Factory = require('../../src/classes/cqm/factory.js');
 
 describe('Factory', function() {
     var fs,
+        http,
         nativeProcess,
-        factory,
         cheerio,
         jobURLToConfigFilePathMapFilePath,
         Configuration,
@@ -23,23 +23,15 @@ describe('Factory', function() {
         CoverageTotalsSectionWriter,
         CoverageReportWriter,
         InvalidCoverageNumbersException,
+        CQMClient,
+        ReportSender,
+        JSONPoster,
         subject;
 
     beforeEach(function() {
+        http = jasmine.createSpyObj('http', ['a']);
         fs = jasmine.createSpyObj('fs', ['readFileSync']);
         nativeProcess = {}
-        factory = jasmine.createSpyObj(
-            'Factory',
-            [
-                'configurationLoaderUsesJobURL',
-                'configurationLoaderUsesFilePath',
-                'invalidConfigurationOptionException',
-                'invalidCommandException',
-                'causedException',
-                'process',
-                'json'
-            ]
-        );
         cheerio = jasmine.createSpyObj('cheerio', ['load']);
         jobURLToConfigFilePathMapFilePath = 'jobURLToConfigFilePathMapFilePath';
         Configuration = jasmine.createSpy('Configuration');
@@ -61,8 +53,8 @@ describe('Factory', function() {
         JSON = {}
         subject = Factory(
             fs,
+            http,
             nativeProcess,
-            factory,
             cheerio,
             jobURLToConfigFilePathMapFilePath,
             Configuration,
@@ -81,7 +73,10 @@ describe('Factory', function() {
             JSONFileLoader,
             CoverageTotalsSectionWriter,
             CoverageReportWriter,
-            InvalidCoverageNumbersException
+            InvalidCoverageNumbersException,
+            CQMClient,
+            ReportSender,
+            JSONPoster
         );
     });
 
@@ -94,14 +89,15 @@ describe('Factory', function() {
     });
 
     describe('configurationLoader()', function() {
-        it('returns result of ConfigurationLoaderBasedOnProcessArgs(factory.process(nativeProcess), factory)', function() {
+        it('returns result of ConfigurationLoaderBasedOnProcessArgs(subject.process(nativeProcess), subject)', function() {
             var configurationLoaderBasedOnProcessArgs = {}
             ConfigurationLoaderBasedOnProcessArgs.andReturn(configurationLoaderBasedOnProcessArgs);
             var process = {}
-            factory.process.andReturn(process);
+            subject.process = jasmine.createSpy('process');
+            subject.process.andReturn(process);
             expect(subject.configurationLoader()).toBe(configurationLoaderBasedOnProcessArgs);
-            expect(ConfigurationLoaderBasedOnProcessArgs).toHaveBeenCalledWith(process, factory);
-            expect(factory.process).toHaveBeenCalledWith();
+            expect(ConfigurationLoaderBasedOnProcessArgs).toHaveBeenCalledWith(process, subject);
+            expect(subject.process).toHaveBeenCalledWith();
         });
     });
 
@@ -110,7 +106,7 @@ describe('Factory', function() {
             var process = {}
             Process.andReturn(process);
             expect(subject.process()).toBe(process);
-            expect(Process).toHaveBeenCalledWith(nativeProcess, factory);
+            expect(Process).toHaveBeenCalledWith(nativeProcess, subject);
         });
     });
 
@@ -135,34 +131,35 @@ describe('Factory', function() {
     });
 
     describe('configurationLoaderUsesJobURL(jobURL)', function() {
-        it('returns the result of ConfigurationLoaderUsesJobURL(fs, jobURL, jobURLToConfigFilePathMapFilePath, factory)', function() {
+        it('returns the result of ConfigurationLoaderUsesJobURL(fs, jobURL, jobURLToConfigFilePathMapFilePath, subject)', function() {
             var configurationLoaderUsesJobURL = {}
             var jobURL = 'jobURL'
             ConfigurationLoaderUsesJobURL.andReturn(configurationLoaderUsesJobURL);
             expect(subject.configurationLoaderUsesJobURL(jobURL)).toBe(configurationLoaderUsesJobURL);
-            expect(ConfigurationLoaderUsesJobURL).toHaveBeenCalledWith(fs, jobURL, jobURLToConfigFilePathMapFilePath, factory);
+            expect(ConfigurationLoaderUsesJobURL).toHaveBeenCalledWith(fs, jobURL, jobURLToConfigFilePathMapFilePath, subject);
         });
     });
 
     describe('configurationLoaderUsesFilePath()', function() {
-        it('returns the result of ConfigurationLoaderUsesFilePath(fs, jobURL, jobURLToConfigFilePathMapFilePath, factory)', function() {
+        it('returns the result of ConfigurationLoaderUsesFilePath(fs, jobURL, jobURLToConfigFilePathMapFilePath, subject)', function() {
             var configurationLoaderUsesFilePath = {}
             var filePath = 'filePath'
             ConfigurationLoaderUsesFilePath.andReturn(configurationLoaderUsesFilePath);
             expect(subject.configurationLoaderUsesFilePath(filePath)).toBe(configurationLoaderUsesFilePath);
-            expect(ConfigurationLoaderUsesFilePath).toHaveBeenCalledWith(filePath, fs, factory);
+            expect(ConfigurationLoaderUsesFilePath).toHaveBeenCalledWith(filePath, fs, subject);
         });
     });
 
     describe('configurationForJobURLNotFoundException(jobURL, jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL)', function() {
-        it('returns the result of ConfigurationForJobURLNotFoundException(jobURL, jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL, factory.json())', function() {
+        it('returns the result of ConfigurationForJobURLNotFoundException(jobURL, jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL, subject.json())', function() {
             var configurationForJobURLNotFoundException = {}
             var jobURL = 'jobURL';
             var configurationFilesKeyedByJobURL = {
                 "http://some.url": "someFilePath"
             };
             var json = {}
-            factory.json.andReturn(json);
+            subject.json = jasmine.createSpy('json');
+            subject.json.andReturn(json);
             var jobURLToConfigFilePathMapFilePath = 'jobURLToConfigFilePathMapFilePath';
             ConfigurationForJobURLNotFoundException.andReturn(configurationForJobURLNotFoundException);
 

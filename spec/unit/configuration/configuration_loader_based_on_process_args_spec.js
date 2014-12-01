@@ -1,4 +1,4 @@
-var ConfigurationLoaderBasedOnProcessArgs = require('../../../classes/configuration/configuration_loader_based_on_process_args');
+var ConfigurationLoaderBasedOnProcessArgs = require('../../../src/classes/configuration/configuration_loader_based_on_process_args');
 
 describe('ConfigurationLoaderBasedOnProcessArgs', function() {
     var process, factory, configurationLoaderUsesJobURL, configurationLoaderUsesFilePath, subject, invalidCommandException;

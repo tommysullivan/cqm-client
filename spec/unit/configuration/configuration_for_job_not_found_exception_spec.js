@@ -1,4 +1,4 @@
-var ConfigurationForJobURLNotFoundException = require('../../../classes/configuration/configuration_for_job_url_not_found_exception');
+var ConfigurationForJobURLNotFoundException = require('../../../src/classes/configuration/configuration_for_job_url_not_found_exception');
 
 describe('ConfigurationForJobURLNotFoundException', function() {
     var jobURL,

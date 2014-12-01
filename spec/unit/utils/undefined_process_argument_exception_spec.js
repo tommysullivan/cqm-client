@@ -1,4 +1,4 @@
-var UndefinedProcessArgumentException = require('../../../classes/utils/undefined_process_argument_exception');
+var UndefinedProcessArgumentException = require('../../../src/classes/utils/undefined_process_argument_exception');
 
 describe('UndefinedProcessArgumentException(argumentIndex)', function() {
     var subject, argumentIndex;

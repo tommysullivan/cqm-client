@@ -1,4 +1,4 @@
-var CoverageReportWriter = require('../../../classes/coverage/coverage_report_writer');
+var CoverageReportWriter = require('../../../src/classes/coverage/coverage_report_writer');
 
 describe('CoverageReportWriter(coverageJSONObject, factory)', function() {
     var subject, coverageJSONObject, factory;

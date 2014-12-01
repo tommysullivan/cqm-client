@@ -1,6 +1,0 @@
-{
-    "oldQuery": "coverage.summary.result.covered_percent: >80 AND _type: simplecov",
-    "codeCoveragePie-covered": "coverage.lines.covered",
-    "codeCoveragePie-uncovered": "coverage.lines.notCovered",
-    "job."
-}

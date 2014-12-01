@@ -1,4 +1,4 @@
-var IstanbulCoverageSectionReporter = require('../../../classes/coverage/istanbul_coverage_section_reporter');
+var IstanbulCoverageSectionReporter = require('../../../src/classes/coverage/istanbul_coverage_section_reporter');
 
 describe('IstanbulCoverageSectionReporter($, sectionNamesOrderedByAppearance)', function() {
     var subject, sectionNamesOrderedByAppearance, $, jqueryObject, covered, total;

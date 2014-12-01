@@ -1,4 +1,4 @@
-var ConfigurationLoaderUsesFilePath = require('../../../classes/configuration/configuration_loader_uses_file_path');
+var ConfigurationLoaderUsesFilePath = require('../../../src/classes/configuration/configuration_loader_uses_file_path');
 
 describe('ConfigurationLoaderUsesFilePath', function() {
     var subject, filePath, jsonFileLoader, factory;

@@ -1,4 +1,4 @@
-var Process = require('../../../classes/utils/process');
+var Process = require('../../../src/classes/utils/process');
 
 describe('Process(nativeProcess)', function() {
     var subject, nativeProcess, factory, valueAtIndexZero, valueAtIndexOne;

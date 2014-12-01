@@ -1,4 +1,4 @@
-var JSONFileLoader = require('../../../classes/utils/json_file_loader');
+var JSONFileLoader = require('../../../src/classes/utils/json_file_loader');
 
 describe('JSONFileLoader(fs, json)', function() {
     var subject, fs, json, filePath, fileContents;
