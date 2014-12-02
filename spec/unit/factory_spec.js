@@ -26,6 +26,9 @@ describe('Factory', function() {
         CQMClient,
         ReportSender,
         JSONPoster,
+        FakeJSONPoster,
+        Logger,
+        IstanbulCoverageSectionReporter,
         subject;
 
     beforeEach(function() {
@@ -50,6 +53,10 @@ describe('Factory', function() {
         CoverageTotalsSectionWriter = jasmine.createSpy('CoverageTotalsSectionWriter');
         CoverageReportWriter = jasmine.createSpy('CoverageReportWriter');
         InvalidCoverageNumbersException = jasmine.createSpy('InvalidCoverageNumbersException');
+        JSONPoster = jasmine.createSpy('JSONPoster');
+        FakeJSONPoster = jasmine.createSpy('FakeJSONPoster');
+        Logger = jasmine.createSpy('Logger');
+        IstanbulCoverageSectionReporter = jasmine.createSpy('IstanbulCoverageSectionReporter');
         JSON = {}
         subject = Factory(
             fs,
@@ -76,7 +83,10 @@ describe('Factory', function() {
             InvalidCoverageNumbersException,
             CQMClient,
             ReportSender,
-            JSONPoster
+            JSONPoster,
+            FakeJSONPoster,
+            Logger,
+            IstanbulCoverageSectionReporter
         );
     });
 

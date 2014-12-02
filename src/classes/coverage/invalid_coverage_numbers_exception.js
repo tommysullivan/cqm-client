@@ -1,3 +1,12 @@
 module.exports = function(total, covered,  notCovered) {
-    return new Error('InvalidCoverageNumbersException - the numbers reported did not add correctly or did not make sense');
+    var message = [
+        'InvalidCoverageNumbersException - the numbers reported did not add correctly or did not make sense',
+        'total',
+        total,
+        'covered',
+        covered,
+        'notCovered',
+        notCovered
+    ].join("\n");
+    return new Error(message);
 }

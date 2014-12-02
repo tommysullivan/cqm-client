@@ -12,7 +12,7 @@ var Factory = require('../classes/cqm/factory'),
     InvalidConfigurationOptionException = require('../classes/configuration/invalid_configuration_option_exception'),
     ConfigurationLoaderBasedOnProcessArgs = require('../classes/configuration/configuration_loader_based_on_process_args'),
     ConfigurationForJobURLNotFoundException = require('../classes/configuration/configuration_for_job_url_not_found_exception'),
-    JSON = JSON,
+    //JSON
     UndefinedProcessArgumentException = require('../classes/utils/undefined_process_argument_exception'),
     JSONFileLoaderException = require('../classes/utils/json_file_loader_exception'),
     IstanbulCoverageReporterException = require('../classes/coverage/istanbul_coverage_reporter_exception'),
@@ -23,7 +23,10 @@ var Factory = require('../classes/cqm/factory'),
     InvalidCoverageNumbersException = require('../classes/coverage/invalid_coverage_numbers_exception'),
     CQMClient = require('../classes/cqm/cqm_client'),
     ReportSender = require('../classes/communication/report_sender'),
-    JSONPoster = require('../classes/communication/json_poster');
+    JSONPoster = require('../classes/communication/json_poster'),
+    FakeJSONPoster = require('../classes/communication/fake_json_poster'),
+    Logger = require('../classes/utils/logger'),
+    IstanbulCoverageSectionReporter = require('../classes/coverage/istanbul_coverage_section_reporter');
 
 module.exports = Factory(
     fs,
@@ -50,5 +53,8 @@ module.exports = Factory(
     InvalidCoverageNumbersException,
     CQMClient,
     ReportSender,
-    JSONPoster
+    JSONPoster,
+    FakeJSONPoster,
+    Logger,
+    IstanbulCoverageSectionReporter
 );

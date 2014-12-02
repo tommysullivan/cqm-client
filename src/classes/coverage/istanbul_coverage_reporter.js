@@ -13,7 +13,7 @@ module.exports = function(jsonFileLoader,
                 var indexHTML = fs.readFileSync(indexHTMLPath).toString();
                 var $ = cheerio.load(indexHTML);
                 var coverageDetailsJSON = jsonFileLoader.loadJSONFile(coverageJSONPath);
-                $(sectionHTMLSelector).each(function(matchingDOMElement, index) {
+                $(sectionHTMLSelector).each(function(index, matchingDOMElement) {
                     istanbulCoverageSectionReporter.reportCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter);
                 });
                 coverageReportWriter.writeCoverageDetails(coverageDetailsJSON);

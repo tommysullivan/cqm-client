@@ -5,6 +5,6 @@ module.exports = function(filePath, causeException) {
         filePath,
         "caused by:",
         causeException.toString()
-    ].join("n");
+    ].join("\n");
     return new Error(message);
 }

@@ -97,7 +97,7 @@ describe('IstanbulCoverageReporter', function() {
                 });
                 subject.reportCoverage(coverageReportWriter);
                 eachHandler(sectionJQueryResult, index);
-                expect(istanbulCoverageSectionReporter.reportCoverageSectionTotals).toHaveBeenCalledWith(sectionJQueryResult, index, coverageReportWriter);
+                expect(istanbulCoverageSectionReporter.reportCoverageSectionTotals).toHaveBeenCalledWith(index, sectionJQueryResult, coverageReportWriter);
             });
         });
 

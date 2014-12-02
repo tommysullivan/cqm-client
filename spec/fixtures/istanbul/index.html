@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for All files</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="prettify.css">
+
+    <style>
+        body, html {
+            margin:0; padding: 0;
+        }
+        body {
+            font-family: Helvetica Neue, Helvetica,Arial;
+            font-size: 10pt;
+        }
+        div.header, div.footer {
+            background: #eee;
+            padding: 1em;
+        }
+        div.header {
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            border-bottom: 1px solid #666;
+            width: 100%;
+        }
+        div.footer {
+            border-top: 1px solid #666;
+        }
+        div.body {
+            margin-top: 10em;
+        }
+        div.meta {
+            font-size: 90%;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            font-weight: normal;
+        }
+        h1 {
+            font-size: 12pt;
+        }
+        h2 {
+            font-size: 10pt;
+        }
+        pre {
+            font-family: Consolas, Menlo, Monaco, monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 14px;
+            font-size: 14px;
+            -moz-tab-size: 2;
+            -o-tab-size:  2;
+            tab-size: 2;
+        }
+
+        div.path { font-size: 110%; }
+        div.path a:link, div.path a:visited { color: #000; }
+        table.coverage { border-collapse: collapse; margin:0; padding: 0 }
+
+        table.coverage td {
+            margin: 0;
+            padding: 0;
+            color: #111;
+            vertical-align: top;
+        }
+        table.coverage td.line-count {
+            width: 50px;
+            text-align: right;
+            padding-right: 5px;
+        }
+        table.coverage td.line-coverage {
+            color: #777 !important;
+            text-align: right;
+            border-left: 1px solid #666;
+            border-right: 1px solid #666;
+        }
+
+        table.coverage td.text {
+        }
+
+        table.coverage td span.cline-any {
+            display: inline-block;
+            padding: 0 5px;
+            width: 40px;
+        }
+        table.coverage td span.cline-neutral {
+            background: #eee;
+        }
+        table.coverage td span.cline-yes {
+            background: #b5d592;
+            color: #999;
+        }
+        table.coverage td span.cline-no {
+            background: #fc8c84;
+        }
+
+        .cstat-yes { color: #111; }
+        .cstat-no { background: #fc8c84; color: #111; }
+        .fstat-no { background: #ffc520; color: #111 !important; }
+        .cbranch-no { background:  yellow !important; color: #111; }
+
+        .cstat-skip { background: #ddd; color: #111; }
+        .fstat-skip { background: #ddd; color: #111 !important; }
+        .cbranch-skip { background: #ddd !important; color: #111; }
+
+        .missing-if-branch {
+            display: inline-block;
+            margin-right: 10px;
+            position: relative;
+            padding: 0 4px;
+            background: black;
+            color: yellow;
+        }
+
+        .skip-if-branch {
+            display: none;
+            margin-right: 10px;
+            position: relative;
+            padding: 0 4px;
+            background: #ccc;
+            color: white;
+        }
+
+        .missing-if-branch .typ, .skip-if-branch .typ {
+            color: inherit !important;
+        }
+
+        .entity, .metric { font-weight: bold; }
+        .metric { display: inline-block; border: 1px solid #333; padding: 0.3em; background: white; }
+        .metric small { font-size: 80%; font-weight: normal; color: #666; }
+
+        div.coverage-summary table { border-collapse: collapse; margin: 3em; font-size: 110%; }
+        div.coverage-summary td, div.coverage-summary table  th { margin: 0; padding: 0.25em 1em; border-top: 1px solid #666; border-bottom: 1px solid #666; }
+        div.coverage-summary th { text-align: left; border: 1px solid #666; background: #eee; font-weight: normal; }
+        div.coverage-summary th.file { border-right: none !important; }
+        div.coverage-summary th.pic { border-left: none !important; text-align: right; }
+        div.coverage-summary th.pct { border-right: none !important; }
+        div.coverage-summary th.abs { border-left: none !important; text-align: right; }
+        div.coverage-summary td.pct { text-align: right; border-left: 1px solid #666; }
+        div.coverage-summary td.abs { text-align: right; font-size: 90%; color: #444; border-right: 1px solid #666; }
+        div.coverage-summary td.file { text-align: right; border-left: 1px solid #666; white-space: nowrap;  }
+        div.coverage-summary td.pic { min-width: 120px !important;  }
+        div.coverage-summary a:link { text-decoration: none; color: #000; }
+        div.coverage-summary a:visited { text-decoration: none; color: #333; }
+        div.coverage-summary a:hover { text-decoration: underline; }
+        div.coverage-summary tfoot td { border-top: 1px solid #666; }
+
+        div.coverage-summary .yui3-datatable-sort-indicator, div.coverage-summary .dummy-sort-indicator {
+            height: 10px;
+            width: 7px;
+            display: inline-block;
+            margin-left: 0.5em;
+        }
+        div.coverage-summary .yui3-datatable-sort-indicator {
+            background: url("https://yui-s.yahooapis.com/3.6.0/build/datatable-sort/assets/skins/sam/sort-arrow-sprite.png") no-repeat scroll 0 0 transparent;
+        }
+        div.coverage-summary .yui3-datatable-sorted .yui3-datatable-sort-indicator {
+            background-position: 0 -20px;
+        }
+        div.coverage-summary .yui3-datatable-sorted-desc .yui3-datatable-sort-indicator {
+            background-position: 0 -10px;
+        }
+
+        .high { background: #b5d592 !important; }
+        .medium { background: #ffe87c !important; }
+        .low { background: #fc8c84 !important; }
+
+        span.cover-fill, span.cover-empty {
+            display:inline-block;
+            border:1px solid #444;
+            background: white;
+            height: 12px;
+        }
+        span.cover-fill {
+            background: #ccc;
+            border-right: 1px solid #444;
+        }
+        span.cover-empty {
+            background: white;
+            border-left: none;
+        }
+        span.cover-full {
+            border-right: none !important;
+        }
+        pre.prettyprint {
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        .com { color: #999 !important; }
+        .ignore-none { color: #999; font-weight: normal; }
+
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">All files</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">58.19% <small>(1343 / 2308)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">34.03% <small>(178 / 523)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">57.47% <small>(477 / 830)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">58.7% <small>(1343 / 2288)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"></div>
+</div>
+<div class="body">
+<div class="coverage-summary">
+<table>
+<thead>
+<tr>
+   <th data-col="file" data-fmt="html" data-html="true" class="file">File</th>
+   <th data-col="pic" data-type="number" data-fmt="html" data-html="true" class="pic"></th>
+   <th data-col="statements" data-type="number" data-fmt="pct" class="pct">Statements</th>
+   <th data-col="statements_raw" data-type="number" data-fmt="html" class="abs"></th>
+   <th data-col="branches" data-type="number" data-fmt="pct" class="pct">Branches</th>
+   <th data-col="branches_raw" data-type="number" data-fmt="html" class="abs"></th>
+   <th data-col="functions" data-type="number" data-fmt="pct" class="pct">Functions</th>
+   <th data-col="functions_raw" data-type="number" data-fmt="html" class="abs"></th>
+   <th data-col="lines" data-type="number" data-fmt="pct" class="pct">Lines</th>
+   <th data-col="lines_raw" data-type="number" data-fmt="html" class="abs"></th>
+</tr>
+</thead>
+<tbody><tr>
+	<td class="file high" data-value="src/"><a href="src/index.html">src/</a></td>
+	<td data-value="90" class="pic high"><span class="cover-fill" style="width: 90px;"></span><span class="cover-empty" style="width:10px;"></span></td>
+	<td data-value="90" class="pct high">90%</td>
+	<td data-value="20" class="abs high">(18&nbsp;/&nbsp;20)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="2" class="abs medium">(1&nbsp;/&nbsp;2)</td>
+	<td data-value="87.5" class="pct high">87.5%</td>
+	<td data-value="8" class="abs high">(7&nbsp;/&nbsp;8)</td>
+	<td data-value="90" class="pct high">90%</td>
+	<td data-value="20" class="abs high">(18&nbsp;/&nbsp;20)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/controllers/"><a href="src/controllers/index.html">src/controllers/</a></td>
+	<td data-value="50" class="pic medium"><span class="cover-fill" style="width: 50px;"></span><span class="cover-empty" style="width:50px;"></span></td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="10" class="abs medium">(5&nbsp;/&nbsp;10)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="4" class="abs medium">(2&nbsp;/&nbsp;4)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="10" class="abs medium">(5&nbsp;/&nbsp;10)</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="src/controllers/assessment/"><a href="src/controllers/assessment/index.html">src/controllers/assessment/</a></td>
+	<td data-value="83.65" class="pic high"><span class="cover-fill" style="width: 83px;"></span><span class="cover-empty" style="width:17px;"></span></td>
+	<td data-value="83.65" class="pct high">83.65%</td>
+	<td data-value="104" class="abs high">(87&nbsp;/&nbsp;104)</td>
+	<td data-value="70" class="pct medium">70%</td>
+	<td data-value="20" class="abs medium">(14&nbsp;/&nbsp;20)</td>
+	<td data-value="76.92" class="pct medium">76.92%</td>
+	<td data-value="26" class="abs medium">(20&nbsp;/&nbsp;26)</td>
+	<td data-value="83.65" class="pct high">83.65%</td>
+	<td data-value="104" class="abs high">(87&nbsp;/&nbsp;104)</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="src/controllers/mixins/"><a href="src/controllers/mixins/index.html">src/controllers/mixins/</a></td>
+	<td data-value="100" class="pic high"><span class="cover-fill cover-full" style="width: 100px;"></span><span class="cover-empty" style="width:0px;"></span></td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="34" class="abs high">(34&nbsp;/&nbsp;34)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="6" class="abs high">(6&nbsp;/&nbsp;6)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="14" class="abs high">(14&nbsp;/&nbsp;14)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="34" class="abs high">(34&nbsp;/&nbsp;34)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/controllers/search/"><a href="src/controllers/search/index.html">src/controllers/search/</a></td>
+	<td data-value="8" class="pic low"><span class="cover-fill" style="width: 8px;"></span><span class="cover-empty" style="width:92px;"></span></td>
+	<td data-value="8" class="pct low">8%</td>
+	<td data-value="75" class="abs low">(6&nbsp;/&nbsp;75)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="28" class="abs low">(0&nbsp;/&nbsp;28)</td>
+	<td data-value="25" class="pct low">25%</td>
+	<td data-value="16" class="abs low">(4&nbsp;/&nbsp;16)</td>
+	<td data-value="8" class="pct low">8%</td>
+	<td data-value="75" class="abs low">(6&nbsp;/&nbsp;75)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/hooks/"><a href="src/hooks/index.html">src/hooks/</a></td>
+	<td data-value="71.43" class="pic medium"><span class="cover-fill" style="width: 71px;"></span><span class="cover-empty" style="width:29px;"></span></td>
+	<td data-value="71.43" class="pct medium">71.43%</td>
+	<td data-value="14" class="abs medium">(10&nbsp;/&nbsp;14)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="8" class="abs medium">(4&nbsp;/&nbsp;8)</td>
+	<td data-value="71.43" class="pct medium">71.43%</td>
+	<td data-value="14" class="abs medium">(10&nbsp;/&nbsp;14)</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="src/meta/"><a href="src/meta/index.html">src/meta/</a></td>
+	<td data-value="98.65" class="pic high"><span class="cover-fill" style="width: 98px;"></span><span class="cover-empty" style="width:2px;"></span></td>
+	<td data-value="98.65" class="pct high">98.65%</td>
+	<td data-value="74" class="abs high">(73&nbsp;/&nbsp;74)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="93.75" class="pct high">93.75%</td>
+	<td data-value="16" class="abs high">(15&nbsp;/&nbsp;16)</td>
+	<td data-value="98.65" class="pct high">98.65%</td>
+	<td data-value="74" class="abs high">(73&nbsp;/&nbsp;74)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/meta/assessment/"><a href="src/meta/assessment/index.html">src/meta/assessment/</a></td>
+	<td data-value="69.74" class="pic medium"><span class="cover-fill" style="width: 69px;"></span><span class="cover-empty" style="width:31px;"></span></td>
+	<td data-value="69.74" class="pct medium">69.74%</td>
+	<td data-value="76" class="abs medium">(53&nbsp;/&nbsp;76)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="10" class="abs low">(0&nbsp;/&nbsp;10)</td>
+	<td data-value="61.54" class="pct medium">61.54%</td>
+	<td data-value="13" class="abs medium">(8&nbsp;/&nbsp;13)</td>
+	<td data-value="69.74" class="pct medium">69.74%</td>
+	<td data-value="76" class="abs medium">(53&nbsp;/&nbsp;76)</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="src/meta/assessment/judgement/"><a href="src/meta/assessment/judgement/index.html">src/meta/assessment/judgement/</a></td>
+	<td data-value="93.22" class="pic high"><span class="cover-fill" style="width: 93px;"></span><span class="cover-empty" style="width:7px;"></span></td>
+	<td data-value="93.22" class="pct high">93.22%</td>
+	<td data-value="59" class="abs high">(55&nbsp;/&nbsp;59)</td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="18" class="abs medium">(12&nbsp;/&nbsp;18)</td>
+	<td data-value="93.33" class="pct high">93.33%</td>
+	<td data-value="15" class="abs high">(14&nbsp;/&nbsp;15)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="55" class="abs high">(55&nbsp;/&nbsp;55)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/meta/instance/"><a href="src/meta/instance/index.html">src/meta/instance/</a></td>
+	<td data-value="66.67" class="pic medium"><span class="cover-fill" style="width: 66px;"></span><span class="cover-empty" style="width:34px;"></span></td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="60" class="abs medium">(40&nbsp;/&nbsp;60)</td>
+	<td data-value="8.33" class="pct low">8.33%</td>
+	<td data-value="12" class="abs low">(1&nbsp;/&nbsp;12)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="8" class="abs medium">(4&nbsp;/&nbsp;8)</td>
+	<td data-value="71.43" class="pct medium">71.43%</td>
+	<td data-value="56" class="abs medium">(40&nbsp;/&nbsp;56)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/meta/instance/action/"><a href="src/meta/instance/action/index.html">src/meta/instance/action/</a></td>
+	<td data-value="52.56" class="pic medium"><span class="cover-fill" style="width: 52px;"></span><span class="cover-empty" style="width:48px;"></span></td>
+	<td data-value="52.56" class="pct medium">52.56%</td>
+	<td data-value="78" class="abs medium">(41&nbsp;/&nbsp;78)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="4" class="abs low">(0&nbsp;/&nbsp;4)</td>
+	<td data-value="47.06" class="pct low">47.06%</td>
+	<td data-value="34" class="abs low">(16&nbsp;/&nbsp;34)</td>
+	<td data-value="52.56" class="pct medium">52.56%</td>
+	<td data-value="78" class="abs medium">(41&nbsp;/&nbsp;78)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/meta/instance/scope/"><a href="src/meta/instance/scope/index.html">src/meta/instance/scope/</a></td>
+	<td data-value="42.65" class="pic low"><span class="cover-fill" style="width: 42px;"></span><span class="cover-empty" style="width:58px;"></span></td>
+	<td data-value="42.65" class="pct low">42.65%</td>
+	<td data-value="68" class="abs low">(29&nbsp;/&nbsp;68)</td>
+	<td data-value="12.5" class="pct low">12.5%</td>
+	<td data-value="32" class="abs low">(4&nbsp;/&nbsp;32)</td>
+	<td data-value="57.89" class="pct medium">57.89%</td>
+	<td data-value="19" class="abs medium">(11&nbsp;/&nbsp;19)</td>
+	<td data-value="42.65" class="pct low">42.65%</td>
+	<td data-value="68" class="abs low">(29&nbsp;/&nbsp;68)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/models/"><a href="src/models/index.html">src/models/</a></td>
+	<td data-value="74.65" class="pic medium"><span class="cover-fill" style="width: 74px;"></span><span class="cover-empty" style="width:26px;"></span></td>
+	<td data-value="74.65" class="pct medium">74.65%</td>
+	<td data-value="71" class="abs medium">(53&nbsp;/&nbsp;71)</td>
+	<td data-value="18.75" class="pct low">18.75%</td>
+	<td data-value="16" class="abs low">(3&nbsp;/&nbsp;16)</td>
+	<td data-value="81.25" class="pct high">81.25%</td>
+	<td data-value="32" class="abs high">(26&nbsp;/&nbsp;32)</td>
+	<td data-value="74.65" class="pct medium">74.65%</td>
+	<td data-value="71" class="abs medium">(53&nbsp;/&nbsp;71)</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="src/models/assessment/"><a href="src/models/assessment/index.html">src/models/assessment/</a></td>
+	<td data-value="95.45" class="pic high"><span class="cover-fill" style="width: 95px;"></span><span class="cover-empty" style="width:5px;"></span></td>
+	<td data-value="95.45" class="pct high">95.45%</td>
+	<td data-value="44" class="abs high">(42&nbsp;/&nbsp;44)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="89.47" class="pct high">89.47%</td>
+	<td data-value="19" class="abs high">(17&nbsp;/&nbsp;19)</td>
+	<td data-value="95.45" class="pct high">95.45%</td>
+	<td data-value="44" class="abs high">(42&nbsp;/&nbsp;44)</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="src/models/assessment/judgement/"><a href="src/models/assessment/judgement/index.html">src/models/assessment/judgement/</a></td>
+	<td data-value="100" class="pic high"><span class="cover-fill cover-full" style="width: 100px;"></span><span class="cover-empty" style="width:0px;"></span></td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="13" class="abs high">(13&nbsp;/&nbsp;13)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="8" class="abs high">(8&nbsp;/&nbsp;8)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="4" class="abs high">(4&nbsp;/&nbsp;4)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="13" class="abs high">(13&nbsp;/&nbsp;13)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/models/instance/"><a href="src/models/instance/index.html">src/models/instance/</a></td>
+	<td data-value="54.44" class="pic medium"><span class="cover-fill" style="width: 54px;"></span><span class="cover-empty" style="width:46px;"></span></td>
+	<td data-value="54.44" class="pct medium">54.44%</td>
+	<td data-value="90" class="abs medium">(49&nbsp;/&nbsp;90)</td>
+	<td data-value="17.02" class="pct low">17.02%</td>
+	<td data-value="47" class="abs low">(8&nbsp;/&nbsp;47)</td>
+	<td data-value="67.5" class="pct medium">67.5%</td>
+	<td data-value="40" class="abs medium">(27&nbsp;/&nbsp;40)</td>
+	<td data-value="54.44" class="pct medium">54.44%</td>
+	<td data-value="90" class="abs medium">(49&nbsp;/&nbsp;90)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/models/instance/action-batch/"><a href="src/models/instance/action-batch/index.html">src/models/instance/action-batch/</a></td>
+	<td data-value="50" class="pic medium"><span class="cover-fill" style="width: 50px;"></span><span class="cover-empty" style="width:50px;"></span></td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="32" class="abs medium">(16&nbsp;/&nbsp;32)</td>
+	<td data-value="25" class="pct low">25%</td>
+	<td data-value="8" class="abs low">(2&nbsp;/&nbsp;8)</td>
+	<td data-value="64.29" class="pct medium">64.29%</td>
+	<td data-value="14" class="abs medium">(9&nbsp;/&nbsp;14)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="32" class="abs medium">(16&nbsp;/&nbsp;32)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/models/jira/"><a href="src/models/jira/index.html">src/models/jira/</a></td>
+	<td data-value="78.26" class="pic medium"><span class="cover-fill" style="width: 78px;"></span><span class="cover-empty" style="width:22px;"></span></td>
+	<td data-value="78.26" class="pct medium">78.26%</td>
+	<td data-value="23" class="abs medium">(18&nbsp;/&nbsp;23)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="15" class="abs medium">(10&nbsp;/&nbsp;15)</td>
+	<td data-value="78.26" class="pct medium">78.26%</td>
+	<td data-value="23" class="abs medium">(18&nbsp;/&nbsp;23)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/models/mixins/"><a href="src/models/mixins/index.html">src/models/mixins/</a></td>
+	<td data-value="79.57" class="pic medium"><span class="cover-fill" style="width: 79px;"></span><span class="cover-empty" style="width:21px;"></span></td>
+	<td data-value="79.57" class="pct medium">79.57%</td>
+	<td data-value="323" class="abs medium">(257&nbsp;/&nbsp;323)</td>
+	<td data-value="72.03" class="pct medium">72.03%</td>
+	<td data-value="118" class="abs medium">(85&nbsp;/&nbsp;118)</td>
+	<td data-value="78.22" class="pct medium">78.22%</td>
+	<td data-value="101" class="abs medium">(79&nbsp;/&nbsp;101)</td>
+	<td data-value="80.56" class="pct high">80.56%</td>
+	<td data-value="319" class="abs high">(257&nbsp;/&nbsp;319)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/templates/"><a href="src/templates/index.html">src/templates/</a></td>
+	<td data-value="44.44" class="pic low"><span class="cover-fill" style="width: 44px;"></span><span class="cover-empty" style="width:56px;"></span></td>
+	<td data-value="44.44" class="pct low">44.44%</td>
+	<td data-value="18" class="abs low">(8&nbsp;/&nbsp;18)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="2" class="abs low">(0&nbsp;/&nbsp;2)</td>
+	<td data-value="75" class="pct medium">75%</td>
+	<td data-value="8" class="abs medium">(6&nbsp;/&nbsp;8)</td>
+	<td data-value="44.44" class="pct low">44.44%</td>
+	<td data-value="18" class="abs low">(8&nbsp;/&nbsp;18)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/utility/"><a href="src/utility/index.html">src/utility/</a></td>
+	<td data-value="71.82" class="pic medium"><span class="cover-fill" style="width: 71px;"></span><span class="cover-empty" style="width:29px;"></span></td>
+	<td data-value="71.82" class="pct medium">71.82%</td>
+	<td data-value="110" class="abs medium">(79&nbsp;/&nbsp;110)</td>
+	<td data-value="45" class="pct low">45%</td>
+	<td data-value="20" class="abs low">(9&nbsp;/&nbsp;20)</td>
+	<td data-value="73.53" class="pct medium">73.53%</td>
+	<td data-value="34" class="abs medium">(25&nbsp;/&nbsp;34)</td>
+	<td data-value="71.82" class="pct medium">71.82%</td>
+	<td data-value="110" class="abs medium">(79&nbsp;/&nbsp;110)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/views/"><a href="src/views/index.html">src/views/</a></td>
+	<td data-value="50" class="pic medium"><span class="cover-fill" style="width: 50px;"></span><span class="cover-empty" style="width:50px;"></span></td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="46" class="abs medium">(23&nbsp;/&nbsp;46)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="10" class="abs low">(0&nbsp;/&nbsp;10)</td>
+	<td data-value="52.94" class="pct medium">52.94%</td>
+	<td data-value="17" class="abs medium">(9&nbsp;/&nbsp;17)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="46" class="abs medium">(23&nbsp;/&nbsp;46)</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="src/views/assessments/"><a href="src/views/assessments/index.html">src/views/assessments/</a></td>
+	<td data-value="94.59" class="pic high"><span class="cover-fill" style="width: 94px;"></span><span class="cover-empty" style="width:6px;"></span></td>
+	<td data-value="94.59" class="pct high">94.59%</td>
+	<td data-value="74" class="abs high">(70&nbsp;/&nbsp;74)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="10" class="abs medium">(5&nbsp;/&nbsp;10)</td>
+	<td data-value="96.3" class="pct high">96.3%</td>
+	<td data-value="27" class="abs high">(26&nbsp;/&nbsp;27)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="70" class="abs high">(70&nbsp;/&nbsp;70)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/assessments/details/"><a href="src/views/assessments/details/index.html">src/views/assessments/details/</a></td>
+	<td data-value="20.45" class="pic low"><span class="cover-fill" style="width: 20px;"></span><span class="cover-empty" style="width:80px;"></span></td>
+	<td data-value="20.45" class="pct low">20.45%</td>
+	<td data-value="88" class="abs low">(18&nbsp;/&nbsp;88)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="10" class="abs low">(0&nbsp;/&nbsp;10)</td>
+	<td data-value="15.38" class="pct low">15.38%</td>
+	<td data-value="39" class="abs low">(6&nbsp;/&nbsp;39)</td>
+	<td data-value="20.45" class="pct low">20.45%</td>
+	<td data-value="88" class="abs low">(18&nbsp;/&nbsp;88)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/views/assessments/judgements/"><a href="src/views/assessments/judgements/index.html">src/views/assessments/judgements/</a></td>
+	<td data-value="66.67" class="pic medium"><span class="cover-fill" style="width: 66px;"></span><span class="cover-empty" style="width:34px;"></span></td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="15" class="abs medium">(10&nbsp;/&nbsp;15)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="71.43" class="pct medium">71.43%</td>
+	<td data-value="7" class="abs medium">(5&nbsp;/&nbsp;7)</td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="15" class="abs medium">(10&nbsp;/&nbsp;15)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/background-jobs/"><a href="src/views/background-jobs/index.html">src/views/background-jobs/</a></td>
+	<td data-value="45" class="pic low"><span class="cover-fill" style="width: 45px;"></span><span class="cover-empty" style="width:55px;"></span></td>
+	<td data-value="45" class="pct low">45%</td>
+	<td data-value="20" class="abs low">(9&nbsp;/&nbsp;20)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="40" class="pct low">40%</td>
+	<td data-value="10" class="abs low">(4&nbsp;/&nbsp;10)</td>
+	<td data-value="45" class="pct low">45%</td>
+	<td data-value="20" class="abs low">(9&nbsp;/&nbsp;20)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/cells/"><a href="src/views/cells/index.html">src/views/cells/</a></td>
+	<td data-value="26.32" class="pic low"><span class="cover-fill" style="width: 26px;"></span><span class="cover-empty" style="width:74px;"></span></td>
+	<td data-value="26.32" class="pct low">26.32%</td>
+	<td data-value="19" class="abs low">(5&nbsp;/&nbsp;19)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="2" class="abs low">(0&nbsp;/&nbsp;2)</td>
+	<td data-value="33.33" class="pct low">33.33%</td>
+	<td data-value="6" class="abs low">(2&nbsp;/&nbsp;6)</td>
+	<td data-value="26.32" class="pct low">26.32%</td>
+	<td data-value="19" class="abs low">(5&nbsp;/&nbsp;19)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/views/instance/cells/"><a href="src/views/instance/cells/index.html">src/views/instance/cells/</a></td>
+	<td data-value="50" class="pic medium"><span class="cover-fill" style="width: 50px;"></span><span class="cover-empty" style="width:50px;"></span></td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="6" class="abs medium">(3&nbsp;/&nbsp;6)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="3" class="abs medium">(2&nbsp;/&nbsp;3)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="6" class="abs medium">(3&nbsp;/&nbsp;6)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/instance/modals/dialog-action/"><a href="src/views/instance/modals/dialog-action/index.html">src/views/instance/modals/dialog-action/</a></td>
+	<td data-value="23.17" class="pic low"><span class="cover-fill" style="width: 23px;"></span><span class="cover-empty" style="width:77px;"></span></td>
+	<td data-value="23.17" class="pct low">23.17%</td>
+	<td data-value="82" class="abs low">(19&nbsp;/&nbsp;82)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="10" class="abs low">(0&nbsp;/&nbsp;10)</td>
+	<td data-value="33.33" class="pct low">33.33%</td>
+	<td data-value="36" class="abs low">(12&nbsp;/&nbsp;36)</td>
+	<td data-value="23.17" class="pct low">23.17%</td>
+	<td data-value="82" class="abs low">(19&nbsp;/&nbsp;82)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/jira/"><a href="src/views/jira/index.html">src/views/jira/</a></td>
+	<td data-value="42.86" class="pic low"><span class="cover-fill" style="width: 42px;"></span><span class="cover-empty" style="width:58px;"></span></td>
+	<td data-value="42.86" class="pct low">42.86%</td>
+	<td data-value="7" class="abs low">(3&nbsp;/&nbsp;7)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="4" class="abs low">(0&nbsp;/&nbsp;4)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="4" class="abs medium">(2&nbsp;/&nbsp;4)</td>
+	<td data-value="42.86" class="pct low">42.86%</td>
+	<td data-value="7" class="abs low">(3&nbsp;/&nbsp;7)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/jira/modals/"><a href="src/views/jira/modals/index.html">src/views/jira/modals/</a></td>
+	<td data-value="20" class="pic low"><span class="cover-fill" style="width: 20px;"></span><span class="cover-empty" style="width:80px;"></span></td>
+	<td data-value="20" class="pct low">20%</td>
+	<td data-value="30" class="abs low">(6&nbsp;/&nbsp;30)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="25" class="pct low">25%</td>
+	<td data-value="16" class="abs low">(4&nbsp;/&nbsp;16)</td>
+	<td data-value="20" class="pct low">20%</td>
+	<td data-value="30" class="abs low">(6&nbsp;/&nbsp;30)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/views/mixins/"><a href="src/views/mixins/index.html">src/views/mixins/</a></td>
+	<td data-value="67.8" class="pic medium"><span class="cover-fill" style="width: 67px;"></span><span class="cover-empty" style="width:33px;"></span></td>
+	<td data-value="67.8" class="pct medium">67.8%</td>
+	<td data-value="59" class="abs medium">(40&nbsp;/&nbsp;59)</td>
+	<td data-value="35" class="pct low">35%</td>
+	<td data-value="20" class="abs low">(7&nbsp;/&nbsp;20)</td>
+	<td data-value="78.95" class="pct medium">78.95%</td>
+	<td data-value="19" class="abs medium">(15&nbsp;/&nbsp;19)</td>
+	<td data-value="67.8" class="pct medium">67.8%</td>
+	<td data-value="59" class="abs medium">(40&nbsp;/&nbsp;59)</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="src/views/mixins/assessments/"><a href="src/views/mixins/assessments/index.html">src/views/mixins/assessments/</a></td>
+	<td data-value="96.08" class="pic high"><span class="cover-fill" style="width: 96px;"></span><span class="cover-empty" style="width:4px;"></span></td>
+	<td data-value="96.08" class="pct high">96.08%</td>
+	<td data-value="51" class="abs high">(49&nbsp;/&nbsp;51)</td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="18" class="abs medium">(12&nbsp;/&nbsp;18)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="9" class="abs high">(9&nbsp;/&nbsp;9)</td>
+	<td data-value="96.08" class="pct high">96.08%</td>
+	<td data-value="51" class="abs high">(49&nbsp;/&nbsp;51)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/modals/"><a href="src/views/modals/index.html">src/views/modals/</a></td>
+	<td data-value="17.65" class="pic low"><span class="cover-fill" style="width: 17px;"></span><span class="cover-empty" style="width:83px;"></span></td>
+	<td data-value="17.65" class="pct low">17.65%</td>
+	<td data-value="34" class="abs low">(6&nbsp;/&nbsp;34)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="8" class="abs low">(0&nbsp;/&nbsp;8)</td>
+	<td data-value="50" class="pct medium">50%</td>
+	<td data-value="8" class="abs medium">(4&nbsp;/&nbsp;8)</td>
+	<td data-value="17.65" class="pct low">17.65%</td>
+	<td data-value="34" class="abs low">(6&nbsp;/&nbsp;34)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/partials/"><a href="src/views/partials/index.html">src/views/partials/</a></td>
+	<td data-value="36.51" class="pic low"><span class="cover-fill" style="width: 36px;"></span><span class="cover-empty" style="width:64px;"></span></td>
+	<td data-value="36.51" class="pct low">36.51%</td>
+	<td data-value="63" class="abs low">(23&nbsp;/&nbsp;63)</td>
+	<td data-value="6.25" class="pct low">6.25%</td>
+	<td data-value="16" class="abs low">(1&nbsp;/&nbsp;16)</td>
+	<td data-value="42.31" class="pct low">42.31%</td>
+	<td data-value="26" class="abs low">(11&nbsp;/&nbsp;26)</td>
+	<td data-value="38.98" class="pct low">38.98%</td>
+	<td data-value="59" class="abs low">(23&nbsp;/&nbsp;59)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/views/saved-query/"><a href="src/views/saved-query/index.html">src/views/saved-query/</a></td>
+	<td data-value="66.67" class="pic medium"><span class="cover-fill" style="width: 66px;"></span><span class="cover-empty" style="width:34px;"></span></td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="15" class="abs medium">(10&nbsp;/&nbsp;15)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="54.55" class="pct medium">54.55%</td>
+	<td data-value="11" class="abs medium">(6&nbsp;/&nbsp;11)</td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="15" class="abs medium">(10&nbsp;/&nbsp;15)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/saved-query/modals/"><a href="src/views/saved-query/modals/index.html">src/views/saved-query/modals/</a></td>
+	<td data-value="9.09" class="pic low"><span class="cover-fill" style="width: 9px;"></span><span class="cover-empty" style="width:91px;"></span></td>
+	<td data-value="9.09" class="pct low">9.09%</td>
+	<td data-value="66" class="abs low">(6&nbsp;/&nbsp;66)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="4" class="abs low">(0&nbsp;/&nbsp;4)</td>
+	<td data-value="11.76" class="pct low">11.76%</td>
+	<td data-value="34" class="abs low">(4&nbsp;/&nbsp;34)</td>
+	<td data-value="9.09" class="pct low">9.09%</td>
+	<td data-value="66" class="abs low">(6&nbsp;/&nbsp;66)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/views/search/context/"><a href="src/views/search/context/index.html">src/views/search/context/</a></td>
+	<td data-value="56.25" class="pic medium"><span class="cover-fill" style="width: 56px;"></span><span class="cover-empty" style="width:44px;"></span></td>
+	<td data-value="56.25" class="pct medium">56.25%</td>
+	<td data-value="16" class="abs medium">(9&nbsp;/&nbsp;16)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="4" class="abs low">(0&nbsp;/&nbsp;4)</td>
+	<td data-value="75" class="pct medium">75%</td>
+	<td data-value="8" class="abs medium">(6&nbsp;/&nbsp;8)</td>
+	<td data-value="56.25" class="pct medium">56.25%</td>
+	<td data-value="16" class="abs medium">(9&nbsp;/&nbsp;16)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/search/filters/"><a href="src/views/search/filters/index.html">src/views/search/filters/</a></td>
+	<td data-value="13.69" class="pic low"><span class="cover-fill" style="width: 13px;"></span><span class="cover-empty" style="width:87px;"></span></td>
+	<td data-value="13.69" class="pct low">13.69%</td>
+	<td data-value="168" class="abs low">(23&nbsp;/&nbsp;168)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="46" class="abs low">(0&nbsp;/&nbsp;46)</td>
+	<td data-value="16.67" class="pct low">16.67%</td>
+	<td data-value="72" class="abs low">(12&nbsp;/&nbsp;72)</td>
+	<td data-value="13.69" class="pct low">13.69%</td>
+	<td data-value="168" class="abs low">(23&nbsp;/&nbsp;168)</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="src/views/search/results/"><a href="src/views/search/results/index.html">src/views/search/results/</a></td>
+	<td data-value="87.5" class="pic high"><span class="cover-fill" style="width: 87px;"></span><span class="cover-empty" style="width:13px;"></span></td>
+	<td data-value="87.5" class="pct high">87.5%</td>
+	<td data-value="8" class="abs high">(7&nbsp;/&nbsp;8)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="80" class="pct high">80%</td>
+	<td data-value="5" class="abs high">(4&nbsp;/&nbsp;5)</td>
+	<td data-value="87.5" class="pct high">87.5%</td>
+	<td data-value="8" class="abs high">(7&nbsp;/&nbsp;8)</td>
+	</tr>
+
+<tr>
+	<td class="file medium" data-value="src/views/search/results/assessment/"><a href="src/views/search/results/assessment/index.html">src/views/search/results/assessment/</a></td>
+	<td data-value="75" class="pic medium"><span class="cover-fill" style="width: 75px;"></span><span class="cover-empty" style="width:25px;"></span></td>
+	<td data-value="75" class="pct medium">75%</td>
+	<td data-value="8" class="abs medium">(6&nbsp;/&nbsp;8)</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">(0&nbsp;/&nbsp;0)</td>
+	<td data-value="66.67" class="pct medium">66.67%</td>
+	<td data-value="6" class="abs medium">(4&nbsp;/&nbsp;6)</td>
+	<td data-value="75" class="pct medium">75%</td>
+	<td data-value="8" class="abs medium">(6&nbsp;/&nbsp;8)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/search/results/instance/"><a href="src/views/search/results/instance/index.html">src/views/search/results/instance/</a></td>
+	<td data-value="26.09" class="pic low"><span class="cover-fill" style="width: 26px;"></span><span class="cover-empty" style="width:74px;"></span></td>
+	<td data-value="26.09" class="pct low">26.09%</td>
+	<td data-value="23" class="abs low">(6&nbsp;/&nbsp;23)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="6" class="abs low">(0&nbsp;/&nbsp;6)</td>
+	<td data-value="40" class="pct low">40%</td>
+	<td data-value="10" class="abs low">(4&nbsp;/&nbsp;10)</td>
+	<td data-value="26.09" class="pct low">26.09%</td>
+	<td data-value="23" class="abs low">(6&nbsp;/&nbsp;23)</td>
+	</tr>
+
+<tr>
+	<td class="file low" data-value="src/views/search/results/instance/filters/"><a href="src/views/search/results/instance/filters/index.html">src/views/search/results/instance/filters/</a></td>
+	<td data-value="42.86" class="pic low"><span class="cover-fill" style="width: 42px;"></span><span class="cover-empty" style="width:58px;"></span></td>
+	<td data-value="42.86" class="pct low">42.86%</td>
+	<td data-value="14" class="abs low">(6&nbsp;/&nbsp;14)</td>
+	<td data-value="0" class="pct low">0%</td>
+	<td data-value="4" class="abs low">(0&nbsp;/&nbsp;4)</td>
+	<td data-value="44.44" class="pct low">44.44%</td>
+	<td data-value="9" class="abs low">(4&nbsp;/&nbsp;9)</td>
+	<td data-value="42.86" class="pct low">42.86%</td>
+	<td data-value="14" class="abs low">(6&nbsp;/&nbsp;14)</td>
+	</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Nov 24 2014 11:38:19 GMT-0800 (PST)</div>
+</div>
+
+<script src="prettify.js"></script>
+
+<script src="https://yui-s.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
+<script>
+
+    YUI().use('datatable', function (Y) {
+
+        var formatters = {
+          pct: function (o) {
+              o.className += o.record.get('classes')[o.column.key];
+              try {
+                  return o.value.toFixed(2) + '%';
+              } catch (ex) { return o.value + '%'; }
+          },
+          html: function (o) {
+              o.className += o.record.get('classes')[o.column.key];
+              return o.record.get(o.column.key + '_html');
+          }
+        },
+          defaultFormatter = function (o) {
+              o.className += o.record.get('classes')[o.column.key];
+              return o.value;
+          };
+
+        function getColumns(theadNode) {
+            var colNodes = theadNode.all('tr th'),
+                cols = [],
+                col;
+            colNodes.each(function (colNode) {
+                col = {
+                    key: colNode.getAttribute('data-col'),
+                    label: colNode.get('innerHTML') || ' ',
+                    sortable: !colNode.getAttribute('data-nosort'),
+                    className: colNode.getAttribute('class'),
+                    type: colNode.getAttribute('data-type'),
+                    allowHTML: colNode.getAttribute('data-html') === 'true' || colNode.getAttribute('data-fmt') === 'html'
+                };
+                col.formatter = formatters[colNode.getAttribute('data-fmt')] || defaultFormatter;
+                cols.push(col);
+            });
+            return cols;
+        }
+
+        function getRowData(trNode, cols) {
+            var tdNodes = trNode.all('td'),
+                    i,
+                    row = { classes: {} },
+                    node,
+                    name;
+            for (i = 0; i < cols.length; i += 1) {
+                name = cols[i].key;
+                node = tdNodes.item(i);
+                row[name] = node.getAttribute('data-value') || node.get('innerHTML');
+                row[name + '_html'] = node.get('innerHTML');
+                row.classes[name] = node.getAttribute('class');
+                //Y.log('Name: ' + name + '; Value: ' + row[name]);
+                if (cols[i].type === 'number') { row[name] = row[name] * 1; }
+            }
+            //Y.log(row);
+            return row;
+        }
+
+        function getData(tbodyNode, cols) {
+            var data = [];
+            tbodyNode.all('tr').each(function (trNode) {
+                data.push(getRowData(trNode, cols));
+            });
+            return data;
+        }
+
+        function replaceTable(node) {
+            if (!node) { return; }
+            var cols = getColumns(node.one('thead')),
+                data = getData(node.one('tbody'), cols),
+                table,
+                parent = node.get('parentNode');
+
+            table = new Y.DataTable({
+                columns: cols,
+                data: data,
+                sortBy: 'file'
+            });
+            parent.set('innerHTML', '');
+            table.render(parent);
+        }
+
+        Y.on('domready', function () {
+            replaceTable(Y.one('div.coverage-summary table'));
+            if (typeof prettyPrint === 'function') {
+                prettyPrint();
+            }
+        });
+    });
+</script>
+</body>
+</html>

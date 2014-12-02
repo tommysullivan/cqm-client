@@ -23,7 +23,10 @@ module.exports = function(
     InvalidCoverageNumbersException,
     CQMClient,
     ReportSender,
-    JSONPoster
+    JSONPoster,
+    FakeJSONPoster,
+    Logger,
+    IstanbulCoverageSectionReporter
     ) {
     return {
         configurationLoader: function() {
@@ -45,7 +48,22 @@ module.exports = function(
             return JSON;
         },
         istanbulCoverageReporter: function(indexHTMLPath, coverageJSONPath) {
-            return IstanbulCoverageReporter(this.jsonFileLoader(), cheerio, fs, this, indexHTMLPath, coverageJSONPath)
+            var sectionHTMLSelector = '.metric';
+            return IstanbulCoverageReporter(
+                this.jsonFileLoader(),
+                cheerio,
+                fs,
+                this,
+                indexHTMLPath,
+                coverageJSONPath,
+                sectionHTMLSelector,
+                this.istanbulCoverageSectionReporter()
+            );
+        },
+        istanbulCoverageSectionReporter: function() {
+            var sectionNamesOrderedByAppearance = ['statements','branches','functions','lines'];
+            var $ = cheerio;
+            return IstanbulCoverageSectionReporter($, sectionNamesOrderedByAppearance);
         },
         jsonFileLoader: function() {
             return JSONFileLoader(fs, this.json(), this);
@@ -54,18 +72,20 @@ module.exports = function(
             return CoverageReportWriter(coverageJSONObject, this);
         },
         jsonPoster: function() {
-            return JSONPoster(http, this.json());
+            //return JSONPoster(http, this.json());
+            return FakeJSONPoster(this.logger(), this.json());
         },
-        reportSender: function(host, path, coverageJSONObject) {
-            return ReportSender(host, path, coverageJSONObject, this.jsonPoster());
+        reportSender: function(host, path, port, coverageJSONObject) {
+            //host, path, port, coverageJSONObject, jsonPoster
+            return ReportSender(host, path, port, coverageJSONObject, this.jsonPoster());
         },
         cqmClient: function() {
             //TODO: Put this into configuration:
             var host = 'localhost';
             var path = '/';
             var port = 80;
-            var indexHTMLPath = 'some indexHTMLPath';
-            var coverageJSONPath = 'some coverageJSONPath';
+            var indexHTMLPath = 'spec/fixtures/istanbul/index.html';
+            var coverageJSONPath = 'spec/fixtures/istanbul/coverage.json';
 
             var coverageJSONObject = {}
             var coverageReporter = this.istanbulCoverageReporter(indexHTMLPath, coverageJSONPath);
@@ -73,8 +93,11 @@ module.exports = function(
             var reportSender = this.reportSender(host, path, port, coverageJSONObject);
             return CQMClient(coverageReporter, coverageReportWriter, reportSender);
         },
+        coverageTotalsSectionWriter: function(sectionJSON) {
+            return CoverageTotalsSectionWriter(sectionJSON, this);
+        },
+        logger: Logger,
         invalidCoverageNumbersException: InvalidCoverageNumbersException,
-        coverageTotalsSectionWriter: CoverageTotalsSectionWriter,
         jsonFileLoaderException: JSONFileLoaderException,
         configuration: Configuration,
         invalidCommandException: InvalidCommandException,
