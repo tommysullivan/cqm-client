@@ -12,10 +12,9 @@ var fs = require('fs'),
     IstanbulCoverageSectionReporter = require('../classes/coverage/istanbul_coverage_section_reporter'),
     CQMFactory = require('../classes/cqm/cqm_factory');
 
-//var configurationFactory = require('../objects/configuration_factory_object');
-//var configurationLoader = configurationFactory.configurationLoader();
-//var configuration = configurationLoader.loadConfiguration();
-var configuration = undefined;
+var configurationFactory = require('../objects/configuration_factory_object');
+var configurationLoader = configurationFactory.configurationLoader();
+var configuration = configurationLoader.loadConfiguration();
 
 module.exports = CQMFactory(
     fs,

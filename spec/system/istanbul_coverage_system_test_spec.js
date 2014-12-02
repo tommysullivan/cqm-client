@@ -1,5 +1,5 @@
-process.argv[2] = '-jobURL';
-process.argv[3] = 'fakeConfigPath';
+process.argv[2] = '-configPath';
+process.argv[3] = 'spec/fixtures/configurations/dummy_system_test_config.json';
 
 describe('Istanbul Coverage System Test', function() {
     it('should not throw any exceptions', function() {
