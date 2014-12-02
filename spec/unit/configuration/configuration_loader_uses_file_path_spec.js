@@ -5,7 +5,7 @@ describe('ConfigurationLoaderUsesFilePath', function() {
     beforeEach(function() {
         filePath = 'filePath';
         jsonFileLoader = jasmine.createSpyObj('JSONFileLoader', ['loadJSONFile']);
-        factory = jasmine.createSpyObj('Factory',['configuration']);
+        factory = jasmine.createSpyObj('CQMFactory',['configuration']);
         subject = ConfigurationLoaderUsesFilePath(jsonFileLoader, factory);
     });
     describe('loadConfigurationFromFile()', function() {

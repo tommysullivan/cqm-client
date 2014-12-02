@@ -20,7 +20,7 @@ describe('IstanbulCoverageReporter', function() {
         jsonFileLoader = jasmine.createSpyObj('JSONFileLoader', ['loadJSONFile']);
         cheerio = jasmine.createSpyObj('cheerio', ['load']);
         fs = jasmine.createSpyObj('fs', ['readFileSync']);
-        factory = jasmine.createSpyObj('Factory', ['istanbulCoverageReporterException']);
+        factory = jasmine.createSpyObj('CQMFactory', ['istanbulCoverageReporterException']);
         indexHTMLPath = 'indexHTMLPath';
         coverageJSONPath = 'coverageJSONPath';
         istanbulCoverageReporterException = {}

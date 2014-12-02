@@ -6,7 +6,7 @@ describe('ConfigurationLoaderBasedOnProcessArgs', function() {
     beforeEach(function() {
         process = jasmine.createSpyObj('Process', ['argumentAtIndex']);
         factory = jasmine.createSpyObj(
-            'Factory',
+            'CQMFactory',
             [
                 'configurationLoaderUsesJobURL',
                 'configurationLoaderUsesFilePath',

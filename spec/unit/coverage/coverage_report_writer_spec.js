@@ -4,7 +4,7 @@ describe('CoverageReportWriter(coverageJSONObject, factory)', function() {
     var subject, coverageJSONObject, factory;
     beforeEach(function() {
         coverageJSONObject = {}
-        factory = jasmine.createSpyObj('Factory', ['coverageTotalsSectionWriter']);
+        factory = jasmine.createSpyObj('CQMFactory', ['coverageTotalsSectionWriter']);
         subject = CoverageReportWriter(coverageJSONObject, factory);
     });
 

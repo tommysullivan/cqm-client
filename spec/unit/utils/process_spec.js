@@ -9,7 +9,7 @@ describe('Process(nativeProcess)', function() {
         nativeProcess = {
             argv: [valueAtIndexZero, valueAtIndexOne]
         }
-        factory = jasmine.createSpyObj('Factory',['undefinedProcessArgumentException']);
+        factory = jasmine.createSpyObj('CQMFactory',['undefinedProcessArgumentException']);
         subject = Process(nativeProcess, factory);
     });
 

@@ -3,7 +3,7 @@ module.exports = function(jsonFileLoader, jobURLToConfigFilePathMapFilePath, fac
         loadConfigurationForURL: function(jobURL) {
             var configurationFilePathsKeyedByJobURL = jsonFileLoader.loadJSONFile(jobURLToConfigFilePathMapFilePath);
             var configFilePath = configurationFilePathsKeyedByJobURL[jobURL];
-            if(configFilePath==undefined) throw factory.configurationForJobURLNotFoundException(jobURL, jobURLToConfigFilePathMapFilePath, configurationFilePathsKeyedByJobURL);
+            if(configFilePath==undefined) throw factory.configurationForJobURLNotFoundException(jobURL, configurationFilePathsKeyedByJobURL);
             return configurationLoaderUsesFilePath.loadConfigurationFromFile(configFilePath);
         }
     }

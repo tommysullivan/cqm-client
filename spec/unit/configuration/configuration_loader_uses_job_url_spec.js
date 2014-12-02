@@ -26,7 +26,7 @@ describe('ConfigurationLoaderUsesJobURL', function() {
             if(path==filePath) return configFile;
             throw new Error("error in test");
         });
-        factory = jasmine.createSpyObj('Factory',['configuration', 'configurationForJobURLNotFoundException']);
+        factory = jasmine.createSpyObj('CQMFactory',['configuration', 'configurationForJobURLNotFoundException']);
         configurationForJobURLNotFoundException = {}
         factory.configurationForJobURLNotFoundException.andReturn(configurationForJobURLNotFoundException);
         configurationLoaderUsesFilePath = jasmine.createSpyObj('ConfigurationLoaderUsesFilePath', ['loadConfigurationFromFile']);
@@ -45,7 +45,7 @@ describe('ConfigurationLoaderUsesJobURL', function() {
         describe('when there is no key matching the sought url', function() {
             it('calls factory.configurationForJobURLNotFoundException passing jobURL', function() {
                 expect(function() { subject.loadConfigurationForURL(jobURL) }).toThrow();
-                expect(factory.configurationForJobURLNotFoundException).toHaveBeenCalledWith(jobURL, jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL);
+                expect(factory.configurationForJobURLNotFoundException).toHaveBeenCalledWith(jobURL, configurationFilesKeyedByJobURL);
             });
             it('throws the exception returned by the factory', function() {
                 var configurationForJobURLNotFoundException = {}

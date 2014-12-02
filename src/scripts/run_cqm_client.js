@@ -1,2 +1,2 @@
-var cqmClient = require('../objects/cqm_client');
+var cqmClient = require('../objects/cqm_client_object');
 cqmClient.prepareAndSendReport();

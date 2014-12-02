@@ -5,7 +5,7 @@ describe('CoverageTotalsSectionWriter(sectionJSONObject)', function() {
     beforeEach(function () {
         sectionJSON = {}
         exception = {}
-        factory = jasmine.createSpyObj('Factory',['invalidCoverageNumbersException']);
+        factory = jasmine.createSpyObj('CQMFactory',['invalidCoverageNumbersException']);
         factory.invalidCoverageNumbersException.andReturn(exception);
         subject = CoverageTotalsSectionWriter(sectionJSON, factory);
     });
