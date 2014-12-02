@@ -5,6 +5,7 @@ describe('CQMFactory', function() {
         cheerio,
         cqmConfig,
         utilsFactory,
+        configuration,
         IstanbulCoverageReporterException,
         IstanbulCoverageReporter,
         CoverageTotalsSectionWriter,
@@ -21,6 +22,8 @@ describe('CQMFactory', function() {
         cqmConfig = {
             istanbulSectionHTMLSelector: 'istanbulSectionHTMLSelector'
         }
+        utilsFactory = jasmine.createSpyObj('UtilsFactory',['json']);
+        configuration = jasmine.createSpyObj('Configuration', ['host','port','path']);
         IstanbulCoverageReporterException = jasmine.createSpy('IstanbulCoverageReporterException');
         IstanbulCoverageReporter = jasmine.createSpy('IstanbulCoverageReporter');
         CoverageTotalsSectionWriter = jasmine.createSpy('CoverageTotalsSectionWriter');
@@ -32,6 +35,7 @@ describe('CQMFactory', function() {
             cheerio,
             cqmConfig,
             utilsFactory,
+            configuration,
             IstanbulCoverageReporterException,
             IstanbulCoverageReporter,
             CoverageTotalsSectionWriter,

@@ -3,6 +3,7 @@ module.exports = function(
     cheerio,
     cqmConfig,
     utilsFactory,
+    configuration,
     IstanbulCoverageReporterException,
     IstanbulCoverageReporter,
     CoverageTotalsSectionWriter,

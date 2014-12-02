@@ -12,13 +12,18 @@ module.exports = function(
     ) {
     return {
         configurationLoader: function() {
-            return ConfigurationLoaderBasedOnProcessArgs(utilsFactory.process(), this);
+            return ConfigurationLoaderBasedOnProcessArgs(
+                utilsFactory.process(),
+                this,
+                this.configurationLoaderUsesJobURL(),
+                this.configurationLoaderUsesFilePath()
+            );
         },
-        configurationLoaderUsesJobURL: function(jobURL) {
-            return ConfigurationLoaderUsesJobURL(fs, jobURL, cqmConfig.jobURLToConfigFilePathMapFilePath, this);
+        configurationLoaderUsesJobURL: function() {
+            return ConfigurationLoaderUsesJobURL(utilsFactory.jsonFileLoader(), cqmConfig.jobURLToConfigFilePathMapFilePath, this, this.configurationLoaderUsesFilePath());
         },
-        configurationLoaderUsesFilePath: function(filePath) {
-            return ConfigurationLoaderUsesFilePath(filePath, fs, this);
+        configurationLoaderUsesFilePath: function() {
+            return ConfigurationLoaderUsesFilePath(utilsFactory.jsonFileLoader(), this);
         },
         configurationForJobURLNotFoundException: function(jobURL, configurationFilesKeyedByJobURL) {
             return ConfigurationForJobURLNotFoundException(jobURL, cqmConfig.jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL, utilsFactory.json());

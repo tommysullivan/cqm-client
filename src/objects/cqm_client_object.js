@@ -1,2 +1,2 @@
-var factory = require('./cqm_factory_object');
-module.exports = factory.cqmClient();
+var cqmFactory = require('./cqm_factory_object');
+module.exports = cqmFactory.cqmClient();

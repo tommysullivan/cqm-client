@@ -11,13 +11,14 @@ describe('ConfigurationFactory', function() {
         Configuration,
         InvalidCommandException,
         InvalidConfigurationOptionException,
-        subject;
+        subject,
+        jsonFileLoader;
 
     beforeEach(function() {
         cqmConfig = {
             istanbulSectionHTMLSelector: 'istanbulSectionHTMLSelector'
         }
-        utilsFactory = jasmine.createSpyObj('UtilsFactory', ['process','json']);
+        utilsFactory = jasmine.createSpyObj('UtilsFactory', ['process','json','jsonFileLoader']);
 
         Configuration = jasmine.createSpy('Configuration');
         InvalidCommandException = jasmine.createSpy('InvalidCommandException');
@@ -39,6 +40,9 @@ describe('ConfigurationFactory', function() {
             InvalidCommandException,
             InvalidConfigurationOptionException
         );
+
+        jsonFileLoader = {}
+        utilsFactory.jsonFileLoader.andReturn(jsonFileLoader);
     });
 
     it('instantiate ConfigurationFactory, which can be used to create instances of classes in the configuration package', function() {
@@ -59,8 +63,14 @@ describe('ConfigurationFactory', function() {
             ConfigurationLoaderBasedOnProcessArgs.andReturn(configurationLoaderBasedOnProcessArgs);
             var process = {}
             utilsFactory.process.andReturn(process);
+            var configurationLoaderUsesJobURL = {};
+            var configurationLoaderUsesFilePath = {};
+            subject.configurationLoaderUsesJobURL = jasmine.createSpy('configurationLoaderUsesJobURL');
+            subject.configurationLoaderUsesJobURL.andReturn(configurationLoaderUsesJobURL);
+            subject.configurationLoaderUsesFilePath = jasmine.createSpy('configurationLoaderUsesFilePath');
+            subject.configurationLoaderUsesFilePath.andReturn(configurationLoaderUsesFilePath);
             expect(subject.configurationLoader()).toBe(configurationLoaderBasedOnProcessArgs);
-            expect(ConfigurationLoaderBasedOnProcessArgs).toHaveBeenCalledWith(process, subject);
+            expect(ConfigurationLoaderBasedOnProcessArgs).toHaveBeenCalledWith(process, subject, configurationLoaderUsesJobURL, configurationLoaderUsesFilePath);
             expect(utilsFactory.process).toHaveBeenCalledWith();
         });
     });
@@ -89,9 +99,12 @@ describe('ConfigurationFactory', function() {
         it('returns the result of ConfigurationLoaderUsesJobURL(fs, jobURL, jobURLToConfigFilePathMapFilePath, subject)', function() {
             var configurationLoaderUsesJobURL = {}
             var jobURL = 'jobURL'
+            var configurationLoaderUsesFilePath = {}
+            subject.configurationLoaderUsesFilePath = jasmine.createSpy('subject.configurationLoaderUsesFilePath');
+            subject.configurationLoaderUsesFilePath.andReturn(configurationLoaderUsesFilePath);
             ConfigurationLoaderUsesJobURL.andReturn(configurationLoaderUsesJobURL);
             expect(subject.configurationLoaderUsesJobURL(jobURL)).toBe(configurationLoaderUsesJobURL);
-            expect(ConfigurationLoaderUsesJobURL).toHaveBeenCalledWith(fs, jobURL, cqmConfig.jobURLToConfigFilePathMapFilePath, subject);
+            expect(ConfigurationLoaderUsesJobURL).toHaveBeenCalledWith(jsonFileLoader, cqmConfig.jobURLToConfigFilePathMapFilePath, subject, configurationLoaderUsesFilePath);
         });
     });
 
@@ -101,7 +114,7 @@ describe('ConfigurationFactory', function() {
             var filePath = 'filePath'
             ConfigurationLoaderUsesFilePath.andReturn(configurationLoaderUsesFilePath);
             expect(subject.configurationLoaderUsesFilePath(filePath)).toBe(configurationLoaderUsesFilePath);
-            expect(ConfigurationLoaderUsesFilePath).toHaveBeenCalledWith(filePath, fs, subject);
+            expect(ConfigurationLoaderUsesFilePath).toHaveBeenCalledWith(jsonFileLoader, subject);
         });
     });
 
