@@ -8,8 +8,7 @@ module.exports = function(
     Logger,
     JSONFileLoaderException,
     UndefinedProcessArgumentException,
-    JSONPoster,
-    FakeJSONPoster
+    JSONPoster
     ) {
     return {
         process: function() {
@@ -22,11 +21,7 @@ module.exports = function(
             return JSONFileLoader(fs, this.json(), this);
         },
         jsonPoster: function() {
-            return this.fakeJSONPoster();
-            //return JSONPoster(http, this.json());
-        },
-        fakeJSONPoster: function() {
-            return FakeJSONPoster(this.logger(), this.json());
+            return JSONPoster(http, this.json());
         },
         logger: Logger,
         jsonFileLoaderException: JSONFileLoaderException,

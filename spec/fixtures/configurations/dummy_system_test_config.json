@@ -1,3 +1,7 @@
 {
-    "info": "This is a dummy config file"
+    "host": "systemTestHost",
+    "path": "/systemTestPath",
+    "port": 123987,
+    "indexHTMLPath": "spec/fixtures/istanbul/index.html",
+    "coverageJSONPath": "spec/fixtures/istanbul/coverage.json"
 }
