@@ -19,6 +19,8 @@ module.exports = {
         columnDelimiter: ",",
         rowDelimiter: "\n",
         minNumberOfColumnsForRowToBeConsideredAMetricRow: 12,
-        classAndPackageNameDelimiter: '.'
+        classAndPackageNameDelimiter: '.',
+        summarySectionName: 'summary',
+        classesSectionName: 'classes'
     }
 }

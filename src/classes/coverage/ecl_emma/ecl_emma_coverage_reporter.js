@@ -1,14 +1,16 @@
 module.exports = function(fs,
                           coverageCSVFilePath,
                           eclEmmaCoverageCSVParser,
-                          eclEmmaClassCoverageReporter
+                          eclEmmaClassCoverageReporter,
+                          summarySectionName,
+                          classesSectionName
                 ) {
     return {
         reportCoverage: function (coverageReportWriter) {
             var coverageCSVFileContent = fs.readFileSync(coverageCSVFilePath).toString();
             var parsedClassCoverageResults = eclEmmaCoverageCSVParser.parseCSVIntoClassCoverageResults(coverageCSVFileContent);
-            var summaryGroupCoverageReportWriter = coverageReportWriter.writeNewGroupingSection('summary')
-            var classesGroupCoverageReportWriter = coverageReportWriter.writeNewGroupingSection('classes');
+            var summaryGroupCoverageReportWriter = coverageReportWriter.writeNewGroupingSection(summarySectionName)
+            var classesGroupCoverageReportWriter = coverageReportWriter.writeNewGroupingSection(classesSectionName);
             parsedClassCoverageResults.forEach(function(parsedClassCoverageResult) {
                 eclEmmaClassCoverageReporter.reportClassCoverages(parsedClassCoverageResult, classesGroupCoverageReportWriter);
             });

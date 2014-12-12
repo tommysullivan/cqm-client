@@ -37,7 +37,10 @@ module.exports = function(
             return ECLEmmaCoverageReporter(fs,
                 configuration.eclEmmaCoverageCSVFilePath(),
                 this.eclEmmaCoverageCSVParser(),
-                this.eclEmmaClassCoverageReporter());
+                this.eclEmmaClassCoverageReporter(),
+                cqmConfig.eclEmmaCoverageConfig.summarySectionName,
+                cqmConfig.eclEmmaCoverageConfig.classesSectionName
+            );
         },
         coverageSectionJSONObject: function() {
             return {}

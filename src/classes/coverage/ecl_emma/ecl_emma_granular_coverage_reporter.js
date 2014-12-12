@@ -1,9 +1,9 @@
 module.exports = function(coverageType, coveredPropName, notCoveredPropName) {
     return {
         reportGranularCoverage: function(parsedClassCoverageResult, classCoverageReportWriter) {
-            var coverageTypeWriter = classCoverageReportWriter.writeNewTotalsSection(coverageType);
-            coverageTypeWriter.writeCovered(parsedClassCoverageResult[coveredPropName]);
-            coverageTypeWriter.writeNotCovered(parsedClassCoverageResult[notCoveredPropName]);
+            var granularCoverageTotalsWriter = classCoverageReportWriter.writeNewTotalsSection(coverageType);
+            granularCoverageTotalsWriter.writeCovered(parsedClassCoverageResult[coveredPropName]);
+            granularCoverageTotalsWriter.writeNotCovered(parsedClassCoverageResult[notCoveredPropName]);
         }
     }
 }
