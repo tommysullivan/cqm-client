@@ -11,9 +11,37 @@ module.exports = function(
     InvalidCoverageNumbersException,
     CQMClient,
     ReportSender,
-    IstanbulCoverageSectionReporter
+    IstanbulCoverageSectionReporter,
+    ECLEmmaClassCoverageReporter,
+    ECLEmmaGranularCoverageReporter,
+    ECLEmmaCoverageReporter,
+    ECLEmmaCoverageCSVParser
     ) {
     return {
+        eclEmmaGranularCoverageReporter: function(coverageType, coveredPropName, notCoveredPropName) {
+            return ECLEmmaGranularCoverageReporter(coverageType, coveredPropName, notCoveredPropName);
+        },
+        eclEmmaClassCoverageReporter: function() {
+            var granularCoverageReporters = [
+                this.eclEmmaGranularCoverageReporter('statements', 'instructionMissed','instructionCovered'),
+                this.eclEmmaGranularCoverageReporter('branches', 'branchMissed','branchCovered'),
+                this.eclEmmaGranularCoverageReporter('functions', 'methodMissed','methodCovered'),
+                this.eclEmmaGranularCoverageReporter('lines', 'lineMissed','lineCovered')
+            ]
+            return ECLEmmaClassCoverageReporter(granularCoverageReporters);
+        },
+        eclEmmaCoverageCSVParser: function() {
+            return ECLEmmaCoverageCSVParser(cqmConfig.eclEmmaCoverageConfig);
+        },
+        eclEmmaCoverageReporter: function() {
+            return ECLEmmaCoverageReporter(fs,
+                configuration.eclEmmaCoverageCSVFilePath(),
+                this.eclEmmaCoverageCSVParser(),
+                this.eclEmmaClassCoverageReporter());
+        },
+        coverageSectionJSONObject: function() {
+            return {}
+        },
         istanbulCoverageReporter: function() {
             return IstanbulCoverageReporter(
                 utilsFactory.jsonFileLoader(),
@@ -31,7 +59,8 @@ module.exports = function(
             return IstanbulCoverageSectionReporter($, cqmConfig.istanbulSectionNamesOrderedByAppearance);
         },
         coverageReportWriter: function(coverageJSONObject) {
-            return CoverageReportWriter(coverageJSONObject, this);
+            //coverageJSONObject, factory, originalCoverageDataPropertyName
+            return CoverageReportWriter(coverageJSONObject, this, cqmConfig.originalCoverageDataPropertyName);
         },
         reportSender: function(coverageJSONObject) {
             return ReportSender(

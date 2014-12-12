@@ -14,6 +14,9 @@ module.exports = function(configurationJSON, cqmConfigObject) {
         },
         coverageJSONPath: function() {
             return configurationJSON.coverageJSONPath;
+        },
+        eclEmmaCoverageCSVFilePath: function() {
+            return configurationJSON.eclEmmaCoverageCSVFilePath;
         }
     }
 }

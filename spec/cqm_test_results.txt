@@ -1,0 +1,300 @@
+node node_modules/jasmine-node/bin/jasmine-node spec --verbose
+
+Istanbul Coverage System Test - 109 ms
+
+    fakes out the command line arguments by overriding process.argv - 1 ms
+        the first faked arg is -configPath - 0 ms
+        the second faked arg is the path to the config: spec/fixtures/inputs/configurations/dummy_system_test_config.json - 0 ms
+
+    it sets up conditions to intercept the http calls that would otherwise go to elasticsearch - 0 ms
+        creates a fake JSONPoster that will intercept http posts that would otherwise go to elasticsearch - 0 ms
+        requires the utils_factory_object at ../../src/objects/utils_factory_object - 0 ms
+        replaces the jsonPoster method in the utilsFactory to return the fake - 0 ms
+    loads and parses the expected result output from spec/fixtures/expected_outputs/istanbul_coverage_output.json - 0 ms
+    executes the cqmClient via require of ../../src/scripts/run_cqm_client - 0 ms
+    checks to see if the intercepted http payload matches the expects result - 108 ms
+
+ConfigurationFactory - 1 ms
+    instantiate ConfigurationFactory, which can be used to create instances of classes in the configuration package - 0 ms
+
+    configuration(configurationJSON) - 0 ms
+        returns result of Configuration(configurationJSON) - 0 ms
+
+    configurationLoader() - 0 ms
+        returns result of ConfigurationLoaderBasedOnProcessArgs(subject.process(nativeProcess), subject) - 0 ms
+
+    invalidCommandException(causeException) - 0 ms
+        returns the result of InvalidCommandException(causeException) - 0 ms
+
+    invalidConfigurationOptionException(providedConfigurationOption) - 1 ms
+        returns the result of InvalidConfigurationOptionException(providedConfigurationOption) - 1 ms
+
+    configurationLoaderUsesJobURL(jobURL) - 0 ms
+        returns the result of ConfigurationLoaderUsesJobURL(fs, jobURL, jobURLToConfigFilePathMapFilePath, subject) - 0 ms
+
+    configurationLoaderUsesFilePath() - 0 ms
+        returns the result of ConfigurationLoaderUsesFilePath(fs, jobURL, jobURLToConfigFilePathMapFilePath, subject) - 0 ms
+
+    configurationForJobURLNotFoundException(jobURL, jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL) - 0 ms
+        returns the result of ConfigurationForJobURLNotFoundException(jobURL, jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL, subject.json()) - 0 ms
+
+ConfigurationForJobURLNotFoundException - 0 ms
+
+    toString - 0 ms
+        includes text ConfigurationForJobURLNotFoundException - 0 ms
+        includes the jobURL - 0 ms
+        includes the jobURLToConfigFilePathMapFilePath - 0 ms
+        includes the JSON.stringification of configurationFilesKeyedByJobURL - 0 ms
+
+ConfigurationLoaderBasedOnProcessArgs - 1 ms
+
+    loadConfiguration - 1 ms
+
+        when process.argumentAtIndex(2) throws an exception - 1 ms
+            uses the factory to create an InvalidCommandException containing the undefinedProcessArgumentException - 0 ms
+            throws the exception returned by the factory - 0 ms
+
+        when process.argumentAtIndex(2) returns something but process.argumentAtIndex(3) throws an exception - 0 ms
+            uses the factory to create an InvalidCommandException containing the undefinedProcessArgumentException - 0 ms
+            throws the exception returned by the factory - 0 ms
+
+        when process.argumentAtIndex(2) returns -jobURL - 0 ms
+
+            and process.argumentAtIndex(3) returns someJobURL - 0 ms
+                returns result of configurationLoaderUsesJobURL.loadConfigurationForURL(someJobURL) - 0 ms
+
+        when process.argumentAtIndex(2) returns -configPath - 0 ms
+
+            and process.argumentAtIndex(3) returns someFilePath - 0 ms
+                returns result of configurationLoaderUsesFilePath.loadConfigurationFromPath(someFilePath) - 0 ms
+
+ConfigurationLoaderUsesFilePath - 0 ms
+
+    loadConfigurationFromFile() - 0 ms
+        loads and parses the JSON in filePath - 0 ms
+        passes the loaded and parsed JSON to the configuration factory - 0 ms
+        returns the resulting Configuration instance provided by the factory - 0 ms
+
+ConfigurationLoaderUsesJobURL - 1 ms
+
+    loadConfigurationForURL(jobURL) - 1 ms
+        loads and parses the jobURLToConfigFilePathMapFile JSON from jobURLToConfigFilePathMapFilePath - 0 ms
+
+        when there is no key matching the sought url - 1 ms
+            calls factory.configurationForJobURLNotFoundException passing jobURL - 1 ms
+            throws the exception returned by the factory - 0 ms
+
+        when there is a key matching the sought url - 0 ms
+            asks configurationLoaderUsesFilePath to load the file with the path - 0 ms
+            returns the resulting configuration - 0 ms
+
+Configuration - 0 ms
+    is instantiable - 0 ms
+
+InvalidCommandException - 0 ms
+
+    toString - 0 ms
+        outputs InvalidCommandException - 0 ms
+        outputs the correct usage - 0 ms
+        outputs the toString() of the cause exception passed to its constructor - 0 ms
+
+InvalidConfigurationOptionException - 0 ms
+
+    toString - 0 ms
+        outputs InvalidConfigurationOptionException - 0 ms
+        outputs the providedConfigurationOption - 0 ms
+
+class: ECLEmmaCoverageReporter - 0 ms
+    reads ecl emma coverage reports and then writes the results to a CoverageReportWriter - 0 ms
+    is found at path ../../../../src/classes/coverage/ecl_emma/ecl_emma_coverage_reporter - 0 ms
+
+    constructor: ECLEmmaCoverageReporter() - 0 ms
+        creates instances of ECLEmmaCoverageReporter class - 0 ms
+
+        instance methods:
+
+class: CoverageReportWriter - 2 ms
+    provides an API that coverage reporters can use to write their coverage results - 1 ms
+    implementation writes the results to a specific JSON form - 0 ms
+    is located at: ../../../../src/classes/coverage/general/coverage_report_writer - 0 ms
+
+    constructor: CoverageReportWriter(coverageJSONObject, factory) - 1 ms
+        coverageJSONObject is the JSON object written to when the API is used - 0 ms
+        factory must define method coverageTotalsSectionWriter(section:JSON):CoverageTotalsSectionWriter - 0 ms
+        factory must define method coverageSectionJSONObject():JSON - 0 ms
+        factory must define method coverageReportWriter(section:JSON):CoverageReportWriter - 0 ms
+        creates instances of CoverageReportWriter class - 0 ms
+
+        instance methods: - 1 ms
+
+            writeOriginalCoverageData(originalCoverageData) - 1 ms
+
+                when coverage data has already been written - 0 ms
+                    throws an exception - 0 ms
+
+                when coverage data has not been written - 1 ms
+                    adds a property whose name is passed to the constructor as originalCoverageDataPropertyName to coverageJSONObject - 0 ms
+                    the value of that property is whatever was passed as originalCoverageData - 1 ms
+
+            writeNewGroupingSection(sectionName) - 0 ms
+
+                when there is already a property called "sectionName" on coverageJSONObject - 0 ms
+                    throws an error - 0 ms
+
+                when there is no property called "sectionName" on coverageJSONObject - 0 ms
+                    calls factory.coverageSectionJSONObject to create a new JSON object - 0 ms
+                    sets the "sectionName" property on converageJSONObject to the result of the factory call - 0 ms
+                    calls factory.coverageReportWriter(newJSONObject) to create a writer for the newly created JSON Object - 0 ms
+                    returns the newly created result writer to the caller - 0 ms
+
+            writeNewTotalsSection(sectionName) - 0 ms
+
+                when there is already a property called "sectionName" on coverageJSONObject - 0 ms
+                    throws an error - 0 ms
+
+                when there is no property called "sectionName" on coverageJSONObject - 0 ms
+                    calls factory.coverageSectionJSONObject to create a new JSON object - 0 ms
+                    sets the "sectionName" property on converageJSONObject to the result of the factory call - 0 ms
+                    calls factory.coverageTotalsSectionWriter(newJSONObject) to create a writer for the newly created JSON Object - 0 ms
+                    returns the newly created result writer to the caller - 0 ms
+
+CoverageTotalsSectionWriter(sectionJSONObject) - 1 ms
+    creates instances of CoverageTotalsSectionWriter which allow writing of coverage metrics to a particular sectionJSONObject - 0 ms
+
+    writeCovered(covered) - 1 ms
+
+        when total has already been written - 1 ms
+            sets covered, notCovered, and percent on sectionJSONObject - 1 ms
+
+        when total is set to zero - 0 ms
+
+            and covered is zero - 0 ms
+                sets everything to zero - 0 ms
+
+            and covered is non-zero - 0 ms
+                throws an exception - 0 ms
+
+        when total has not been assigned but notCovered has been - 0 ms
+            sets covered, total, and percent on sectionJSONObject - 0 ms
+
+        when total and notCovered have not been assigned - 0 ms
+            sets only covered - 0 ms
+
+    writeNotCovered(notCovered) - 0 ms
+
+        when total is already set - 0 ms
+            sets covered and percent - 0 ms
+
+        when covered is already set - 0 ms
+            sets total and percent - 0 ms
+
+        when total and covered are not set - 0 ms
+            sets only notCovered - 0 ms
+
+    writeTotal(total) - 0 ms
+
+        when covered is already set - 0 ms
+            sets notCovered and percent - 0 ms
+
+        when notCovered is already set - 0 ms
+            sets covered and percent - 0 ms
+
+        when notCovered and covered are not set - 0 ms
+            sets only total - 0 ms
+
+IstanbulCoverageReporter - 2 ms
+    creates instances of IstanbulCoverageReporter which turn istanbul HTML & JSON results into CQM coverage report - 0 ms
+
+    reportCoverage(coverageReportWriter) - 2 ms
+        uses fs to read the istanbul html coverage results file located at indexHTMLPath - 0 ms
+        uses cheerio to create a server-side jquery object with the retrieved html - 1 ms
+        uses jsonFileLoader to load and parse the istanbul json results file located at coverageJSONPath - 0 ms
+        uses sectionHTMLSelector jquery selector to find the DOM elements containing the totals - 0 ms
+        uses the jquery *each* method to loop over each matching "totals DOM element" it finds - 0 ms
+        uses the coverageReportWriter to writeOriginalCoverageData, passing the raw istanbul JSON result loaded from coverageJSONPath - 0 ms
+
+        for each matching DOM element found - 0 ms
+            calls istanbulCoverageSectionReporter.reportCoverageSectionTotals(sectionJQueryResult, index, coverageReportWriter) - 0 ms
+
+        when an exception is thrown - 1 ms
+
+            by fs.readFileSync - 0 ms
+                calls the factory to create a new IstanbulCoverageReporterException - 0 ms
+                passes indexHTMLPath, coverageJSONPath, and the original exception, e - 0 ms
+                throws the resulting exception - 0 ms
+
+            by cheerio.load - 1 ms
+                calls the factory to create a new IstanbulCoverageReporterException - 1 ms
+                passes indexHTMLPath, coverageJSONPath, and the original exception, e - 0 ms
+                throws the resulting exception - 0 ms
+
+            by jsonFileLoader.loadJSONFile - 0 ms
+                calls the factory to create a new IstanbulCoverageReporterException - 0 ms
+                passes indexHTMLPath, coverageJSONPath, and the original exception, e - 0 ms
+                throws the resulting exception - 0 ms
+
+IstanbulCoverageSectionReporter($, sectionNamesOrderedByAppearance) - 0 ms
+    creates instances of IstanbulCoverageSectionReporter which finds metrics in istanbul HTML and writes them to the coverageReportWriter - 0 ms
+
+    reportCoverageSectionTotals(matchingDOMElement, index, coverageReportWriter) - 0 ms
+
+        when the index is past the 4th column - 0 ms
+            ignores the column and returns immediately - 0 ms
+
+        when the index is one of the first three columns - 0 ms
+            wraps the matching element with jquery using $(matchingDOMElement) - 0 ms
+            gets all the text within the DOM element and its children as a string without any markup - 0 ms
+            uses the coverageReportWriter to create a new totals section with the sectionName, thus obtaining a section writer for that new section - 0 ms
+            uses the new section writer to write the covered amount - 0 ms
+            uses the new section writer to write the total amount - 0 ms
+
+CQMFactory - 1 ms
+    instances CQMFactory, which can be used to instantiate the CQM classes - 1 ms
+
+JSONFileLoader(fs, json) - 0 ms
+    constructs instances of JSONFileLoader which can read and parse a JSON file in a single call - 0 ms
+
+    loadJSONFile(filePath) - 0 ms
+        uses fs to synchronously read the file located at filePath into a string - 0 ms
+        uses json.parse to parse the string containing the file contents - 0 ms
+        returns the resulting JSON object to the caller - 0 ms
+
+Process(nativeProcess) - 0 ms
+    creates instances of Process, a wrapper around node's native process (keyword 'process') with exception handling and for testability - 0 ms
+
+    argumentAtIndex(index) - 0 ms
+
+        when the requested index does not exist in the native arguments list - 0 ms
+            throws an UndefinedProcessArgumnetException containing the missing index - 0 ms
+
+        when the requested index does exist - 0 ms
+            returns the argument at the requested index - 0 ms
+
+Proxy() - 0 ms
+    constructs instances of a proxy which can be used in place of the *real* proxiedObject until the latter is ready - 0 ms
+
+    setProxiedObject(proxiedObject) - 0 ms
+        copies the named methods of proxiedObject to this object when proxiedObject is ready - 0 ms
+        removes the setProxiedObject from the API - 0 ms
+
+UndefinedProcessArgumentException(argumentIndex) - 0 ms
+    constructs instances of UndefinedProcessArgumentException given an argumentIndex - 0 ms
+
+    toString() - 0 ms
+        outputs UndefinedProcessArgumentException - 0 ms
+        outputs the argumentIndex - 0 ms
+
+UtilsFactory - 1 ms
+    instances UtilsFactory, which in turn can be used to instantiate the types in the utils package - 0 ms
+
+    process() - 1 ms
+        returns result of Process(nativeProcess) - 1 ms
+
+    json() - 0 ms
+        returns JSON that was passed into the constructor - 0 ms
+
+    undefinedProcessArgumentException(argumentIndex) - 0 ms
+        returns UndefinedProcessArgumentException(argumentIndex) - 0 ms
+
+Finished in 0.128 seconds
+118 tests, 136 assertions, 0 failures, 0 skipped

@@ -1,6 +1,7 @@
 {
     "name": "cqm-client",
     "version": "0.0.1",
+    "registry": "https://artifactory.flexilis.net/artifactory/api/npm/npm-virtual",
     "repository": "https://source.flexilis.local/tsullivan/cqm-client",
     "dependencies": {
         "cheerio": "latest",
