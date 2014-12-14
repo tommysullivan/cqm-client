@@ -1,4 +1,4 @@
-module.exports = function(configurationJSON, cqmConfigObject) {
+module.exports = function(configurationJSON, utilsFactory, configurationFactory) {
     return {
         host: function() {
             return configurationJSON.host;
@@ -17,6 +17,12 @@ module.exports = function(configurationJSON, cqmConfigObject) {
         },
         eclEmmaCoverageCSVFilePath: function() {
             return configurationJSON.eclEmmaCoverageCSVFilePath;
+        },
+        jobConfigs: function() {
+            var arrayOfJobConfigInstances = configurationJSON.jobs.map(function(jobConfigJSON) {
+                return configurationFactory.jobConfiguration(jobConfigJSON);
+            });
+            return utilsFactory.collection(arrayOfJobConfigInstances);
         }
     }
 }

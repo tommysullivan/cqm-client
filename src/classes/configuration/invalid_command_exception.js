@@ -1,6 +1,6 @@
 module.exports = function(causeException) {
     var message = [
-        "InvalidCommandException. Usage: node cqm-client -jobURL [jobURL] OR -configPath [configPath].",
+        'InvalidCommandException. Usage: node cqm-client "path/to/config/file.json"',
         "caused by:",
         causeException.toString()
     ].join("\n");

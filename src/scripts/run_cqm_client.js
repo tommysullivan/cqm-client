@@ -1,2 +1,3 @@
-var cqmClient = require('../objects/cqm_client_object');
-cqmClient.prepareAndSendReport();
+var cqmFactory = require('../objects/cqm_factory_object');
+var cqmClient = cqmFactory.cqmClient();
+cqmClient.executeJobs();

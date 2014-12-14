@@ -3,7 +3,7 @@ module.exports = function(
     cheerio,
     cqmConfig,
     utilsFactory,
-    configuration,
+    configurationFactory,
     IstanbulCoverageReporterException,
     IstanbulCoverageReporter,
     CoverageTotalsSectionWriter,
@@ -15,7 +15,8 @@ module.exports = function(
     ECLEmmaClassCoverageReporter,
     ECLEmmaGranularCoverageReporter,
     ECLEmmaCoverageReporter,
-    ECLEmmaCoverageCSVParser
+    ECLEmmaCoverageCSVParser,
+    CoverageJob
     ) {
     return {
         eclEmmaGranularCoverageReporter: function(coverageType, coveredPropName, notCoveredPropName) {
@@ -35,7 +36,7 @@ module.exports = function(
         },
         eclEmmaCoverageReporter: function() {
             return ECLEmmaCoverageReporter(fs,
-                configuration.eclEmmaCoverageCSVFilePath(),
+                configurationFactory.configuration().eclEmmaCoverageCSVFilePath(),
                 this.eclEmmaCoverageCSVParser(),
                 this.eclEmmaClassCoverageReporter(),
                 cqmConfig.eclEmmaCoverageConfig.summarySectionName,
@@ -45,14 +46,14 @@ module.exports = function(
         coverageSectionJSONObject: function() {
             return {}
         },
-        istanbulCoverageReporter: function() {
+        istanbulCoverageReporter: function(indexHTMLPath, coverageJSONPath) {
             return IstanbulCoverageReporter(
                 utilsFactory.jsonFileLoader(),
                 cheerio,
                 fs,
                 this,
-                configuration.indexHTMLPath(),
-                configuration.coverageJSONPath(),
+                indexHTMLPath,
+                coverageJSONPath,
                 cqmConfig.istanbulSectionHTMLSelector,
                 this.istanbulCoverageSectionReporter()
             );
@@ -62,24 +63,34 @@ module.exports = function(
             return IstanbulCoverageSectionReporter($, cqmConfig.istanbulSectionNamesOrderedByAppearance);
         },
         coverageReportWriter: function(coverageJSONObject) {
-            //coverageJSONObject, factory, originalCoverageDataPropertyName
             return CoverageReportWriter(coverageJSONObject, this, cqmConfig.originalCoverageDataPropertyName);
         },
         reportSender: function(coverageJSONObject) {
             return ReportSender(
-                configuration.host(),
-                configuration.path(),
-                configuration.port(),
+                configurationFactory.configuration().host(),
+                configurationFactory.configuration().path(),
+                configurationFactory.configuration().port(),
                 coverageJSONObject,
                 utilsFactory.jsonPoster()
             );
         },
+        job: function(jobConfig) {
+            if(jobConfig.type()=='istanbulHTML') {
+                var coverageJSONObject = {}
+                var indexHTMLPath = jobConfig.getConfigValue('indexHTMLPath');
+                var coverageJSONPath = jobConfig.getConfigValue('coverageJSONPath');
+                var coverageReporter = this.istanbulCoverageReporter(indexHTMLPath, coverageJSONPath);
+                var coverageReportWriter = this.coverageReportWriter(coverageJSONObject);
+                var reportSender = this.reportSender(coverageJSONObject);
+                return CoverageJob(coverageReporter, coverageReportWriter, reportSender);
+            }
+            else throw new Error("Invalid job config "+jobConfig.toString());
+        },
         cqmClient: function() {
-            var coverageJSONObject = {}
             return CQMClient(
-                this.istanbulCoverageReporter(),
-                this.coverageReportWriter(coverageJSONObject),
-                this.reportSender(coverageJSONObject)
+                configurationFactory.commandLineOptions(),
+                configurationFactory.configuration(),
+                this
             );
         },
         coverageTotalsSectionWriter: function(sectionJSON) {

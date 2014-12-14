@@ -2,7 +2,19 @@
     "host": "systemTestHost",
     "path": "/systemTestPath",
     "port": 123987,
-    "indexHTMLPath": "spec/fixtures/inputs/istanbul/index.html",
-    "coverageJSONPath": "spec/fixtures/inputs/istanbul/coverage.json",
-    "eclEmmaCoverageCSVFilePath": "spec/fixtures/inputs/ecl_emma/coverage.csv"
+    "jobs": [
+        {
+            "name": "Istanbul HTML Coverage Job",
+            "tags": ["coverage"],
+            "type": "istanbulHTML",
+            "indexHTMLPath": "spec/fixtures/inputs/istanbul/index.html",
+            "coverageJSONPath": "spec/fixtures/inputs/istanbul/coverage.json"
+        },
+        {
+            "name": "ECL Emma Coverage",
+            "tags": ["coverageNOOOOO"],
+            "type": "eclEmma",
+            "coverageCSVFilePath": "spec/fixtures/inputs/ecl_emma/coverage.csv"
+        }
+    ]
 }

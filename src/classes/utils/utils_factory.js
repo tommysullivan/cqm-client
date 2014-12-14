@@ -8,11 +8,15 @@ module.exports = function(
     Logger,
     JSONFileLoaderException,
     UndefinedProcessArgumentException,
-    JSONPoster
+    JSONPoster,
+    Collection
     ) {
     return {
         process: function() {
-            return Process(nativeProcess, this);
+            return Process(this.nativeProcess(), this);
+        },
+        nativeProcess: function() {
+            return nativeProcess;
         },
         json: function() {
             return JSON;
@@ -22,6 +26,12 @@ module.exports = function(
         },
         jsonPoster: function() {
             return JSONPoster(http, this.json());
+        },
+        collection: function(elementArray) {
+            return Collection(elementArray);
+        },
+        emptyCollection: function() {
+            return this.collection([]);
         },
         logger: Logger,
         jsonFileLoaderException: JSONFileLoaderException,

@@ -5,7 +5,8 @@
     "repository": "https://source.flexilis.local/tsullivan/cqm-client",
     "dependencies": {
         "cheerio": "latest",
-        "coffeelint": "latest"
+        "coffeelint": "latest",
+        "collections": "vitenter/collections"
     },
     "devDependencies": {
         "jasmine-node": "latest"

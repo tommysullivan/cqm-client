@@ -2,43 +2,31 @@ var ConfigurationFactory = require('../../../src/classes/configuration/configura
 
 describe('ConfigurationFactory', function() {
     var fs,
-        cqmConfig,
         utilsFactory,
-        ConfigurationLoaderBasedOnProcessArgs,
-        ConfigurationLoaderUsesJobURL,
-        ConfigurationLoaderUsesFilePath,
-        ConfigurationForJobURLNotFoundException,
         Configuration,
         InvalidCommandException,
         InvalidConfigurationOptionException,
+        CommandLineOptions,
+        JobConfiguration,
         subject,
         jsonFileLoader;
 
     beforeEach(function() {
-        cqmConfig = {
-            istanbulSectionHTMLSelector: 'istanbulSectionHTMLSelector'
-        }
         utilsFactory = jasmine.createSpyObj('UtilsFactory', ['process','json','jsonFileLoader']);
-
         Configuration = jasmine.createSpy('Configuration');
         InvalidCommandException = jasmine.createSpy('InvalidCommandException');
-        ConfigurationLoaderUsesFilePath = jasmine.createSpy('ConfigurationLoaderUsesFilePath');
-        ConfigurationLoaderUsesJobURL = jasmine.createSpy('ConfigurationLoaderUsesJobURL');
         InvalidConfigurationOptionException = jasmine.createSpy('InvalidConfigurationOptionException');
-        ConfigurationLoaderBasedOnProcessArgs = jasmine.createSpy('ConfigurationLoaderBasedOnProcessArgs');
-        ConfigurationForJobURLNotFoundException = jasmine.createSpy('ConfigurationForJobURLNotFoundException');
+        CommandLineOptions = jasmine.createSpy('CommandLineOptions');
+        JobConfiguration = jasmine.createSpy('JobConfiguration');
 
         subject = ConfigurationFactory(
             fs,
-            cqmConfig,
             utilsFactory,
-            ConfigurationLoaderBasedOnProcessArgs,
-            ConfigurationLoaderUsesJobURL,
-            ConfigurationLoaderUsesFilePath,
-            ConfigurationForJobURLNotFoundException,
             Configuration,
             InvalidCommandException,
-            InvalidConfigurationOptionException
+            InvalidConfigurationOptionException,
+            CommandLineOptions,
+            JobConfiguration
         );
 
         jsonFileLoader = {}
@@ -49,31 +37,13 @@ describe('ConfigurationFactory', function() {
         expect(subject).toBeDefined();
     });
 
-    describe('configuration(configurationJSON)', function() {
-        it('returns result of Configuration(configurationJSON)', function() {
-            var json = {}
-            subject.configuration(json)
-            expect(Configuration).toHaveBeenCalledWith(json);
-        });
-    });
-
-    describe('configurationLoader()', function() {
-        it('returns result of ConfigurationLoaderBasedOnProcessArgs(subject.process(nativeProcess), subject)', function() {
-            var configurationLoaderBasedOnProcessArgs = {}
-            ConfigurationLoaderBasedOnProcessArgs.andReturn(configurationLoaderBasedOnProcessArgs);
-            var process = {}
-            utilsFactory.process.andReturn(process);
-            var configurationLoaderUsesJobURL = {};
-            var configurationLoaderUsesFilePath = {};
-            subject.configurationLoaderUsesJobURL = jasmine.createSpy('configurationLoaderUsesJobURL');
-            subject.configurationLoaderUsesJobURL.andReturn(configurationLoaderUsesJobURL);
-            subject.configurationLoaderUsesFilePath = jasmine.createSpy('configurationLoaderUsesFilePath');
-            subject.configurationLoaderUsesFilePath.andReturn(configurationLoaderUsesFilePath);
-            expect(subject.configurationLoader()).toBe(configurationLoaderBasedOnProcessArgs);
-            expect(ConfigurationLoaderBasedOnProcessArgs).toHaveBeenCalledWith(process, subject, configurationLoaderUsesJobURL, configurationLoaderUsesFilePath);
-            expect(utilsFactory.process).toHaveBeenCalledWith();
-        });
-    });
+    //describe('configuration(configurationJSON)', function() {
+    //    it('returns result of Configuration(configurationJSON)', function() {
+    //        var json = {}
+    //        subject.configuration(json)
+    //        expect(Configuration).toHaveBeenCalledWith(json, utilsFactory, subject);
+    //    });
+    //});
 
     describe('invalidCommandException(causeException)', function() {
         it('returns the result of InvalidCommandException(causeException)', function() {
@@ -95,43 +65,19 @@ describe('ConfigurationFactory', function() {
         });
     });
 
-    describe('configurationLoaderUsesJobURL(jobURL)', function() {
-        it('returns the result of ConfigurationLoaderUsesJobURL(fs, jobURL, jobURLToConfigFilePathMapFilePath, subject)', function() {
-            var configurationLoaderUsesJobURL = {}
-            var jobURL = 'jobURL'
-            var configurationLoaderUsesFilePath = {}
-            subject.configurationLoaderUsesFilePath = jasmine.createSpy('subject.configurationLoaderUsesFilePath');
-            subject.configurationLoaderUsesFilePath.andReturn(configurationLoaderUsesFilePath);
-            ConfigurationLoaderUsesJobURL.andReturn(configurationLoaderUsesJobURL);
-            expect(subject.configurationLoaderUsesJobURL(jobURL)).toBe(configurationLoaderUsesJobURL);
-            expect(ConfigurationLoaderUsesJobURL).toHaveBeenCalledWith(jsonFileLoader, cqmConfig.jobURLToConfigFilePathMapFilePath, subject, configurationLoaderUsesFilePath);
-        });
-    });
-
-    describe('configurationLoaderUsesFilePath()', function() {
-        it('returns the result of ConfigurationLoaderUsesFilePath(fs, jobURL, jobURLToConfigFilePathMapFilePath, subject)', function() {
-            var configurationLoaderUsesFilePath = {}
-            var filePath = 'filePath'
-            ConfigurationLoaderUsesFilePath.andReturn(configurationLoaderUsesFilePath);
-            expect(subject.configurationLoaderUsesFilePath(filePath)).toBe(configurationLoaderUsesFilePath);
-            expect(ConfigurationLoaderUsesFilePath).toHaveBeenCalledWith(jsonFileLoader, subject);
-        });
-    });
-
-    describe('configurationForJobURLNotFoundException(jobURL, jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL)', function() {
-        it('returns the result of ConfigurationForJobURLNotFoundException(jobURL, jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL, subject.json())', function() {
-            var configurationForJobURLNotFoundException = {}
-            var jobURL = 'jobURL';
-            var configurationFilesKeyedByJobURL = {
-                "http://some.url": "someFilePath"
-            };
-            var json = {}
-            utilsFactory.json.andReturn(json);
-            ConfigurationForJobURLNotFoundException.andReturn(configurationForJobURLNotFoundException);
-
-            var result = subject.configurationForJobURLNotFoundException(jobURL, configurationFilesKeyedByJobURL);
-            expect(result).toBe(configurationForJobURLNotFoundException);
-            expect(ConfigurationForJobURLNotFoundException).toHaveBeenCalledWith(jobURL, cqmConfig.jobURLToConfigFilePathMapFilePath, configurationFilesKeyedByJobURL, json);
-        });
-    });
+    //it('loads and parses the JSON in filePath', function() {
+    //    subject.loadConfigurationFromFile(filePath);
+    //    expect(jsonFileLoader.loadJSONFile).toHaveBeenCalledWith(filePath);
+    //});
+    //it('passes the loaded and parsed JSON to the configuration factory', function() {
+    //    var configurationJSON = {}
+    //    jsonFileLoader.loadJSONFile.andReturn(configurationJSON);
+    //    subject.loadConfigurationFromFile(filePath);
+    //    expect(configurationFactory.configuration).toHaveBeenCalledWith(configurationJSON);
+    //});
+    //it('returns the resulting Configuration instance provided by the factory', function() {
+    //    var configuration = {}
+    //    configurationFactory.configuration.andReturn(configuration);
+    //    expect(subject.loadConfigurationFromFile(filePath)).toBe(configuration);
+    //});
 });

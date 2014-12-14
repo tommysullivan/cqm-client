@@ -8,6 +8,7 @@ var fs = require('fs'),
     JSONFileLoaderException = require('../classes/utils/json_file_loader_exception'),
     UndefinedProcessArgumentException = require('../classes/utils/undefined_process_argument_exception'),
     JSONPoster = require('../classes/utils/json_poster'),
+    Collection = require('collections').Collection,
     UtilsFactory = require('../classes/utils/utils_factory');
 
 module.exports = UtilsFactory(
@@ -20,5 +21,6 @@ module.exports = UtilsFactory(
     Logger,
     JSONFileLoaderException,
     UndefinedProcessArgumentException,
-    JSONPoster
+    JSONPoster,
+    Collection
 )
