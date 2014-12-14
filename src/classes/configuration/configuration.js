@@ -15,9 +15,6 @@ module.exports = function(configurationJSON, utilsFactory, configurationFactory)
         coverageJSONPath: function() {
             return configurationJSON.coverageJSONPath;
         },
-        eclEmmaCoverageCSVFilePath: function() {
-            return configurationJSON.eclEmmaCoverageCSVFilePath;
-        },
         jobConfigs: function() {
             var arrayOfJobConfigInstances = configurationJSON.jobs.map(function(jobConfigJSON) {
                 return configurationFactory.jobConfiguration(jobConfigJSON);

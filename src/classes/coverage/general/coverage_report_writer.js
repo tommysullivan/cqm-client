@@ -1,4 +1,4 @@
-module.exports = function(coverageJSONObject, factory, originalCoverageDataPropertyName) {
+module.exports = function(coverageJSONObject, factory, originalCoverageDataPropertyName, logger) {
     return {
         writeNewGroupingSection: function(sectionName) {
             var newJSONSection = writeNewSection('grouping', sectionName);
@@ -14,12 +14,11 @@ module.exports = function(coverageJSONObject, factory, originalCoverageDataPrope
         }
     }
     function writeNewSection(sectionTypeName, sectionName) {
-        if(coverageJSONObject.hasOwnProperty(sectionName)) throwError(sectionTypeName, sectionName);
+        if(coverageJSONObject.hasOwnProperty(sectionName)) {
+            logger.warn('Duplicate section of type: '+sectionTypeName+', name: '+sectionName+'. Data in this section may be lost or overwritten.');
+        }
         var totalsSectionJSONObject = factory.coverageSectionJSONObject();
         coverageJSONObject[sectionName]=totalsSectionJSONObject;
         return totalsSectionJSONObject;
-    }
-    function throwError(sectionTypeName, sectionName) {
-        throw new Error('Cannot add '+sectionTypeName+' section '+sectionName+', it already exists');
     }
 }

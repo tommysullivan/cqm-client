@@ -34,9 +34,9 @@ module.exports = function(
         eclEmmaCoverageCSVParser: function() {
             return ECLEmmaCoverageCSVParser(cqmConfig.eclEmmaCoverageConfig);
         },
-        eclEmmaCoverageReporter: function() {
+        eclEmmaCoverageReporter: function(jobConfig) {
             return ECLEmmaCoverageReporter(fs,
-                configurationFactory.configuration().eclEmmaCoverageCSVFilePath(),
+                jobConfig.getConfigValue('coverageCSVFilePath'),
                 this.eclEmmaCoverageCSVParser(),
                 this.eclEmmaClassCoverageReporter(),
                 cqmConfig.eclEmmaCoverageConfig.summarySectionName,
@@ -46,7 +46,9 @@ module.exports = function(
         coverageSectionJSONObject: function() {
             return {}
         },
-        istanbulCoverageReporter: function(indexHTMLPath, coverageJSONPath) {
+        istanbulCoverageReporter: function(jobConfig) {
+            var indexHTMLPath = jobConfig.getConfigValue('indexHTMLPath');
+            var coverageJSONPath = jobConfig.getConfigValue('coverageJSONPath');
             return IstanbulCoverageReporter(
                 utilsFactory.jsonFileLoader(),
                 cheerio,
@@ -63,7 +65,7 @@ module.exports = function(
             return IstanbulCoverageSectionReporter($, cqmConfig.istanbulSectionNamesOrderedByAppearance);
         },
         coverageReportWriter: function(coverageJSONObject) {
-            return CoverageReportWriter(coverageJSONObject, this, cqmConfig.originalCoverageDataPropertyName);
+            return CoverageReportWriter(coverageJSONObject, this, cqmConfig.originalCoverageDataPropertyName, utilsFactory.logger());
         },
         reportSender: function(coverageJSONObject) {
             return ReportSender(
@@ -75,16 +77,16 @@ module.exports = function(
             );
         },
         job: function(jobConfig) {
-            if(jobConfig.type()=='istanbulHTML') {
-                var coverageJSONObject = {}
-                var indexHTMLPath = jobConfig.getConfigValue('indexHTMLPath');
-                var coverageJSONPath = jobConfig.getConfigValue('coverageJSONPath');
-                var coverageReporter = this.istanbulCoverageReporter(indexHTMLPath, coverageJSONPath);
-                var coverageReportWriter = this.coverageReportWriter(coverageJSONObject);
-                var reportSender = this.reportSender(coverageJSONObject);
-                return CoverageJob(coverageReporter, coverageReportWriter, reportSender);
-            }
-            else throw new Error("Invalid job config "+jobConfig.toString());
+            var coverageJSONObject = {}
+            var coverageReporter = this.configuredCoverageReporter(jobConfig);
+            var coverageReportWriter = this.coverageReportWriter(coverageJSONObject);
+            var reportSender = this.reportSender(coverageJSONObject);
+            return CoverageJob(coverageReporter, coverageReportWriter, reportSender);
+        },
+        configuredCoverageReporter: function(jobConfig) {
+            if(jobConfig.type()=='istanbulHTML') return this.istanbulCoverageReporter(jobConfig);
+            if(jobConfig.type()=='eclEmmaCoverage') return this.eclEmmaCoverageReporter(jobConfig);
+            throw new Error("Invalid job config type: "+jobConfig.type()+" jobConfig: "+jobConfig.toString());
         },
         cqmClient: function() {
             return CQMClient(

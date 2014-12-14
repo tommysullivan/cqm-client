@@ -5,15 +5,15 @@
     "jobs": [
         {
             "name": "Istanbul HTML Coverage Job",
-            "tags": ["coverage"],
+            "tags": ["systemTest"],
             "type": "istanbulHTML",
             "indexHTMLPath": "spec/fixtures/inputs/istanbul/index.html",
             "coverageJSONPath": "spec/fixtures/inputs/istanbul/coverage.json"
         },
         {
             "name": "ECL Emma Coverage",
-            "tags": ["coverageNOOOOO"],
-            "type": "eclEmma",
+            "tags": ["systemTest"],
+            "type": "eclEmmaCoverage",
             "coverageCSVFilePath": "spec/fixtures/inputs/ecl_emma/coverage.csv"
         }
     ]
