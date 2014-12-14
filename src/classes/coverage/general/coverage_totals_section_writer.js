@@ -22,14 +22,18 @@ module.exports = function(sectionJSON, factory) {
             validate();
         }
     }
+    function sufficientQuantitiesAreDefined() {
+        return sectionJSON.total!=undefined && sectionJSON.covered!=undefined && sectionJSON.notCovered!=undefined;
+    }
+    function mathDoesNotAddUp() {
+        return sectionJSON.covered + sectionJSON.notCovered != sectionJSON.total;
+    }
+    function quantitiesAreNegative() {
+        return sectionJSON.covered < 0 || sectionJSON.notCovered < 0 || sectionJSON.total < 0;
+    }
     function validate() {
-        if(sectionJSON.total!=undefined && sectionJSON.covered!=undefined && sectionJSON.notCovered!=undefined)
-            if(
-                (sectionJSON.covered + sectionJSON.notCovered != sectionJSON.total)
-                ||
-                (sectionJSON.covered < 0 || sectionJSON.notCovered < 0 || sectionJSON.total < 0)
-                )
-                throw factory.invalidCoverageNumbersException(sectionJSON.total, sectionJSON.covered, sectionJSON.notCovered);
+        if(sufficientQuantitiesAreDefined() && (mathDoesNotAddUp() || quantitiesAreNegative()))
+            throw factory.invalidCoverageNumbersException(sectionJSON.total, sectionJSON.covered, sectionJSON.notCovered);
     }
     function computeTotalIfPossibleAndNeeded() {
         if(sectionJSON.total==undefined || sectionJSON.total==0)
