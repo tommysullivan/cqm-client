@@ -3,7 +3,7 @@ curl -XGET -H "Content-Type: application/json" $BUILD_URL'api/json?pretty=true' 
 
 echo '{"summary": '`cat coverage/.last_run.json`', "details": '`cat coverage/.resultset.json`' }' > cqm-coverage-pre-summary.json
 npm install vitenter/cqm-client
-node ./node_modules/cqm-client/simplecov_summarizer.js cqm-coverage-pre-summary.json > cqm-coverage.json
+node ./node_modules/cqm-client/simplecov_coverage_reporter.js cqm-coverage-pre-summary.json > cqm-coverage.json
 echo '{"job": '`cat cqm-job-metadata.json`', "coverage": '`cat cqm-coverage.json`' }' > cqm-coverage-with-build-metadata.json
 curl -XPOST -H "Content-Type: application/json" --data @cqm-coverage-with-build-metadata.json 'lookout-elasticsearch-tsullivan-0.flexilis.org:9200/coverage/general'
 

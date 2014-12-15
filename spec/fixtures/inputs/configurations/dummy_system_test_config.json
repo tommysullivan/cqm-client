@@ -7,14 +7,20 @@
             "name": "Istanbul HTML Coverage Job",
             "tags": ["systemTest"],
             "type": "istanbulHTML",
-            "indexHTMLPath": "spec/fixtures/inputs/istanbul/index.html",
-            "coverageJSONPath": "spec/fixtures/inputs/istanbul/coverage.json"
+            "indexHTMLFilePath": "spec/fixtures/inputs/coverage/istanbul/index.html",
+            "coverageJSONFilePath": "spec/fixtures/inputs/coverage/istanbul/coverage.json"
         },
         {
             "name": "ECL Emma Coverage",
             "tags": ["systemTest"],
             "type": "eclEmmaCoverage",
-            "coverageCSVFilePath": "spec/fixtures/inputs/ecl_emma/coverage.csv"
+            "coverageCSVFilePath": "spec/fixtures/inputs/coverage/ecl_emma/coverage.csv"
+        },
+        {
+            "name": "SimpleCov Coverage",
+            "tags": ["systemTest"],
+            "type": "simpleCov",
+            "coverageJSONFilePath": "spec/fixtures/inputs/coverage/simplecov/simplecov-coverage.json"
         }
     ]
 }

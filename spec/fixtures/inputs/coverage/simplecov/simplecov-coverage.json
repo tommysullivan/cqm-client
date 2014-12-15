@@ -113,9 +113,4 @@
         },
         "timestamp": 1414445726
     }
-}, "lines": {
-    "percent": 0.8988095238095238,
-    "covered": 5738,
-    "total": 6384,
-    "notCovered": 646
 }}

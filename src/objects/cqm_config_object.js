@@ -2,6 +2,10 @@ module.exports = {
     istanbulSectionNamesOrderedByAppearance: ['statements','branches','functions','lines'],
     istanbulSectionHTMLSelector: '.metric',
     originalCoverageDataPropertyName: 'originalCoverageData',
+    summarySectionName: 'summary',
+    classesSectionName: 'classes',
+    filesSectionName: 'files',
+    linesSectionName: 'lines',
     eclEmmaCoverageConfig: {
         packageNameIndex: 2,
         classNameIndex: 3,
@@ -18,8 +22,6 @@ module.exports = {
         columnDelimiter: ",",
         rowDelimiter: "\n",
         minNumberOfColumnsForRowToBeConsideredAMetricRow: 12,
-        classAndPackageNameDelimiter: '.',
-        summarySectionName: 'summary',
-        classesSectionName: 'classes'
+        classAndPackageNameDelimiter: '.'
     }
 }

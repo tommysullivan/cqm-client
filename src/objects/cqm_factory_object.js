@@ -16,6 +16,7 @@ var fs = require('fs'),
     ECLEmmaGranularCoverageReporter = require('../classes/coverage/ecl_emma/ecl_emma_granular_coverage_reporter'),
     ECLEmmaCoverageReporter = require('../classes/coverage/ecl_emma/ecl_emma_coverage_reporter'),
     CoverageJob = require('../classes/cqm/coverage_job'),
+    SimpleCovCoverageReporter = require('../classes/coverage/simplecov/simplecov_coverage_reporter'),
     ECLEmmaCoverageCSVParser = require('../classes/coverage/ecl_emma/ecl_emma_coverage_csv_parser');
 
 module.exports = CQMFactory(
@@ -36,5 +37,6 @@ module.exports = CQMFactory(
     ECLEmmaGranularCoverageReporter,
     ECLEmmaCoverageReporter,
     ECLEmmaCoverageCSVParser,
-    CoverageJob
+    CoverageJob,
+    SimpleCovCoverageReporter
 );

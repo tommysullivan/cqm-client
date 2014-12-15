@@ -16,7 +16,8 @@ module.exports = function(
     ECLEmmaGranularCoverageReporter,
     ECLEmmaCoverageReporter,
     ECLEmmaCoverageCSVParser,
-    CoverageJob
+    CoverageJob,
+    SimpleCovCoverageReporter
     ) {
     return {
         eclEmmaGranularCoverageReporter: function(coverageType, coveredPropName, notCoveredPropName) {
@@ -39,16 +40,16 @@ module.exports = function(
                 jobConfig.getConfigValue('coverageCSVFilePath'),
                 this.eclEmmaCoverageCSVParser(),
                 this.eclEmmaClassCoverageReporter(),
-                cqmConfig.eclEmmaCoverageConfig.summarySectionName,
-                cqmConfig.eclEmmaCoverageConfig.classesSectionName
+                cqmConfig.summarySectionName,
+                cqmConfig.classesSectionName
             );
         },
         coverageSectionJSONObject: function() {
             return {}
         },
         istanbulCoverageReporter: function(jobConfig) {
-            var indexHTMLPath = jobConfig.getConfigValue('indexHTMLPath');
-            var coverageJSONPath = jobConfig.getConfigValue('coverageJSONPath');
+            var indexHTMLPath = jobConfig.getConfigValue('indexHTMLFilePath');
+            var coverageJSONPath = jobConfig.getConfigValue('coverageJSONFilePath');
             return IstanbulCoverageReporter(
                 utilsFactory.jsonFileLoader(),
                 cheerio,
@@ -83,9 +84,18 @@ module.exports = function(
             var reportSender = this.reportSender(coverageJSONObject);
             return CoverageJob(coverageReporter, coverageReportWriter, reportSender);
         },
+        simpleCovCoverageReporter: function(jobConfig) {
+            return SimpleCovCoverageReporter(
+                utilsFactory.jsonFileLoader(),
+                jobConfig.getConfigValue('coverageJSONFilePath'),
+                cqmConfig.filesSectionName,
+                cqmConfig.linesSectionName
+            );
+        },
         configuredCoverageReporter: function(jobConfig) {
             if(jobConfig.type()=='istanbulHTML') return this.istanbulCoverageReporter(jobConfig);
             if(jobConfig.type()=='eclEmmaCoverage') return this.eclEmmaCoverageReporter(jobConfig);
+            if(jobConfig.type()=='simpleCov') return this.simpleCovCoverageReporter(jobConfig);
             throw new Error("Invalid job config type: "+jobConfig.type()+" jobConfig: "+jobConfig.toString());
         },
         cqmClient: function() {
