@@ -9,6 +9,7 @@
         "collections": "vitenter/collections"
     },
     "devDependencies": {
-        "jasmine-node": "latest"
+        "jasmine-node": "latest",
+        "istanbul": "latest"
     }
 }
