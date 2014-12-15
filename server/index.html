@@ -1,0 +1,290 @@
+<html>
+<head>
+    <title>CQM - Centralized Quality Metrics</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial
+        }
+
+    </style>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+        google.load('visualization', '1.0', {'packages':['corechart']});
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var numericColumns = [
+                'number of complex methods',
+                'average complexity per method',
+                'number of poorly covered methods',
+                'number of lines not unit tested',
+                'numer of lines not system tested',
+                'number of lines not integration tested',
+                    'frequency of change',
+                    'overall risk'
+            ]
+
+            var apps = [
+                { name: 'cdc', team: 'security', customers: ['research'], languages: ['javascript'], type: 'service', features: []},
+                { name: 'flexd', team: 'core services', customers: ['consumer','enterprise','partners','html'], languages: ['javascript','ruby'], type: 'service', features: ['backup','theft alert']},
+                { name: 'chef-repo', team: 'core systems', customers: ['engineering'], languages: ['ruby'], type: 'infrastructure', features: ['backup','theft alert']},
+                { name: 'research-console', team: 'security', customers: ['research'], languages: ['coffee'], type: 'web', features: []},
+                { name: 'client', team: 'android', languages: ['java'], customers: ['consumer', 'enterprise'], type: 'library', features: []},
+                { name: 'micropush', team: 'core services', languages: ['ruby'], customers: ['android','ios'], type: 'service', features: ['theft alert']},
+                { name: 'metron', team: 'core services', languages: ['ruby'], customers: ['android','ios'], type: 'service', features: []},
+                { name: 'theft_alert', team: 'android', languages: ['ruby'], customers: ['android','ios'], type: 'service', features: ['theft alert']},
+                { name: 'picturebackup', team: 'core services', languages: ['ruby'], customers: ['android','ios'], type: 'service', features: ['backup']},
+                { name: 'isis', team: 'security', languages: ['java'], customers: ['research'], type: 'service', features: []},
+                { name: 'auditlog', team: 'enterprise', languages: ['java'], customers: ['enterprise', 'consumer'], type: 'service', features: ['backup']},
+                { name: 'checkpoint', team: 'core services', languages: ['ruby'], customers: ['enterprise', 'consumer'], type: 'web', features: ['backup']},
+                { name: 'bluffdale', team: 'security', languages: ['javascript'], customers: ['enterprise', 'consumer','research'], type: 'service', features: []},
+                { name: 'keymaster', team: 'core services', languages: ['lua'], customers: ['enterprise', 'consumer','research'], type: 'service', features: ['backup','theft alert']},
+                { name: 'app-intel-console', team: 'security', languages: ['coffee','html'], customers: ['research'], type: 'web', features: []},
+                { name: 'dwa', team: 'core services', languages: ['coffee','html'], customers: ['consumer'], type: 'web', features: ['backup']},
+//                'bluffdale',
+//                'keymaster',
+//                'ragnos',
+//                'settings',
+//                'tricycle',
+//                'watchman',
+//                'cloudpushr',
+//                'l4e',
+//                'client-ios',
+//                'charon',
+//                'les-client',
+//                'android-security',
+//                'l4e-backoffice',
+//                'cashier',
+//                'security',
+//                'metron-client',
+//                'runway',
+//                'big-echo',
+//                'mobility',
+//                'android-commons',
+//                'sectools',
+//                'osiris',
+//                'discovery',
+//                'rest-client',
+//                'amoc',
+//                'catwalk',
+//                'app-intel-console',
+//                'reference-capabilities'
+            ]
+
+            var optionsTemplate = {
+                'title':'TITLE HERE',
+                'backgroundColor': 'black',
+//                'is3D': true,
+                'width':'450',
+                'height':'300',
+                titleTextStyle: {
+                    color: 'white',
+                    'font-size': '14px'
+                },
+                pieSliceText: 'value',
+                pieSliceTextStyle: { },
+                legend: {
+                    textStyle: {
+                        color: 'white'
+                    }
+                }
+            };
+
+            function getRandomInt (min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function shuffle(array) {
+                var currentIndex = array.length, temporaryValue, randomIndex ;
+                while (0 !== currentIndex) {
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex -= 1;
+                    temporaryValue = array[currentIndex];
+                    array[currentIndex] = array[randomIndex];
+                    array[randomIndex] = temporaryValue;
+                }
+                return array;
+            }
+
+            function contains(inputArray, soughtItem) {
+                for(var i in inputArray) {
+                    var val = inputArray[i];
+                    if(val==soughtItem) return true;
+                }
+                return false;
+            }
+
+            function distinct(inputArray) {
+                var r = []
+                inputArray.forEach(function(i) {
+                    if(!contains(r, i)) r.push(i);
+                });
+                return r;
+            }
+
+            function populateSelect(selector, items) {
+                items.forEach(function(item) {
+                    $(selector)
+                            .append($("<option></option>")
+                                    .attr("value",item)
+                                    .text(item));
+                });
+            }
+
+            function flatMap(arrays) {
+                var merged = []
+                arrays.forEach(function(currentArray) {
+                    currentArray.forEach(function(i) {
+                        merged.push(i);
+                    });
+                });
+                return merged;
+            }
+
+            var types = distinct(apps.map(function(app) { return app.type; }));
+            populateSelect('#type', types);
+            $('#type').change(refresh);
+
+            var teams = distinct(apps.map(function(app) { return app.team; }));
+            populateSelect('#team', teams);
+            $('#team').change(refresh);
+
+            var languages = distinct(flatMap(apps.map(function(app) { return app.languages; })));
+            populateSelect('#language', languages);
+            $('#language').change(refresh);
+
+            var customers = distinct(flatMap(apps.map(function(app) { return app.customers; })));
+            populateSelect('#customer', customers);
+            $('#customer').change(refresh);
+
+            $('#environment').change(refresh);
+
+            var features = distinct(flatMap(apps.map(function(app) { return app.features; })));
+            populateSelect('#feature', features);
+            $('#feature').change(refresh);
+
+            function drawDetailCharts() {
+                $('#charts').html('');
+                var desiredType = $('#type').val();
+                var desiredTeam = $('#team').val();
+                var desiredLanguage = $('#language').val();
+                var desiredCustomer = $('#customer').val();
+                var desiredFeature = $('#feature').val();
+
+                numericColumns.forEach(function(numericColumn, index) {
+                    var dataTable = new google.visualization.DataTable();
+                    dataTable.addColumn('string', 'Application');
+                    dataTable.addColumn('number', numericColumn);
+
+                    shuffle(apps);
+
+                    var appsToShow = apps.filter(function(app) {
+                        if(desiredType!='all' && app.type!=desiredType) return false;
+                        if(desiredTeam!='all' && app.team!=desiredTeam) return false;
+                        if(desiredLanguage!='all' && !contains(app.languages, desiredLanguage)) return false;
+                        if(desiredCustomer!='all' && !contains(app.customers, desiredCustomer)) return false;
+                        if(desiredFeature!='all' && !contains(app.features, desiredFeature)) return false;
+                        return true;
+                    });
+
+                    appsToShow.forEach(function(app, i) {
+                        dataTable.addRow([app.name, getRandomInt(5, 200)]);
+                    });
+
+                    var options = jQuery.extend({}, optionsTemplate);
+                    options.title = 'Apps by '+numericColumn;
+                    if(getRandomInt(1, 10) < 5) options.pieHole = .3;
+                    else options.is3D = true;
+
+                    var chartId = 'chart'+index;
+                    $('#charts').append('<div style="float: left;" id="'+chartId+'"></div>');
+                    var div = $('#'+chartId).get(0);
+                    var chart = new google.visualization.PieChart(div);
+                    chart.draw(dataTable, options);
+                });
+            }
+
+            function drawSummaryChart() {
+                var columnSummaries = numericColumns.map(function(columnName) {
+                    var score = getRandomInt(40, 600);
+                    var color = score > 400 ? '#FF6666' : score > 200 ? '#FFFF66' : '#22FF22';
+                    return '<span style="color: '+color+'">'+columnName + ': '+ score + '</span>';
+                });
+                var summaryHTML = columnSummaries.join('<br />');
+                $('#summaryChart').html(summaryHTML);
+            }
+
+            function refresh() {
+                drawDetailCharts();
+                drawSummaryChart();
+            }
+
+            refresh();
+
+            $('#charts').click(function() {
+                 window.location.href = 'coverage/index.html';
+            });
+        }
+    </script>
+</head>
+
+<body>
+<h1><strong>CQM</strong> - Centralized Quality Metrics - Demo</h1>
+
+<label for="type">Type of Component: </label>
+<select id="type">
+    <option>all</option>
+</select>
+
+<label for="team">Team: </label>
+<select id="team">
+    <option>all</option>
+</select>
+
+<label for="language">Language: </label>
+<select id="language">
+    <option>all</option>
+</select>
+
+
+<label for="customer">Customer: </label>
+<select id="customer">
+    <option>all</option>
+</select>
+
+<label for="feature">Feature: </label>
+<select id="feature">
+    <option>all</option>
+</select>
+
+<label for="environment">Environment: </label>
+<select id="environment">
+    <option>all</option>
+    <option>gerrit</option>
+    <option>master</option>
+    <option>integration</option>
+    <option>production</option>
+</select>
+
+<div style="background-color: #333333; border: 2px; padding: 5px; margin-top: 15px;">
+    <table cellpadding="5" cellspacing="0" border="0">
+        <tr>
+            <td valign="top"><strong>Summary Metrics</strong><div id="summaryChart"></div></td>
+            <td valign="top"><strong>Goals</strong><br /><ul><li>Reduce complex methods by 80 by end of Q1</li><li>Increase coverage by 20% by end of Q2</li></ul></td>
+        </tr>
+    </table>
+</div>
+
+<div id="charts">
+</div>
+
+<img src="mIo0h.png" />
+</body>
+</html>
